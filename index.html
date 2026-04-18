@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send Money Home with Wise — Low Fees, Real Exchange Rate | Storelines</title>
+<meta name="google-site-verification" content="lp38G6aDop4ldmK7n05kq9T6LV9V-7Sl3QEjg0VvEKg" /> 
+<meta name="description" content="Send money to 70+ countries with real exchange rate and low fees. No hidden charges, no markups. Open an account in 5 minutes. Free EU business tools included.">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<link rel="canonical" href="https://storelines.net/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://storelines.net/">
+<meta property="og:title" content="Send Money Home with Wise — Low Fees, Real Exchange Rate">
+<meta property="og:description" content="Send money to 70+ countries with real exchange rate and low fees. No hidden charges. Open an account in 5 minutes.">
+<meta property="og:image" content="https://storelines.net/images/hero-wise.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Storelines">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Send Money Home with Wise — Low Fees, Real Exchange Rate">
+<meta name="twitter:description" content="Send money to 70+ countries with real exchange rate and low fees. No hidden charges. Open an account in 5 minutes.">
+<meta name="twitter:image" content="https://storelines.net/images/hero-wise.jpg">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Storelines",
+  "url": "https://storelines.net/",
+  "description": "Send money to 70+ countries with real exchange rate and low fees. Free EU business tools included."
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* === WISE LIGHT THEME — ТОЧНО ПО HEX-ОТЛАДКЕ === */
+:root {
+  --bg: #F0F5F2;
+  --surface: #FFFFFF;
+  --card: #FFFFFF;
+  --teal-dark: #16322E;
+  --teal: #00B972;
+  --teal-light: #2A9D8F;
+  --wise-green: #00B972;
+  --wise-green-hover: #00A060;
+  --tx: #455854;
+  --tx2: #5E7A70;
+  --tx3: #8AACA0;
+  --border: #C0D9D0;
+  --border-light: #A8C9BC;
+  --shadow: 0 8px 24px rgba(22,50,46,0.06);
+  --shadow-h: 0 16px 40px rgba(22,50,46,0.12);
+  --font: 'Inter', sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--tx);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+}
+.nav-links {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links > li {
+  position: relative;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-links a:hover {
+  color: var(--teal);
+  background: rgba(0,185,114,0.08);
+}
+.nav-links a.active {
+  color: var(--teal);
+  font-weight: 700;
+  background: rgba(0,185,114,0.12);
+}
+
+/* DROPDOWN — ИСПРАВЛЕНО WINNER */
+.has-dropdown > a::after {
+  content: '▾';
+  font-size: 11px;
+  opacity: 0.6;
+}
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-h);
+  padding: 8px;
+  min-width: 280px;
+  z-index: 200;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.dropdown-menu .drop-section {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+  margin-top: 4px;
+}
+.dropdown-menu .drop-section:first-child {
+  margin-top: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-cta {
+  height: 38px;
+  padding: 0 20px;
+  background: var(--teal);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 9px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .2s;
+  white-space: nowrap;
+  border: none;
+}
+.header-cta:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 4px 12px rgba(0,185,114,0.25);
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--teal-dark);
+  border-radius: 2px;
+  transition: all .3s;
+}
+.mob-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 98;
+}
+.mob-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  padding: 16px 24px 24px;
+  box-shadow: var(--shadow);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.mob-menu.open {
+  display: block;
+}
+.mob-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.mob-menu nav a {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--tx);
+  text-decoration: none;
+}
+.mob-menu nav a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.mob-section {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+}
+
+/* HERO — ДЕВУШКА */
+.hero {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0,185,114,0.1);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: clamp(32px,4vw,52px);
+  font-weight: 900;
+  color: var(--teal-dark);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+.hero h1 span {
+  background: linear-gradient(135deg, var(--teal), var(--wise-green-hover));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-sub {
+  font-size: 17px;
+  color: var(--tx2);
+  max-width: 480px;
+  margin-bottom: 36px;
+  line-height: 1.75;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--teal);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all .2s;
+  border: none;
+}
+.btn-primary:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 6px 20px rgba(0,185,114,0.3);
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  background: transparent;
+  color: var(--teal);
+  border: 2px solid var(--teal);
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all .2s;
+}
+.btn-secondary:hover {
+  background: var(--teal);
+  color: white;
+}
+.hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  box-shadow: var(--shadow-h);
+}
+
+/* COUNTRIES SECTION — ШАХМАТНЫЙ БЛОК (ПАРЕНЬ СЛЕВА) */
+.countries-section {
+  padding: 80px 24px;
+  background: var(--bg);
+}
+.countries-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.countries-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.section-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  background: rgba(0,185,114,0.1);
+  border: 1px solid var(--teal);
+  border-radius: 100px;
+  padding: 5px 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.countries-title {
+  font-size: clamp(26px,4vw,40px);
+  font-weight: 800;
+  color: var(--teal-dark);
+  margin-bottom: 12px;
+}
+.countries-sub {
+  font-size: 16px;
+  color: var(--tx2);
+  margin-bottom: 28px;
+}
+.country-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.country-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: var(--tx);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.country-icon {
+  font-size: 22px;
+  width: 32px;
+  text-align: center;
+}
+.countries-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: var(--shadow-h);
+  display: block;
+  margin: 0 auto;
+}
+
+/* WISE CARD — ТЁМНЫЙ БЛОК ДЛЯ КОНТРАСТА */
+.wise-section {
+  padding: 80px 24px;
+  background: var(--teal-dark);
+}
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.wise-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+.wise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal), #00A060);
+}
+.wise-card-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 14px;
+}
+.wise-card-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+.wise-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.wise-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+}
+.wise-feature::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 900;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.wise-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 32px;
+  background: var(--teal);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all .2s;
+  border: none;
+}
+.wise-cta:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 6px 20px rgba(0,185,114,0.5);
+  transform: translateY(-2px);
+}
+.wise-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.wise-stat {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 20px;
+}
+.wise-stat-n {
+  font-size: 28px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 4px;
+}
+.wise-stat-l {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+}
+
+/* TOOLS GRID */
+.tools-section {
+  padding: 80px 24px;
+  background: var(--bg);
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+.tool-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all .25s;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--teal);
+  opacity: 0;
+  transition: opacity .25s;
+}
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-h);
+  border-color: var(--teal);
+}
+.tool-card:hover::before {
+  opacity: 1;
+}
+.tool-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  display: block;
+}
+.tool-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-bottom: 6px;
+}
+.tool-desc {
+  font-size: 13px;
+  color: var(--tx2);
+  line-height: 1.5;
+}
+
+/* BLOG */
+.blog-section {
+  padding: 80px 24px;
+  background: var(--bg);
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+.blog-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all .25s;
+  text-decoration: none;
+  display: block;
+  box-shadow: var(--shadow);
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-h);
+}
+.blog-img {
+  height: 160px;
+  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+}
+.blog-body {
+  padding: 20px;
+}
+.blog-cat {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.blog-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.blog-desc {
+  font-size: 13px;
+  color: var(--tx2);
+  line-height: 1.6;
+}
+
+/* CTA — ТЁМНЫЙ БЛОК */
+.cta-section {
+  background: var(--teal-dark);
+  padding: 80px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(255,255,255,0.1) 0%, transparent 70%);
+}
+.cta-section h2 {
+  font-size: clamp(28px,4vw,44px);
+  font-weight: 900;
+  margin-bottom: 16px;
+  position: relative;
+}
+.cta-section p {
+  font-size: 17px;
+  opacity: 0.9;
+  margin-bottom: 36px;
+  position: relative;
+}
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 36px;
+  background: var(--teal);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all .2s;
+  position: relative;
+  border: none;
+}
+.cta-btn:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 8px 28px rgba(0,185,114,0.4);
+  transform: translateY(-2px);
+}
+
+/* FOOTER — ТЁМНЫЙ БЛОК */
+footer {
+  background: var(--teal-dark);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 48px 24px 32px;
+  color: white;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+.footer-brand img {
+  height: 36px;
+  margin-bottom: 14px;
+  filter: brightness(0) invert(1);
+}
+.footer-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+}
+.footer-col h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color .15s;
+}
+.footer-col a:hover {
+  color: var(--teal);
+}
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+}
+
+@media(max-width:1024px){
+  .tools-grid{grid-template-columns:repeat(2,1fr)}
+  .blog-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .wise-card{grid-template-columns:1fr}
+  .countries-grid{grid-template-columns:1fr;gap:32px}
+  .countries-image{order:2}
+}
+@media(max-width:768px){
+  .nav-links,.header-right .header-cta{display:none}
+  .hamburger{display:flex}
+  .hero-inner{grid-template-columns:1fr}
+  .tools-grid{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .countries-grid{grid-template-columns:1fr}
+  .countries-image{order:2}
+}
+
+/* === WINNER'S DROPDOWN FIX === */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+
+<!-- HERO — ДЕВУШКА (sendmoney.png) -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">🇪🇺 Official Wise</div>
+      <h1>Send Money Home with Wise</h1>
+      <p class="hero-sub">Real exchange rate. Low fees. Fast transfers to 70+ countries. Join millions who save on international payments.</p>
+      <div class="hero-actions">
+        <a href="wise-send-money.html" class="btn-primary">💳 Send Money Now →</a>
+        <a href="wise-business.html" class="btn-secondary">ℹ️ Learn More</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="images/sendmoney.png" alt="Send money home with Wise">
+    </div>
+  </div>
+</section>
+
+<!-- COUNTRIES — ШАХМАТНЫЙ ПОРЯДОК: ПАРЕНЬ (hero-wise.jpg) СЛЕВА -->
+<section class="countries-section">
+  <div class="countries-inner">
+    <div class="countries-grid">
+      <div class="countries-image">
+        <img src="images/hero-wise.jpg" alt="Wise business account">
+      </div>
+      <div class="countries-text">
+        <div class="section-badge">🌍 Why Wise</div>
+        <h2 class="countries-title">Send Money Home with Wise — Low Fees, Real Exchange Rates</h2>
+        <p class="countries-sub">Real exchange rate, low transparent fees, fast transfers.</p>
+        <div class="country-list">
+          <div class="country-item"><span class="country-icon">💶</span> Real mid-market rate — what you see is what you get</div>
+          <div class="country-item"><span class="country-icon">⚡</span> Low fee from 0.35% — no surprises, no hidden costs</div>
+          <div class="country-item"><span class="country-icon">🌍</span> 70+ countries, 40+ currencies — all in one account</div>
+        </div>
+        <a href="wise-send-money.html" class="btn-primary" style="margin-top:24px;">💳 Send Money Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WISE SECTION — ТЁМНЫЙ БЛОК -->
+<section class="wise-section">
+  <div class="section-inner">
+    <div class="section-badge" style="color:white;background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);">⭐ Why Wise</div>
+    <h2 class="section-title" style="color:white;margin-bottom:12px">The smarter way to send money abroad</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.8);max-width:700px">Banks charge up to 5% in hidden fees. Wise uses the real exchange rate with low, transparent fees — see the difference.</p>
+    <div class="wise-card">
+      <div>
+        <h3 class="wise-card-title">How much can you save?</h3>
+        <p class="wise-card-desc">Send €1,000 to Poland. Wise fee: ~€4.50. Bank fee: €30–50 hidden in exchange rate. That's up to 10x less.</p>
+        <div class="wise-features">
+          <div class="wise-feature">Real mid-market exchange rate — no markup</div>
+          <div class="wise-feature">Low, transparent fee from 0.35%</div>
+          <div class="wise-feature">Fast transfers — often within seconds</div>
+          <div class="wise-feature">Regulated and secure — 15+ million customers</div>
+        </div>
+        <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="wise-cta">💳 Open Wise Account →</a>
+      </div>
+      <div class="wise-stats">
+        <div class="wise-stat"><div class="wise-stat-n">10x</div><div class="wise-stat-l">Cheaper than banks</div></div>
+        <div class="wise-stat"><div class="wise-stat-n">70+</div><div class="wise-stat-l">Countries</div></div>
+        <div class="wise-stat"><div class="wise-stat-n">40+</div><div class="wise-stat-l">Currencies</div></div>
+        <div class="wise-stat"><div class="wise-stat-n">5 min</div><div class="wise-stat-l">To open account</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS SECTION -->
+<section class="tools-section">
+  <div class="section-inner">
+    <div class="section-badge">🎁 Free Bonus Tools</div>
+    <h2 class="section-title" style="color:var(--teal-dark);margin-bottom:12px">EU Business Tools — Included</h2>
+    <p class="section-sub" style="color:var(--tx2);max-width:600px;margin-bottom:40px">VAT, IBAN, currency — everything you need, free.</p>
+    <div class="tools-grid">
+      <a href="vat-validator.html" class="tool-card"><span class="tool-icon">🔍</span><div class="tool-name">VAT Validator</div><div class="tool-desc">Verify EU VAT numbers</div></a>
+      <a href="iban-validator.html" class="tool-card"><span class="tool-icon">🏦</span><div class="tool-name">IBAN Validator</div><div class="tool-desc">Check account numbers</div></a>
+      <a href="currency-converter.html" class="tool-card"><span class="tool-icon">💱</span><div class="tool-name">Currency Converter</div><div class="tool-desc">Live ECB rates</div></a>
+      <a href="vat-calculator.html" class="tool-card"><span class="tool-icon">🧮</span><div class="tool-name">VAT Calculator</div><div class="tool-desc">Add/remove VAT</div></a>
+      <a href="gdpr-checklist.html" class="tool-card"><span class="tool-icon">🛡️</span><div class="tool-name">GDPR Checklist</div><div class="tool-desc">Compliance check</div></a>
+      <a href="salary-calculator.html" class="tool-card"><span class="tool-icon">💶</span><div class="tool-name">Salary Calculator</div><div class="tool-desc">Gross/net EU</div></a>
+      <a href="invoice-builder.html" class="tool-card"><span class="tool-icon">📄</span><div class="tool-name">Invoice Builder</div><div class="tool-desc">Legal wording</div></a>
+      <a href="oss-ioss-navigator.html" class="tool-card"><span class="tool-icon">🗺️</span><div class="tool-name">OSS/IOSS Navigator</div><div class="tool-desc">VAT for e-commerce</div></a>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="tools.html" class="btn-secondary">🔧 See All Tools →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG SECTION -->
+<section class="blog-section">
+  <div class="section-inner">
+    <div class="section-badge">📝 Guides</div>
+    <h2 class="section-title" style="color:var(--teal-dark)">Send Smarter, Save More</h2>
+    <p class="section-sub" style="color:var(--tx2)">Tips for international payments and EU business.</p>
+    <div class="blog-grid">
+      <a href="blog.html" class="blog-card">
+        <div class="blog-img">💸</div>
+        <div class="blog-body">
+          <div class="blog-cat">Money Transfer</div>
+          <div class="blog-title">How to Send Money Home Without Losing on Exchange Rates</div>
+          <div class="blog-desc">Banks hide fees in the rate — here's how to avoid them.</div>
+        </div>
+      </a>
+      <a href="blog.html" class="blog-card">
+        <div class="blog-img">🌍</div>
+        <div class="blog-body">
+          <div class="blog-cat">Wise Guide</div>
+          <div class="blog-title">Wise Multi-Currency Account: Full Walkthrough</div>
+          <div class="blog-desc">Hold 40+ currencies, get local bank details.</div>
+        </div>
+      </a>
+      <a href="blog.html" class="blog-card">
+        <div class="blog-img">🛡️</div>
+        <div class="blog-body">
+          <div class="blog-cat">Business</div>
+          <div class="blog-title">Wise Business vs Traditional Banks — 2026 Comparison</div>
+          <div class="blog-desc">See the real cost difference for EU entrepreneurs.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA — ТЁМНЫЙ БЛОК -->
+<section class="cta-section">
+  <h2>Ready to send money home?</h2>
+  <p>Join 15+ million people who save with Wise.</p>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="cta-btn">💳 Open Wise Account →</a>
+</section>
+
+<!-- FOOTER — ТЁМНЫЙ БЛОК -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="images/storelines-logo.png" alt="Storelines" style="height:36px;margin-bottom:14px">
+      <p class="footer-desc">Send money abroad with real exchange rate and low fees. Free EU business tools included.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Wise</h4>
+      <a href="wise-business.html">Wise Business</a>
+      <a href="wise-send-money.html">Send Money</a>
+      <a href="wise-iban.html">Get EU IBAN</a>
+      <a href="wise-vs-bank.html">Wise vs Banks</a>
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored">Open Account →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Free Tools</h4>
+      <a href="vat-validator.html">VAT Validator</a>
+      <a href="iban-validator.html">IBAN Validator</a>
+      <a href="vat-calculator.html">VAT Calculator</a>
+      <a href="currency-converter.html">Currency Converter</a>
+      <a href="tools.html">All Tools →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Storelines. All rights reserved.</span>
+    <span>Brussels, Belgium</span>
+  </div>
+</footer>
+
+<script>
+const bar=document.createElement('div');
+bar.style.cssText='position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#00B972,#00A060);z-index:9999;transition:width .1s;pointer-events:none';
+document.body.appendChild(bar);
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  bar.style.width=(window.scrollY/h*100)+'%';
+});
+
+function toggleMenu(){
+  const m=document.getElementById('mob-menu');
+  const o=document.getElementById('overlay');
+  const open=m.classList.toggle('open');
+  o.style.display=open?'block':'none';
+}
+</script>
+<script src="mafioso-widget.js" defer></script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EU Time Converter — World Clock for Business Meetings | Storelines Tools</title>
+<meta name="description" content="Free EU time zone converter. Synchronize meetings across Brussels, Berlin, Paris, Warsaw, London and New York. Live world clock for EU business teams.">
+<meta name="keywords" content="eu time converter, time zone converter europe, world clock business, brussels time, berlin time, paris time, warsaw time, meeting time converter, cet cest time zone, europe time zones">
+<link rel="canonical" href="https://storelines.net/time-converter.html">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<meta property="og:title" content="EU Time Zone Converter — Live World Clock for Business">
+<meta property="og:description" content="Convert meeting times across EU cities and world capitals. Live clocks, business hours indicator. Free.">
+<meta property="og:url" content="https://storelines.net/time-converter.html">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F5F5;--white:#FFFFFF;--navy:#0D1B4B;--blue:#1E6FD9;--blue-light:#EBF3FD;--blue-mid:#D0E6FA;--tx:#1A1A2E;--tx2:#4A5568;--tx3:#9AA5B4;--border:#E2E8F0;--font:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--radius:12px;--green:#10b981;--red:#ef4444;--orange:#f59e0b}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(13,27,75,0.06)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo img{height:40px;width:auto}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links>li{position:relative}
+.nav-links a{font-size:14px;font-weight:500;color:var(--tx2);text-decoration:none;padding:7px 14px;border-radius:8px;transition:all .2s;display:flex;align-items:center;gap:5px}
+.nav-links a:hover{color:var(--navy);background:var(--blue-light)}
+.nav-links a.active{color:var(--blue);font-weight:700;background:var(--blue-light)}
+.has-dropdown>a::after{content:'▾';font-size:11px;opacity:0.6}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:0 8px 32px rgba(13,27,75,0.12);padding:8px;min-width:240px;z-index:200}
+.dropdown-menu a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:500;color:var(--tx2);text-decoration:none;transition:all .15s;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--blue-light);color:var(--navy)}
+.drop-section{font-size:10px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px;margin-top:4px}
+.drop-section:first-child{margin-top:0}
+.has-dropdown:hover .dropdown-menu{display:block}
+.header-cta{height:38px;padding:0 20px;background:var(--blue);color:var(--white);font-size:13px;font-weight:700;border-radius:9px;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all .2s;white-space:nowrap}
+.header-cta:hover{background:var(--navy);box-shadow:0 4px 16px rgba(30,111,217,0.3);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
+.mob-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:98}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:99;padding:16px 24px 24px;box-shadow:0 8px 24px rgba(0,0,0,0.1);max-height:80vh;overflow-y:auto}
+.mob-menu.open{display:block}
+.mob-menu nav{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.mob-menu nav a{padding:10px 14px;border-radius:8px;font-size:15px;font-weight:500;color:var(--tx);text-decoration:none}
+.mob-menu nav a:hover{background:var(--blue-light);color:var(--blue)}
+.mob-section{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px}
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:12px 24px}
+.breadcrumb-inner{max-width:1200px;margin:0 auto;font-size:13px}
+.breadcrumb a{color:var(--blue);text-decoration:none}
+.breadcrumb span{color:var(--tx3);margin:0 6px}
+.breadcrumb .current{color:var(--tx);font-weight:500}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1a2d6b 100%);padding:56px 24px 48px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(30,111,217,0.25) 0%,transparent 70%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(30,111,217,0.2);border:1px solid rgba(30,111,217,0.4);color:#93c5fd;padding:5px 14px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{color:white;font-size:clamp(28px,4vw,46px);font-weight:900;line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
+.hero h1 span{color:#60a5fa}
+.hero p{color:rgba(255,255,255,0.7);font-size:17px;max-width:560px;margin:0 auto}
+.main-wrap{max-width:960px;margin:-30px auto 0;padding:0 20px 60px;position:relative;z-index:10}
+.tool-card{background:var(--white);border-radius:20px;box-shadow:0 8px 48px rgba(13,27,75,0.12);padding:40px;margin-bottom:28px}
+.tool-card h2{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:24px}
+
+/* LIVE CLOCK */
+.live-clock{background:linear-gradient(135deg,var(--navy),#1a2d6b);border-radius:16px;padding:24px 32px;margin-bottom:24px;text-align:center}
+.lc-label{color:rgba(255,255,255,0.5);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.lc-time{font-family:var(--mono);font-size:48px;font-weight:600;color:white;letter-spacing:2px;line-height:1}
+.lc-date{color:rgba(255,255,255,0.6);font-size:14px;margin-top:8px}
+
+/* CONVERTER */
+.conv-row{display:grid;grid-template-columns:auto 1fr 1fr;gap:16px;align-items:end;margin-bottom:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-label{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px}
+input[type="time"],select{width:100%;padding:13px 16px;border:2px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:15px;font-weight:600;color:var(--tx);background:var(--white);outline:none;transition:border-color .2s}
+input[type="time"]:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,111,217,0.1)}
+.btn-convert{height:48px;padding:0 28px;background:var(--blue);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap;align-self:flex-end}
+.btn-convert:hover{background:var(--navy);box-shadow:0 4px 16px rgba(30,111,217,0.3)}
+
+/* TIMEZONE GRID */
+.tz-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tz-card{background:var(--bg);border:2px solid var(--border);border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;transition:all .2s}
+.tz-card.source{background:var(--blue-light);border-color:var(--blue-mid)}
+.tz-card.business{border-color:#86efac}
+.tz-card.after{border-color:var(--border);opacity:.7}
+.tz-left{display:flex;align-items:center;gap:12px}
+.tz-flag{font-size:28px}
+.tz-name{font-size:14px;font-weight:700;color:var(--navy)}
+.tz-zone{font-size:11px;color:var(--tx3);font-weight:500;margin-top:1px}
+.tz-right{text-align:right}
+.tz-time{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--navy)}
+.tz-status{font-size:11px;font-weight:700;margin-top:3px;padding:2px 8px;border-radius:100px;display:inline-block}
+.status-open{background:#dcfce7;color:#166534}
+.status-early{background:#fef3c7;color:#b45309}
+.status-closed{background:#fee2e2;color:#b91c1c}
+.status-source{background:var(--blue-light);color:var(--blue)}
+
+/* BEST TIME */
+.best-time-wrap{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:12px;padding:16px 20px;margin-top:16px;display:flex;align-items:center;gap:12px}
+.best-time-wrap .icon{font-size:24px}
+.best-time-wrap p{font-size:14px;color:var(--navy);font-weight:600}
+.best-time-wrap span{color:var(--blue)}
+
+/* WISE */
+.wise-banner{background:linear-gradient(135deg,#163300 0%,#1a4d00 100%);border-radius:16px;padding:28px 32px;display:flex;align-items:center;gap:24px;margin-bottom:28px}
+.wise-icon{width:52px;height:52px;background:#00b950;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.wise-text{flex:1}
+.wise-text h3{color:white;font-size:16px;font-weight:700;margin-bottom:4px}
+.wise-text p{color:rgba(255,255,255,0.7);font-size:13px}
+.wise-text p strong{color:#4ade80}
+.wise-btn{display:inline-flex;align-items:center;gap:8px;background:#00b950;color:white;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap;transition:background .2s;flex-shrink:0}
+.wise-btn:hover{background:#00d45c}
+
+.seo-card{background:var(--white);border-radius:20px;padding:40px;margin-bottom:24px}
+.seo-card h2{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:16px;letter-spacing:-.3px}
+.seo-card h3{font-size:17px;font-weight:700;color:var(--navy);margin:24px 0 10px}
+.seo-card p{color:#475569;font-size:15px;line-height:1.75;margin-bottom:14px}
+.seo-card ul{margin:0 0 14px 20px;color:#475569;font-size:15px;line-height:1.8}
+
+/* TZ TABLE */
+.tz-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:16px}
+.tz-table thead th{background:var(--navy);color:white;padding:12px 16px;text-align:left;font-weight:600;font-size:13px}
+.tz-table thead th:first-child{border-radius:10px 0 0 0}
+.tz-table thead th:last-child{border-radius:0 10px 0 0}
+.tz-table tbody tr{border-bottom:1px solid var(--border);transition:background .15s}
+.tz-table tbody tr:hover{background:#f8fafc}
+.tz-table tbody td{padding:11px 16px;color:var(--tx)}
+
+.faq-list{display:grid;gap:12px;margin-top:16px}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;font-size:15px;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--white);transition:background .2s;user-select:none}
+.faq-q:hover{background:#f8fafc}
+.faq-q::after{content:'▾';font-size:14px;color:var(--blue);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(180deg)}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;font-size:14px;color:#475569;line-height:1.7;background:#fafbfd}
+.faq-item.open .faq-a{max-height:300px;padding:14px 20px 18px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:16px}
+.related-item{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;align-items:center;gap:10px;text-decoration:none;transition:border-color .2s}
+.related-item:hover{border-color:var(--blue)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:40px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-col h4{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.footer-col a{display:block;font-size:13px;color:var(--tx2);text-decoration:none;margin-bottom:8px;transition:color .15s}
+.footer-col a:hover{color:var(--blue)}
+.footer-desc{font-size:13px;color:var(--tx2);line-height:1.7}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--tx3)}
+@media(max-width:768px){
+  .nav-links,.header-cta{display:none}.hamburger{display:flex}
+  .conv-row{grid-template-columns:1fr;gap:12px}
+  .tz-grid{grid-template-columns:1fr}
+  .lc-time{font-size:36px}
+  .wise-banner{flex-direction:column;text-align:center;padding:24px 20px}
+  .tool-card,.seo-card{padding:24px 18px}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+}
+
+/* DROPDOWN FIX */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu { display: block !important; }
+
+</style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Storelines",
+  "url": "https://storelines.net/",
+  "description": ""
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="tools.html">Tools</a><span>›</span>
+    <span class="current">EU Time Converter</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">🕐 Free EU Tool</div>
+  <h1>EU Time <span>Converter</span></h1>
+  <p>Live world clock for EU business teams. Convert meeting times across Brussels, Berlin, Paris, Warsaw, London, New York and more.</p>
+</div>
+
+<div class="main-wrap">
+
+  <div class="tool-card">
+    <h2>🕐 World Clock & Time Converter</h2>
+
+    <!-- LIVE CLOCK -->
+    <div class="live-clock">
+      <div class="lc-label">Your local time</div>
+      <div class="lc-time" id="liveClock">00:00:00</div>
+      <div class="lc-date" id="liveDate">Loading...</div>
+    </div>
+
+    <!-- CONVERTER -->
+    <div class="conv-row">
+      <div class="form-group">
+        <label class="form-label">Meeting Time</label>
+        <input type="time" id="meetTime" value="10:00" onchange="convert()">
+      </div>
+      <div class="form-group">
+        <label class="form-label">From City</label>
+        <select id="fromTz" onchange="convert()">
+          <option value="Europe/Brussels">🇧🇪 Brussels (CET/CEST)</option>
+          <option value="Europe/Berlin">🇩🇪 Berlin (CET/CEST)</option>
+          <option value="Europe/Paris">🇫🇷 Paris (CET/CEST)</option>
+          <option value="Europe/Warsaw">🇵🇱 Warsaw (CET/CEST)</option>
+          <option value="Europe/London">🇬🇧 London (GMT/BST)</option>
+          <option value="Europe/Amsterdam">🇳🇱 Amsterdam (CET)</option>
+          <option value="Europe/Madrid">🇪🇸 Madrid (CET)</option>
+          <option value="Europe/Rome">🇮🇹 Rome (CET)</option>
+          <option value="Europe/Stockholm">🇸🇪 Stockholm (CET)</option>
+          <option value="Europe/Vienna">🇦🇹 Vienna (CET)</option>
+          <option value="Europe/Zurich">🇨🇭 Zurich (CET)</option>
+          <option value="Europe/Helsinki">🇫🇮 Helsinki (EET)</option>
+          <option value="Europe/Bucharest">🇷🇴 Bucharest (EET)</option>
+          <option value="Europe/Athens">🇬🇷 Athens (EET)</option>
+          <option value="Europe/Moscow">🇷🇺 Moscow (MSK)</option>
+          <option value="Asia/Yerevan">🇦🇲 Yerevan (AMT)</option>
+          <option value="America/New_York">🇺🇸 New York (ET)</option>
+          <option value="America/Los_Angeles">🇺🇸 Los Angeles (PT)</option>
+          <option value="America/Chicago">🇺🇸 Chicago (CT)</option>
+          <option value="Asia/Dubai">🇦🇪 Dubai (GST)</option>
+          <option value="Asia/Tokyo">🇯🇵 Tokyo (JST)</option>
+          <option value="Asia/Shanghai">🇨🇳 Shanghai (CST)</option>
+          <option value="Asia/Singapore">🇸🇬 Singapore (SGT)</option>
+          <option value="Australia/Sydney">🇦🇺 Sydney (AEDT)</option>
+        </select>
+      </div>
+      <button class="btn-convert" onclick="convert()">Convert →</button>
+    </div>
+
+    <!-- TZ GRID -->
+    <div class="tz-grid" id="tzGrid"></div>
+
+    <div class="best-time-wrap" id="bestTimeWrap" style="display:none">
+      <span class="icon">💡</span>
+      <p id="bestTimeText">Best overlap window: <span>—</span></p>
+    </div>
+  </div>
+
+  <div class="wise-banner">
+    <div class="wise-icon">🌍</div>
+    <div class="wise-text">
+      <h3>Work Across Time Zones — Pay Across Borders with Wise</h3>
+      <p>Pay international freelancers and remote teams in <strong>70+ currencies at real exchange rates</strong>. No hidden fees.</p>
+    </div>
+    <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored" class="wise-btn">Open Wise →</a>
+  </div>
+
+  <div class="seo-card">
+    <h2>EU Time Zones — Complete Reference</h2>
+    <p>The European Union spans three main time zones. Understanding these is essential for scheduling cross-border meetings, setting contract deadlines, and coordinating distributed teams across the continent.</p>
+
+    <table class="tz-table">
+      <thead><tr><th>Time Zone</th><th>Standard (Winter)</th><th>Summer (DST)</th><th>Countries</th></tr></thead>
+      <tbody>
+        <tr><td>Western European Time</td><td>UTC+0 (WET)</td><td>UTC+1 (WEST)</td><td>Portugal, Ireland, UK (non-EU)</td></tr>
+        <tr><td>Central European Time</td><td>UTC+1 (CET)</td><td>UTC+2 (CEST)</td><td>Belgium, Germany, France, Netherlands, Poland, Spain, Italy, Austria, Sweden, Denmark, Norway, Switzerland</td></tr>
+        <tr><td>Eastern European Time</td><td>UTC+2 (EET)</td><td>UTC+3 (EEST)</td><td>Finland, Greece, Romania, Bulgaria, Estonia, Latvia, Lithuania, Cyprus</td></tr>
+      </tbody>
+    </table>
+
+    <h3>EU Daylight Saving Time</h3>
+    <p>All EU member states observe Daylight Saving Time (DST), shifting clocks forward 1 hour on the last Sunday of March and back on the last Sunday of October. The European Parliament voted to abolish DST in 2019, but implementation has been delayed — as of 2026 the twice-yearly clock change remains in effect across the EU.</p>
+
+    <h3>Best Times for EU Business Meetings</h3>
+    <p>For pan-European meetings covering CET to EET zones, the optimal window is <strong>09:00–16:00 CET</strong>. When including UK (GMT/BST) teams, start no earlier than 10:00 CET. For EU–US East Coast meetings, the overlap window is narrow: <strong>14:00–17:00 CET</strong> (08:00–11:00 ET). EU–US West Coast is extremely challenging — 17:00 CET = 08:00 PT, leaving almost no business-hours overlap.</p>
+
+    <h3>Contract Deadlines and Time Zones</h3>
+    <p>When EU contracts specify deadlines ("by end of day"), the applicable time zone matters legally. Belgian and French law typically defaults to CET for domestic contracts. For international contracts, always specify the time zone explicitly (e.g., "23:59 CET on 31 December 2026"). Cross-border EU contracts often specify Brussels time as the reference.</p>
+  </div>
+
+  <div class="seo-card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is CET and CEST?</div>
+        <div class="faq-a">CET (Central European Time) is UTC+1, used in winter by most EU countries including Belgium, Germany, France, Netherlands, Poland, and others. CEST (Central European Summer Time) is UTC+2, applied during summer when clocks are moved forward. The switch happens on the last Sunday of March (to summer) and last Sunday of October (back to winter).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">When does EU change clocks in 2026?</div>
+        <div class="faq-a">In 2026, EU countries move clocks forward on Sunday, 29 March 2026 at 02:00 local time (to 03:00 — start of CEST). Clocks go back on Sunday, 25 October 2026 at 03:00 local time (to 02:00 — return to CET). These dates apply to all EU member states simultaneously.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What time zone does Belgium use?</div>
+        <div class="faq-a">Belgium uses Central European Time (CET, UTC+1) in winter and Central European Summer Time (CEST, UTC+2) in summer. Brussels, as the de facto capital of the EU, is the reference point for many EU institutional meetings and deadlines. When an EU regulation says "midnight," it typically means midnight Brussels time.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I schedule a meeting between Brussels and New York?</div>
+        <div class="faq-a">Brussels (CET) is UTC+1 in winter and UTC+2 in summer. New York (ET) is UTC-5 in winter and UTC-4 in summer. The time difference is 6 hours in winter and 5–6 hours depending on DST timing. A 15:00 Brussels meeting = 09:00 New York (winter) or 10:00 (summer). The best overlap window is 14:00–17:00 Brussels time.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seo-card">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="currency-converter.html" class="related-item"><span style="font-size:22px">💱</span><div><strong style="color:var(--navy);font-size:14px">Currency Converter</strong><br><small style="color:var(--tx3)">Live ECB rates</small></div></a>
+      <a href="invoice-number.html" class="related-item"><span style="font-size:22px">📋</span><div><strong style="color:var(--navy);font-size:14px">Invoice Number</strong><br><small style="color:var(--tx3)">EU sequential numbering</small></div></a>
+      <a href="vat-validator.html" class="related-item"><span style="font-size:22px">🔍</span><div><strong style="color:var(--navy);font-size:14px">VAT Validator</strong><br><small style="color:var(--tx3)">Check EU VAT numbers</small></div></a>
+      <a href="tools.html" class="related-item"><span style="font-size:22px">🛠️</span><div><strong style="color:var(--navy);font-size:14px">All 18 Tools</strong><br><small style="color:var(--tx3)">Full EU business toolkit</small></div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="images/storelines-logo.png" alt="Storelines Tools" style="height:36px;margin-bottom:12px">
+      <p class="footer-desc">Professional business tools for EU entrepreneurs. Free, no registration. Official Wise Business partner.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <a href="vat-validator.html">VAT Validator</a>
+      <a href="iban-validator.html">IBAN Validator</a>
+      <a href="currency-converter.html">Currency Converter</a>
+      <a href="time-converter.html">Time Converter</a>
+      <a href="tools.html">All 18 Tools →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Wise Partner</h4>
+      <a href="wise-business.html">Wise Business</a>
+      <a href="wise-send-money.html">Send Money</a>
+      <a href="wise-iban.html">Get EU IBAN</a>
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored">Open Account →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Storelines Tools. All rights reserved.</span>
+    <span>Brussels, Belgium · EU</span>
+  </div>
+</footer>
+
+<script>
+const ZONES = [
+  {tz:'Europe/Brussels', flag:'🇧🇪', name:'Brussels', zone:'CET/CEST'},
+  {tz:'Europe/Berlin',   flag:'🇩🇪', name:'Berlin',   zone:'CET/CEST'},
+  {tz:'Europe/Paris',    flag:'🇫🇷', name:'Paris',    zone:'CET/CEST'},
+  {tz:'Europe/Warsaw',   flag:'🇵🇱', name:'Warsaw',   zone:'CET/CEST'},
+  {tz:'Europe/London',   flag:'🇬🇧', name:'London',   zone:'GMT/BST'},
+  {tz:'Europe/Moscow',   flag:'🇷🇺', name:'Moscow',   zone:'MSK'},
+  {tz:'Asia/Yerevan',    flag:'🇦🇲', name:'Yerevan',  zone:'AMT'},
+  {tz:'America/New_York',flag:'🇺🇸', name:'New York', zone:'ET'},
+];
+
+// Live clock
+function updateClock(){
+  const now = new Date();
+  const t = now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  const d = now.toLocaleDateString('en-GB',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  document.getElementById('liveClock').textContent = t;
+  document.getElementById('liveDate').textContent = d;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+function isBusinessHour(date, tz){
+  const h = parseInt(new Intl.DateTimeFormat('en',{hour:'numeric',hour12:false,timeZone:tz}).format(date));
+  return h >= 9 && h < 18;
+}
+
+function convert(){
+  const [h,m] = document.getElementById('meetTime').value.split(':').map(Number);
+  const fromTz = document.getElementById('fromTz').value;
+
+  const now = new Date();
+  const ref = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m, 0);
+
+  const grid = document.getElementById('tzGrid');
+  grid.innerHTML = ZONES.map(z => {
+    const timeStr = new Intl.DateTimeFormat('en-GB',{
+      hour:'2-digit', minute:'2-digit', timeZone: z.tz, hour12: false
+    }).format(ref);
+
+    const isSource = z.tz === fromTz;
+    const business = isBusinessHour(ref, z.tz);
+    const hourLocal = parseInt(new Intl.DateTimeFormat('en',{hour:'numeric',hour12:false,timeZone:z.tz}).format(ref));
+
+    let statusClass, statusText;
+    if(isSource){ statusClass='status-source'; statusText='Source'; }
+    else if(hourLocal < 7 || hourLocal >= 22){ statusClass='status-closed'; statusText='Night 🌙'; }
+    else if(business){ statusClass='status-open'; statusText='Business hours ✓'; }
+    else{ statusClass='status-early'; statusText='Outside hours'; }
+
+    let cardClass = 'tz-card';
+    if(isSource) cardClass += ' source';
+    else if(business && !isSource) cardClass += ' business';
+
+    return `
+      <div class="${cardClass}">
+        <div class="tz-left">
+          <span class="tz-flag">${z.flag}</span>
+          <div>
+            <div class="tz-name">${z.name}</div>
+            <div class="tz-zone">${z.zone}</div>
+          </div>
+        </div>
+        <div class="tz-right">
+          <div class="tz-time">${timeStr}</div>
+          <span class="tz-status ${statusClass}">${statusText}</span>
+        </div>
+      </div>`;
+  }).join('');
+
+  // Best time suggestion
+  const businessCities = ZONES.filter(z => z.tz !== fromTz && isBusinessHour(ref, z.tz));
+  const wrap = document.getElementById('bestTimeWrap');
+  const txt = document.getElementById('bestTimeText');
+  if(businessCities.length >= 3){
+    wrap.style.display = 'flex';
+    txt.innerHTML = `✅ Good time — business hours in <span style="color:var(--blue);font-weight:700">${businessCities.length} cities</span>: ${businessCities.map(c=>c.name).join(', ')}`;
+  } else if(businessCities.length > 0){
+    wrap.style.display = 'flex';
+    txt.innerHTML = `⚠️ Partial overlap — business hours only in <span style="color:var(--blue);font-weight:700">${businessCities.map(c=>c.name).join(', ')}</span>`;
+  } else {
+    wrap.style.display = 'flex';
+    txt.innerHTML = `❌ Poor time — outside business hours in all other cities. Try <span style="color:var(--blue);font-weight:700">09:00–16:00 CET</span> for best EU overlap.`;
+  }
+}
+
+
+convert();
+</script>
+   <script src="mafioso-widget.js" defer></script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

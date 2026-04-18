@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Storelines</title>
+<meta name="description" content="Terms of Service for Storelines Tools. Rules and conditions for using our 18 EU business tools.">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<link rel="canonical" href="https://storelines.net/terms-of-service.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://storelines.net/terms-of-service.html">
+<meta property="og:title" content="Terms of Service — Storelines">
+<meta property="og:description" content="Terms of Service for Storelines Tools. Rules and conditions for using our 18 EU business tools.">
+<meta property="og:image" content="https://storelines.net/images/hero-wise.jpg">
+<meta property="og:site_name" content="Storelines">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Terms of Service — Storelines">
+<meta name="twitter:description" content="Terms of Service for Storelines Tools. Rules and conditions for using our 18 EU business tools.">
+<meta name="twitter:image" content="https://storelines.net/images/hero-wise.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* === WISE LIGHT THEME === */
+:root {
+  --bg: #F0F5F2;
+  --surface: #FFFFFF;
+  --teal-dark: #16322E;
+  --teal: #00B972;
+  --teal-light: #2A9D8F;
+  --wise-green: #00B972;
+  --wise-green-hover: #00A060;
+  --tx: #1A2E3A;
+  --tx2: #2E4C5E;
+  --tx3: #5A7A8A;
+  --border: #C0D9D0;
+  --border-light: #A8C9BC;
+  --shadow: 0 8px 24px rgba(22,50,46,0.06);
+  --shadow-h: 0 16px 40px rgba(22,50,46,0.12);
+  --font: 'Inter', sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--tx);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+}
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+.nav-links {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links > li {
+  position: relative;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-links a:hover {
+  color: var(--teal);
+  background: rgba(0,185,114,0.08);
+}
+.nav-links a.active {
+  color: var(--teal);
+  font-weight: 700;
+  background: rgba(0,185,114,0.12);
+}
+
+/* DROPDOWN */
+.has-dropdown > a::after {
+  content: '▾';
+  font-size: 11px;
+  opacity: 0.6;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-h);
+  padding: 8px;
+  min-width: 280px;
+  z-index: 200;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.dropdown-menu .drop-section {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+  margin-top: 4px;
+}
+.dropdown-menu .drop-section:first-child {
+  margin-top: 0;
+}
+.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-cta {
+  height: 38px;
+  padding: 0 20px;
+  background: var(--teal);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 9px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .2s;
+  white-space: nowrap;
+  border: none;
+}
+.header-cta:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 4px 12px rgba(0,185,114,0.25);
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--teal-dark);
+  border-radius: 2px;
+  transition: all .3s;
+}
+.mob-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 98;
+}
+.mob-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  padding: 16px 24px 24px;
+  box-shadow: var(--shadow);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.mob-menu.open {
+  display: block;
+}
+.mob-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.mob-menu nav a {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--tx);
+  text-decoration: none;
+}
+.mob-menu nav a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.mob-section {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+}
+
+/* HERO */
+.hero {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 60px 24px;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0,185,114,0.1);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  color: var(--teal-dark);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.hero-date {
+  font-size: 14px;
+  color: var(--tx3);
+}
+
+/* CONTENT */
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+.highlight-box {
+  background: var(--teal-dark);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+  font-size: 15px;
+  color: white;
+  line-height: 1.7;
+}
+.highlight-box strong {
+  color: var(--teal-light);
+}
+
+.terms-section {
+  margin-bottom: 48px;
+}
+.terms-section h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--teal-dark);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.terms-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--tx);
+  margin: 24px 0 10px;
+}
+.terms-section p {
+  font-size: 15px;
+  color: var(--tx2);
+  margin-bottom: 14px;
+  line-height: 1.75;
+}
+.terms-section ul, .terms-section ol {
+  margin: 0 0 16px 20px;
+}
+.terms-section li {
+  font-size: 15px;
+  color: var(--tx2);
+  margin-bottom: 6px;
+  line-height: 1.65;
+}
+.terms-section a {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 600;
+}
+.terms-section a:hover {
+  text-decoration: underline;
+}
+code {
+  font-size: 13px;
+  background: rgba(0,185,114,0.08);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: var(--teal-dark);
+}
+
+/* FOOTER */
+footer {
+  background: var(--teal-dark);
+  padding: 48px 24px 32px;
+  color: white;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-brand {
+  font-size: 22px;
+  font-weight: 700;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color .15s;
+}
+.footer-links a:hover {
+  color: var(--teal);
+}
+.footer-copy {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  .nav-links, .header-right .header-cta { display: none; }
+  .hamburger { display: flex; }
+  .hero { padding: 48px 20px 40px; }
+  .wrap { padding: 40px 20px 60px; }
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+
+/* DROPDOWN FIX */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu { display: block !important; }
+
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Service",
+  "url": "https://storelines.net/terms-of-service.html",
+  "description": "Terms of Service for Storelines Tools. Rules and conditions for using our 18 EU business tools."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Legal</div>
+    <h1>Terms of Service</h1>
+    <p class="hero-date">Last updated: March 23, 2026</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <div class="highlight-box">
+    <strong>Short version:</strong> Storelines Tools is free to use, as-is, for legitimate business purposes. All tools run in your browser. Results are informational only — always verify critical data with official sources. We are not liable for decisions made based on tool outputs.
+  </div>
+
+  <div class="terms-section">
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using Storelines Tools at storelines.net ("the Site"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the Site.</p>
+    <p>We reserve the right to update these Terms at any time. Continued use of the Site after changes constitutes acceptance of the updated Terms.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>2. Description of Service</h2>
+    <p>Storelines Tools provides 18 free, browser-based business tools for EU entrepreneurs, including VAT validation, IBAN verification, currency conversion, GDPR compliance checklists, invoice generation, and more.</p>
+    <p>All tools are provided free of charge, without registration. The Site is operated from Brussels, Belgium, and is designed for use within the European Union.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>3. Informational Purposes Only</h2>
+    <p>All tool outputs — VAT format checks, IBAN validations, VAT calculations, salary estimates, customs duties, and others — are provided for <strong>informational purposes only</strong>. They do not constitute legal, financial, or tax advice.</p>
+    <p>You should always verify results with official sources:</p>
+    <ul>
+      <li>VAT numbers: <a href="https://ec.europa.eu/taxation_customs/vies/" target="_blank" rel="noopener">EU VIES system</a></li>
+      <li>IBAN: your bank or official national banking authority</li>
+      <li>Tax rates: your country's official tax authority</li>
+      <li>Customs duties: EU Customs Tariff database</li>
+    </ul>
+    <p>Storelines Tools is not responsible for any financial, legal, or business decisions made based on information provided by the tools.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>4. Permitted Use</h2>
+    <p>You may use Storelines Tools for lawful personal and business purposes. You agree not to:</p>
+    <ul>
+      <li>Use the Site for any illegal or unauthorised purpose</li>
+      <li>Attempt to scrape, clone, or systematically copy Site content</li>
+      <li>Use automated tools to make excessive requests to the Site</li>
+      <li>Interfere with or disrupt the integrity or performance of the Site</li>
+      <li>Misrepresent tool outputs as official government or regulatory information</li>
+    </ul>
+  </div>
+
+  <div class="terms-section">
+    <h2>5. Intellectual Property</h2>
+    <p>All content on Storelines Tools — including design, code, text, tool logic, and branding — is owned by Storelines Tools or its licensors and is protected by copyright and intellectual property laws.</p>
+    <p>You may not reproduce, distribute, or create derivative works from Site content without written permission, except for personal, non-commercial use.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>6. Affiliate Disclosure — Wise Business</h2>
+    <p>Storelines Tools maintains an affiliate partnership with Wise Business. Links to Wise are marked with <code>rel="noopener sponsored"</code>. When you open a Wise account through our links, we may earn a commission at no extra cost to you.</p>
+    <p>Our affiliate relationship does not affect our editorial independence. We recommend Wise Business because it genuinely benefits EU entrepreneurs — not because of the commission.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>7. Third-Party Links</h2>
+    <p>The Site may contain links to third-party websites including official EU registries, banking portals, and partner services. These links are provided for convenience only. We have no control over the content, availability, or practices of third-party sites and accept no responsibility for them.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>8. Disclaimer of Warranties</h2>
+    <p>Storelines Tools is provided on an <strong>"as is" and "as available"</strong> basis without warranties of any kind, express or implied. We do not warrant that:</p>
+    <ul>
+      <li>The Site will be uninterrupted or error-free</li>
+      <li>Tool results are accurate, complete, or current</li>
+      <li>The Site is free from viruses or other harmful components</li>
+    </ul>
+    <p>Use of the Site is entirely at your own risk.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>9. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by Belgian and EU law, Storelines Tools, its owners, employees, and affiliates shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Site or reliance on tool outputs.</p>
+    <p>This includes but is not limited to: lost profits, incorrect tax filings, failed bank transfers, or regulatory penalties resulting from tool use.</p>
+    <p>Our total liability to you for any claim shall not exceed €100.00 EUR.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>10. Governing Law</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of <strong>Belgium</strong> and the applicable regulations of the European Union. Any disputes shall be subject to the exclusive jurisdiction of the courts of Brussels, Belgium.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>11. Changes to the Site</h2>
+    <p>We reserve the right to modify, suspend, or discontinue any part of Storelines Tools at any time without notice. We are not liable to you or any third party for any modification, suspension, or discontinuation of the Service.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>12. Contact</h2>
+    <p>For questions about these Terms of Service:</p>
+    <p>📧 <a href="mailto:hello@storelines.net">hello@storelines.net</a></p>
+    <p>🌐 <a href="contact.html">storelines.net/contact</a></p>
+    <p>📍 Brussels, Belgium — EU</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">STORELINES</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tools.html">Tools</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 Storelines Tools. All rights reserved. · Brussels, Belgium</div>
+</footer>
+
+<script>
+</script>
+<script src="mafioso-widget.js" defer></script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice Builder — EU Legal Wording for Reverse Charge & Export | Storelines Tools</title>
+<meta name="description" content="Free EU invoice builder. Generate correct legal wording for Reverse Charge, export invoices, OSS distance selling and domestic VAT invoices. Compliant with EU VAT Directive 2026.">
+<meta name="keywords" content="invoice builder eu, reverse charge invoice, eu invoice wording, vat invoice template, reverse charge vat text, export invoice eu, oss invoice, invoice legal text eu, facture reverse charge, rechnung reverse charge">
+<link rel="canonical" href="https://storelines.net/invoice-builder.html">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<meta property="og:title" content="EU Invoice Builder — Legal Wording for All Invoice Types">
+<meta property="og:description" content="Generate correct legal text for EU invoices: Reverse Charge, export, OSS, domestic VAT. Copy-ready in 5 languages.">
+<meta property="og:url" content="https://storelines.net/invoice-builder.html">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F5F5;--white:#FFFFFF;--navy:#0D1B4B;--blue:#1E6FD9;--blue-light:#EBF3FD;--blue-mid:#D0E6FA;--tx:#1A1A2E;--tx2:#4A5568;--tx3:#9AA5B4;--border:#E2E8F0;--font:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--radius:12px;--green:#10b981}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(13,27,75,0.06)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo img{height:40px;width:auto}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links>li{position:relative}
+.nav-links a{font-size:14px;font-weight:500;color:var(--tx2);text-decoration:none;padding:7px 14px;border-radius:8px;transition:all .2s;display:flex;align-items:center;gap:5px}
+.nav-links a:hover{color:var(--navy);background:var(--blue-light)}
+.nav-links a.active{color:var(--blue);font-weight:700;background:var(--blue-light)}
+.has-dropdown>a::after{content:'▾';font-size:11px;opacity:0.6}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:0 8px 32px rgba(13,27,75,0.12);padding:8px;min-width:240px;z-index:200}
+.dropdown-menu a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:500;color:var(--tx2);text-decoration:none;transition:all .15s;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--blue-light);color:var(--navy)}
+.drop-section{font-size:10px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px;margin-top:4px}
+.drop-section:first-child{margin-top:0}
+.has-dropdown:hover .dropdown-menu{display:block}
+.header-cta{height:38px;padding:0 20px;background:var(--blue);color:var(--white);font-size:13px;font-weight:700;border-radius:9px;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all .2s;white-space:nowrap}
+.header-cta:hover{background:var(--navy);box-shadow:0 4px 16px rgba(30,111,217,0.3);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
+.mob-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:98}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:99;padding:16px 24px 24px;box-shadow:0 8px 24px rgba(0,0,0,0.1);max-height:80vh;overflow-y:auto}
+.mob-menu.open{display:block}
+.mob-menu nav{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.mob-menu nav a{padding:10px 14px;border-radius:8px;font-size:15px;font-weight:500;color:var(--tx);text-decoration:none}
+.mob-menu nav a:hover{background:var(--blue-light);color:var(--blue)}
+.mob-section{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px}
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:12px 24px}
+.breadcrumb-inner{max-width:1200px;margin:0 auto;font-size:13px}
+.breadcrumb a{color:var(--blue);text-decoration:none}
+.breadcrumb span{color:var(--tx3);margin:0 6px}
+.breadcrumb .current{color:var(--tx);font-weight:500}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1a2d6b 100%);padding:56px 24px 48px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(30,111,217,0.25) 0%,transparent 70%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(30,111,217,0.2);border:1px solid rgba(30,111,217,0.4);color:#93c5fd;padding:5px 14px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{color:white;font-size:clamp(28px,4vw,46px);font-weight:900;line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
+.hero h1 span{color:#60a5fa}
+.hero p{color:rgba(255,255,255,0.7);font-size:17px;max-width:560px;margin:0 auto}
+.main-wrap{max-width:960px;margin:-30px auto 0;padding:0 20px 60px;position:relative;z-index:10}
+.tool-card{background:var(--white);border-radius:20px;box-shadow:0 8px 48px rgba(13,27,75,0.12);padding:40px;margin-bottom:28px}
+.tool-card h2{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:24px}
+
+/* TYPE GRID */
+.type-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:28px}
+.type-card{background:var(--bg);border:2px solid var(--border);border-radius:14px;padding:18px 20px;cursor:pointer;transition:all .2s;display:flex;align-items:flex-start;gap:14px}
+.type-card:hover{border-color:var(--blue-mid);background:var(--white)}
+.type-card.active{border-color:var(--blue);background:var(--blue-light)}
+.type-icon{font-size:28px;flex-shrink:0}
+.type-name{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.type-desc{font-size:12px;color:var(--tx2);line-height:1.4}
+.type-card.active .type-name{color:var(--blue)}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-label{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px}
+input[type="text"],select{width:100%;padding:12px 16px;border:2px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:500;color:var(--tx);background:var(--white);outline:none;transition:border-color .2s}
+input[type="text"]:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,111,217,0.1)}
+
+.btn-build{width:100%;padding:16px;background:var(--blue);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:16px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-build:hover{background:var(--navy);box-shadow:0 4px 16px rgba(30,111,217,0.3)}
+
+/* OUTPUT */
+.output-wrap{display:none;margin-top:24px;animation:slideIn .3s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.output-wrap.show{display:block}
+
+/* LANG TABS */
+.lang-tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.lang-tab{padding:6px 14px;background:var(--bg);border:2px solid var(--border);border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:all .15s;color:var(--tx2)}
+.lang-tab:hover{border-color:var(--blue-mid);color:var(--navy)}
+.lang-tab.active{background:var(--blue);color:white;border-color:var(--blue)}
+
+.invoice-box{background:#fafbfd;border:2px solid var(--border);border-radius:14px;padding:24px 28px;font-size:14px;color:var(--tx);line-height:1.8;position:relative}
+.invoice-box .inv-label{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
+.inv-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border)}
+.inv-row:last-of-type{border-bottom:none}
+.inv-row .label{color:var(--tx2);font-size:13px}
+.inv-row .value{font-weight:700;color:var(--navy);font-size:13px;text-align:right}
+.legal-text{background:var(--white);border:2px solid var(--blue-mid);border-radius:10px;padding:16px 20px;margin-top:16px;font-size:14px;color:var(--navy);line-height:1.7;font-style:italic}
+.legal-label{font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;font-style:normal}
+.article-ref{font-size:12px;color:var(--tx3);margin-top:8px;font-style:normal}
+
+.copy-actions{display:flex;gap:8px;margin-top:16px}
+.btn-copy{padding:11px 20px;background:var(--blue);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
+.btn-copy:hover{background:var(--navy)}
+.btn-copy-all{padding:11px 20px;background:var(--bg);border:2px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;color:var(--tx2)}
+.btn-copy-all:hover{border-color:var(--blue);color:var(--blue)}
+
+/* WISE */
+.wise-banner{background:linear-gradient(135deg,#163300 0%,#1a4d00 100%);border-radius:16px;padding:28px 32px;display:flex;align-items:center;gap:24px;margin-bottom:28px}
+.wise-icon{width:52px;height:52px;background:#00b950;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.wise-text{flex:1}
+.wise-text h3{color:white;font-size:16px;font-weight:700;margin-bottom:4px}
+.wise-text p{color:rgba(255,255,255,0.7);font-size:13px}
+.wise-text p strong{color:#4ade80}
+.wise-btn{display:inline-flex;align-items:center;gap:8px;background:#00b950;color:white;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap;transition:background .2s;flex-shrink:0}
+.wise-btn:hover{background:#00d45c}
+
+.seo-card{background:var(--white);border-radius:20px;padding:40px;margin-bottom:24px}
+.seo-card h2{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:16px;letter-spacing:-.3px}
+.seo-card h3{font-size:17px;font-weight:700;color:var(--navy);margin:24px 0 10px}
+.seo-card p{color:#475569;font-size:15px;line-height:1.75;margin-bottom:14px}
+.seo-card ul{margin:0 0 14px 20px;color:#475569;font-size:15px;line-height:1.8}
+.faq-list{display:grid;gap:12px;margin-top:16px}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;font-size:15px;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--white);transition:background .2s;user-select:none}
+.faq-q:hover{background:#f8fafc}
+.faq-q::after{content:'▾';font-size:14px;color:var(--blue);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(180deg)}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;font-size:14px;color:#475569;line-height:1.7;background:#fafbfd}
+.faq-item.open .faq-a{max-height:400px;padding:14px 20px 18px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:16px}
+.related-item{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;align-items:center;gap:10px;text-decoration:none;transition:border-color .2s}
+.related-item:hover{border-color:var(--blue)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:40px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-col h4{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.footer-col a{display:block;font-size:13px;color:var(--tx2);text-decoration:none;margin-bottom:8px;transition:color .15s}
+.footer-col a:hover{color:var(--blue)}
+.footer-desc{font-size:13px;color:var(--tx2);line-height:1.7}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--tx3)}
+@media(max-width:768px){
+  .nav-links,.header-cta{display:none}.hamburger{display:flex}
+  .type-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .wise-banner{flex-direction:column;text-align:center;padding:24px 20px}
+  .tool-card,.seo-card{padding:24px 18px}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+}
+
+/* DROPDOWN FIX */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu { display: block !important; }
+
+</style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Storelines",
+  "url": "https://storelines.net/",
+  "description": ""
+}
+</script>
+</head>
+<body>
+
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="tools.html">Tools</a><span>›</span>
+    <span class="current">Invoice Builder</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">📄 Free EU Tool</div>
+  <h1>EU Invoice <span>Builder</span></h1>
+  <p>Generate correct legal wording for any EU invoice type. Reverse Charge, export, OSS, domestic VAT. Ready in 5 languages.</p>
+</div>
+
+<div class="main-wrap">
+
+  <div class="tool-card">
+    <h2>📄 Build Your Invoice Text</h2>
+
+    <!-- TYPE SELECTION -->
+    <div class="type-grid" id="typeGrid">
+      <div class="type-card active" onclick="selectType('rc',this)">
+        <div class="type-icon">🔄</div>
+        <div><div class="type-name">Reverse Charge (B2B EU)</div><div class="type-desc">Selling to VAT-registered businesses in other EU countries. Buyer accounts for VAT.</div></div>
+      </div>
+      <div class="type-card" onclick="selectType('export',this)">
+        <div class="type-icon">✈️</div>
+        <div><div class="type-name">Export (outside EU)</div><div class="type-desc">Goods or services exported to non-EU countries. VAT exempt under Art. 146.</div></div>
+      </div>
+      <div class="type-card" onclick="selectType('domestic',this)">
+        <div class="type-icon">🏠</div>
+        <div><div class="type-name">Domestic (VAT included)</div><div class="type-desc">Standard invoice within your country with VAT charged at applicable rate.</div></div>
+      </div>
+      <div class="type-card" onclick="selectType('oss',this)">
+        <div class="type-icon">🗺️</div>
+        <div><div class="type-name">OSS Distance Sale</div><div class="type-desc">B2C sales to EU consumers. VAT at buyer's country rate via OSS scheme.</div></div>
+      </div>
+      <div class="type-card" onclick="selectType('credit',this)">
+        <div class="type-icon">↩️</div>
+        <div><div class="type-name">Credit Note</div><div class="type-desc">Correction to a previously issued invoice. References original invoice.</div></div>
+      </div>
+      <div class="type-card" onclick="selectType('proforma',this)">
+        <div class="type-icon">📋</div>
+        <div><div class="type-name">Pro Forma Invoice</div><div class="type-desc">Preliminary invoice for customs or payment purposes. Not a tax document.</div></div>
+      </div>
+    </div>
+
+    <!-- FORM FIELDS -->
+    <div class="form-grid" id="formFields"></div>
+
+    <button class="btn-build" onclick="buildInvoice()">📄 Generate Invoice Text</button>
+
+    <!-- OUTPUT -->
+    <div class="output-wrap" id="outputWrap">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <p style="font-size:13px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px">Language</p>
+      </div>
+      <div class="lang-tabs" id="langTabs">
+        <div class="lang-tab active" onclick="setLang('en',this)">🇬🇧 English</div>
+        <div class="lang-tab" onclick="setLang('fr',this)">🇫🇷 Français</div>
+        <div class="lang-tab" onclick="setLang('de',this)">🇩🇪 Deutsch</div>
+        <div class="lang-tab" onclick="setLang('nl',this)">🇳🇱 Nederlands</div>
+        <div class="lang-tab" onclick="setLang('pl',this)">🇵🇱 Polski</div>
+      </div>
+
+      <div class="invoice-box" id="invoiceBox"></div>
+
+      <div class="copy-actions">
+        <button class="btn-copy" onclick="copyLegal()">📋 Copy Legal Text</button>
+        <button class="btn-copy-all" onclick="copyAll()">📄 Copy Full Invoice Block</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wise-banner">
+    <div class="wise-icon">📄</div>
+    <div class="wise-text">
+      <h3>Get Paid on Your Invoices Faster — Use Wise Business</h3>
+      <p>Add your <strong>Wise IBAN and SWIFT</strong> to invoices. Clients pay in their local currency — you receive EUR at real exchange rates.</p>
+    </div>
+    <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored" class="wise-btn">Get Your IBAN →</a>
+  </div>
+
+  <div class="seo-card">
+    <h2>EU Invoice Legal Requirements — Complete Guide 2026</h2>
+
+    <p>The <strong>EU VAT Directive (2006/112/EC)</strong>, specifically Article 226, defines the mandatory elements that every VAT invoice must contain. Missing any of these elements can make an invoice non-compliant, potentially preventing your customer from deducting input VAT and exposing you to tax authority challenges.</p>
+
+    <h3>Mandatory Elements on Every EU VAT Invoice</h3>
+    <ul>
+      <li>Sequential invoice number (unique, within one or more series)</li>
+      <li>Date of issue</li>
+      <li>Date of supply (if different from issue date)</li>
+      <li>Supplier's full name, address, and VAT number</li>
+      <li>Customer's full name and address</li>
+      <li>Customer's VAT number (for B2B reverse charge invoices)</li>
+      <li>Description of goods or services supplied</li>
+      <li>Quantity and unit price (excl. VAT)</li>
+      <li>VAT rate applied and total VAT amount, or reason for exemption</li>
+      <li>Total amount payable (excl. and incl. VAT)</li>
+    </ul>
+
+    <h3>Reverse Charge Invoice — Required Wording</h3>
+    <p>When selling B2B to a VAT-registered business in another EU country, you apply the reverse charge mechanism: the seller issues an invoice with <strong>zero VAT</strong> and includes a specific legal statement referencing Article 194 or 196 of the EU VAT Directive. The exact wording varies slightly by country but must clearly indicate that VAT liability is transferred to the buyer.</p>
+
+    <h3>Export Invoice — Article 146 Exemption</h3>
+    <p>Exports of goods to non-EU countries are VAT exempt under Article 146 of the EU VAT Directive. The invoice must state this exemption explicitly. You must also retain proof of export (customs export declaration, transport documents) for at least 7 years to justify the zero VAT rate during a tax audit.</p>
+
+    <h3>Credit Note Requirements</h3>
+    <p>A credit note (also called a corrective invoice) must reference the original invoice number and date it is correcting. It must contain the same mandatory elements as a standard invoice. Credit notes reduce the VAT liability and must be processed in the same VAT period as issued, or in the period when received by the buyer.</p>
+  </div>
+
+  <div class="seo-card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the correct wording for a reverse charge invoice?</div>
+        <div class="faq-a">The standard EU wording is: "VAT reverse charged. The VAT liability is transferred to the recipient of the supply (Article 194/196 of Council Directive 2006/112/EC)." In some countries, additional national references are required. Belgium requires "Autoliquidation — BTW verlegd" in Dutch or "TVA en autoliquidation" in French. Germany requires "Steuerschuldnerschaft des Leistungsempfängers." Our tool generates the correct version for each language.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I need the customer's VAT number on a reverse charge invoice?</div>
+        <div class="faq-a">Yes, absolutely. The customer's valid VAT number is a mandatory element on reverse charge invoices. You must verify the VAT number before issuing the invoice — use our VAT Validator tool. If the customer's VAT number is invalid, you cannot apply reverse charge and must charge VAT at your country's rate. Keep a record of validation for audit purposes.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is a pro forma invoice and when should I use it?</div>
+        <div class="faq-a">A pro forma invoice is a preliminary document that looks like an invoice but is not a tax document. It is commonly used for: customs clearance declarations (required by customs authorities to assess duties before final invoice is available), price quotations that are binding, and advance payment requests. Pro forma invoices must be clearly marked "PRO FORMA INVOICE" and should not be recorded in your VAT accounting.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long must I keep EU invoices?</div>
+        <div class="faq-a">EU VAT law requires invoices to be kept for a minimum of 5 years (in some countries up to 10 years). Belgium requires 7 years. Germany requires 10 years. France requires 10 years for commercial invoices. Invoices must be stored in a way that guarantees authenticity, integrity, and legibility throughout the retention period. Electronic storage is fully permitted if these conditions are met.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seo-card">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="invoice-number.html" class="related-item"><span style="font-size:22px">📋</span><div><strong style="color:var(--navy);font-size:14px">Invoice Number</strong><br><small style="color:var(--tx3)">Sequential EU numbering</small></div></a>
+      <a href="vat-validator.html" class="related-item"><span style="font-size:22px">🔍</span><div><strong style="color:var(--navy);font-size:14px">VAT Validator</strong><br><small style="color:var(--tx3)">Verify customer VAT</small></div></a>
+      <a href="vat-calculator.html" class="related-item"><span style="font-size:22px">🧮</span><div><strong style="color:var(--navy);font-size:14px">VAT Calculator</strong><br><small style="color:var(--tx3)">Calculate VAT amounts</small></div></a>
+      <a href="oss-ioss-navigator.html" class="related-item"><span style="font-size:22px">🗺️</span><div><strong style="color:var(--navy);font-size:14px">OSS/IOSS Navigator</strong><br><small style="color:var(--tx3)">EU VAT distance selling</small></div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="images/storelines-logo.png" alt="Storelines Tools" style="height:36px;margin-bottom:12px">
+      <p class="footer-desc">Professional business tools for EU entrepreneurs. Free, no registration. Official Wise Business partner.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <a href="invoice-builder.html">Invoice Builder</a>
+      <a href="invoice-number.html">Invoice Number</a>
+      <a href="vat-validator.html">VAT Validator</a>
+      <a href="vat-calculator.html">VAT Calculator</a>
+      <a href="tools.html">All 18 Tools →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Wise Partner</h4>
+      <a href="wise-business.html">Wise Business</a>
+      <a href="wise-iban.html">Get EU IBAN</a>
+      <a href="wise-send-money.html">Send Money</a>
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored">Open Account →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Storelines Tools. All rights reserved.</span>
+    <span>Brussels, Belgium · EU</span>
+  </div>
+</footer>
+
+<script>
+let currentType = 'rc';
+let currentLang = 'en';
+let builtData = null;
+
+const FORM_FIELDS = {
+  rc:       ['supplier_name','supplier_vat','customer_name','customer_vat','description','amount','currency'],
+  export:   ['supplier_name','supplier_vat','customer_name','customer_country','description','amount','currency'],
+  domestic: ['supplier_name','supplier_vat','customer_name','description','amount','vat_rate','currency'],
+  oss:      ['supplier_name','supplier_vat','customer_name','customer_country','description','amount','vat_rate','currency'],
+  credit:   ['supplier_name','supplier_vat','customer_name','original_inv','original_date','reason','amount','currency'],
+  proforma: ['supplier_name','supplier_vat','customer_name','description','amount','currency']
+};
+
+const FIELD_DEFS = {
+  supplier_name:   {label:'Your Company Name', placeholder:'Storelines Tools BV'},
+  supplier_vat:    {label:'Your VAT Number', placeholder:'BE0897290877'},
+  customer_name:   {label:'Customer Name', placeholder:'Acme GmbH'},
+  customer_vat:    {label:'Customer VAT Number', placeholder:'DE111111125'},
+  customer_country:{label:'Customer Country', placeholder:'United States / UK / China'},
+  description:     {label:'Service / Product Description', placeholder:'Software development services — March 2026'},
+  amount:          {label:'Amount (excl. VAT)', placeholder:'5000.00'},
+  currency:        {label:'Currency', type:'select', options:['EUR','USD','GBP','CHF','PLN','SEK','DKK']},
+  vat_rate:        {label:'VAT Rate (%)', type:'select', options:['21','19','20','22','23','25','17','9','6','7']},
+  original_inv:    {label:'Original Invoice Number', placeholder:'INV-2026-001'},
+  original_date:   {label:'Original Invoice Date', placeholder:'01/03/2026'},
+  reason:          {label:'Reason for Credit Note', placeholder:'Returned goods / Price adjustment'},
+};
+
+const LEGAL_TEXTS = {
+  rc: {
+    en: {text: 'VAT reverse charged. The VAT liability is transferred to the recipient of the supply (Article 194 of Council Directive 2006/112/EC on the common system of value added tax).', note: 'Art. 194 EU VAT Directive 2006/112/EC'},
+    fr: {text: 'TVA en autoliquidation. La taxe sur la valeur ajoutée est transférée au destinataire de la prestation (Article 194 de la Directive 2006/112/CE du Conseil relative au système commun de TVA).', note: 'Art. 194 Directive TVA 2006/112/CE'},
+    de: {text: 'Steuerschuldnerschaft des Leistungsempfängers. Die Steuerschuld wird auf den Leistungsempfänger übertragen (Artikel 194 der Richtlinie 2006/112/EG des Rates über das gemeinsame Mehrwertsteuersystem).', note: 'Art. 194 MwSt-Richtlinie 2006/112/EG'},
+    nl: {text: 'BTW verlegd. De btw-schuld wordt overgedragen aan de ontvanger van de prestatie (Artikel 194 van Richtlijn 2006/112/EG van de Raad betreffende het gemeenschappelijke stelsel van belasting over de toegevoegde waarde).', note: 'Art. 194 BTW-Richtlijn 2006/112/EG'},
+    pl: {text: 'Odwrotne obciążenie VAT. Obowiązek podatkowy przechodzi na nabywcę usługi/towaru (Artykuł 194 Dyrektywy Rady 2006/112/WE w sprawie wspólnego systemu podatku od wartości dodanej).', note: 'Art. 194 Dyrektywa VAT 2006/112/WE'}
+  },
+  export: {
+    en: {text: 'VAT exempt — export of goods/services outside the European Union (Article 146 of Council Directive 2006/112/EC). No VAT is charged on this invoice.', note: 'Art. 146 EU VAT Directive 2006/112/EC'},
+    fr: {text: 'Exonéré de TVA — exportation de biens/services hors de l\'Union européenne (Article 146 de la Directive 2006/112/CE). Aucune TVA n\'est facturée sur cette facture.', note: 'Art. 146 Directive TVA 2006/112/CE'},
+    de: {text: 'Umsatzsteuerfrei — Ausfuhr von Waren/Dienstleistungen außerhalb der Europäischen Union (Artikel 146 der Richtlinie 2006/112/EG). Auf dieser Rechnung wird keine Mehrwertsteuer erhoben.', note: 'Art. 146 MwSt-Richtlinie 2006/112/EG'},
+    nl: {text: 'Btw-vrijgesteld — uitvoer van goederen/diensten buiten de Europese Unie (Artikel 146 van Richtlijn 2006/112/EG). Er wordt geen btw in rekening gebracht op deze factuur.', note: 'Art. 146 BTW-Richtlijn 2006/112/EG'},
+    pl: {text: 'Zwolnione z VAT — eksport towarów/usług poza Unię Europejską (Artykuł 146 Dyrektywy 2006/112/WE). Na niniejszej fakturze nie nalicza się VAT.', note: 'Art. 146 Dyrektywa VAT 2006/112/WE'}
+  },
+  domestic: {
+    en: {text: 'VAT is charged at the applicable rate in accordance with national VAT legislation. This invoice constitutes a valid VAT invoice for input tax deduction purposes.', note: 'Standard VAT invoice — EU VAT Directive Art. 226'},
+    fr: {text: 'La TVA est appliquée au taux en vigueur conformément à la législation nationale. Cette facture constitue une facture TVA valide aux fins de déduction de la taxe en amont.', note: 'Facture TVA standard — Directive TVA Art. 226'},
+    de: {text: 'Die Mehrwertsteuer wird zum geltenden Satz gemäß nationaler Mehrwertsteuergesetzgebung berechnet. Diese Rechnung ist eine gültige Mehrwertsteuerrechnung für Vorsteuerabzugszwecke.', note: 'Standard-MwSt-Rechnung — MwSt-Richtlinie Art. 226'},
+    nl: {text: 'Btw wordt geheven tegen het toepasselijke tarief overeenkomstig de nationale btw-wetgeving. Deze factuur vormt een geldige btw-factuur voor aftrek van voorbelasting.', note: 'Standaard btw-factuur — BTW-Richtlijn Art. 226'},
+    pl: {text: 'VAT jest naliczany według obowiązującej stawki zgodnie z krajowymi przepisami o VAT. Niniejsza faktura stanowi ważną fakturę VAT dla celów odliczenia podatku naliczonego.', note: 'Standardowa faktura VAT — Dyrektywa VAT Art. 226'}
+  },
+  oss: {
+    en: {text: 'VAT is charged at the rate applicable in the customer\'s country under the EU One Stop Shop (OSS) scheme. VAT is accounted for and remitted via the OSS declaration in the seller\'s country of identification.', note: 'EU OSS scheme — Art. 369a-369k VAT Directive'},
+    fr: {text: 'La TVA est facturée au taux applicable dans le pays du client dans le cadre du régime OSS (guichet unique) de l\'UE. La TVA est comptabilisée et versée via la déclaration OSS dans le pays d\'identification du vendeur.', note: 'Régime OSS UE — Art. 369a-369k Directive TVA'},
+    de: {text: 'Die Mehrwertsteuer wird zum im Land des Kunden geltenden Satz im Rahmen des EU One-Stop-Shop (OSS)-Verfahrens berechnet. Die Mehrwertsteuer wird über die OSS-Erklärung im Identifikationsland des Verkäufers abgeführt.', note: 'EU-OSS-Verfahren — Art. 369a-369k MwSt-Richtlinie'},
+    nl: {text: 'Btw wordt geheven tegen het in het land van de klant geldende tarief op grond van de EU One Stop Shop (OSS)-regeling. Btw wordt verantwoord en afgedragen via de OSS-aangifte in het identificatieland van de verkoper.', note: 'EU OSS-regeling — Art. 369a-369k BTW-Richtlijn'},
+    pl: {text: 'VAT jest naliczany według stawki obowiązującej w kraju klienta w ramach unijnego systemu OSS (One Stop Shop). VAT jest rozliczany i odprowadzany za pośrednictwem deklaracji OSS w kraju identyfikacji sprzedawcy.', note: 'System OSS UE — Art. 369a-369k Dyrektywa VAT'}
+  },
+  credit: {
+    en: {text: 'CREDIT NOTE — This document cancels and replaces the original invoice referenced above. Please adjust your VAT records accordingly. All terms and conditions of the original invoice apply.', note: 'Credit Note — EU VAT Directive Art. 226'},
+    fr: {text: 'NOTE DE CRÉDIT — Ce document annule et remplace la facture originale référencée ci-dessus. Veuillez ajuster vos registres TVA en conséquence. Toutes les conditions de la facture originale s\'appliquent.', note: 'Note de crédit — Directive TVA Art. 226'},
+    de: {text: 'GUTSCHRIFT — Dieses Dokument storniert und ersetzt die oben referenzierte Originalrechnung. Bitte passen Sie Ihre Mehrwertsteueraufzeichnungen entsprechend an. Alle Bedingungen der Originalrechnung gelten.', note: 'Gutschrift — MwSt-Richtlinie Art. 226'},
+    nl: {text: 'CREDITNOTA — Dit document annuleert en vervangt de hierboven genoemde originele factuur. Pas uw btw-administratie dienovereenkomstig aan. Alle voorwaarden van de originele factuur zijn van toepassing.', note: 'Creditnota — BTW-Richtlijn Art. 226'},
+    pl: {text: 'NOTA KREDYTOWA — Niniejszy dokument anuluje i zastępuje oryginalną fakturę wskazaną powyżej. Proszę odpowiednio dostosować ewidencję VAT. Obowiązują wszystkie warunki oryginalnej faktury.', note: 'Nota kredytowa — Dyrektywa VAT Art. 226'}
+  },
+  proforma: {
+    en: {text: 'PRO FORMA INVOICE — This is not a tax invoice. This document is issued for customs/payment purposes only and does not constitute a formal VAT invoice. A formal VAT invoice will be issued upon confirmation of order.', note: 'Pro Forma — not a VAT document'},
+    fr: {text: 'FACTURE PRO FORMA — Il ne s\'agit pas d\'une facture fiscale. Ce document est émis à des fins douanières/de paiement uniquement et ne constitue pas une facture TVA formelle. Une facture TVA formelle sera émise à la confirmation de commande.', note: 'Pro Forma — pas un document TVA'},
+    de: {text: 'PROFORMA-RECHNUNG — Dies ist keine Steuerrechnung. Dieses Dokument wird nur für Zoll-/Zahlungszwecke ausgestellt und stellt keine formelle Mehrwertsteuerrechnung dar. Eine formelle Mehrwertsteuerrechnung wird nach Auftragsbestätigung ausgestellt.', note: 'Proforma — kein MwSt-Dokument'},
+    nl: {text: 'PROFORMA FACTUUR — Dit is geen belastingfactuur. Dit document wordt uitsluitend uitgereikt voor douane-/betalingsdoeleinden en vormt geen formele btw-factuur. Een formele btw-factuur wordt uitgereikt bij bevestiging van de bestelling.', note: 'Proforma — geen btw-document'},
+    pl: {text: 'FAKTURA PROFORMA — To nie jest faktura podatkowa. Niniejszy dokument jest wystawiany wyłącznie do celów celnych/płatniczych i nie stanowi formalnej faktury VAT. Formalna faktura VAT zostanie wystawiona po potwierdzeniu zamówienia.', note: 'Proforma — nie jest dokumentem VAT'}
+  }
+};
+
+const TYPE_LABELS = {
+  rc:'Reverse Charge Invoice',export:'Export Invoice',
+  domestic:'Domestic VAT Invoice',oss:'OSS Distance Sale Invoice',
+  credit:'Credit Note',proforma:'Pro Forma Invoice'
+};
+
+function selectType(type, card){
+  currentType = type;
+  document.querySelectorAll('.type-card').forEach(c=>c.classList.remove('active'));
+  card.classList.add('active');
+  renderForm();
+  document.getElementById('outputWrap').classList.remove('show');
+}
+
+function renderForm(){
+  const fields = FORM_FIELDS[currentType];
+  document.getElementById('formFields').innerHTML = fields.map(f => {
+    const def = FIELD_DEFS[f];
+    if(def.type === 'select'){
+      return `<div class="form-group"><label class="form-label">${def.label}</label>
+        <select id="f_${f}">${def.options.map(o=>`<option value="${o}">${o}</option>`).join('')}</select></div>`;
+    }
+    return `<div class="form-group"><label class="form-label">${def.label}</label>
+      <input type="text" id="f_${f}" placeholder="${def.placeholder}"></div>`;
+  }).join('');
+}
+
+function getField(name){ const el = document.getElementById('f_'+name); return el ? el.value.trim() : ''; }
+
+function buildInvoice(){
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('en-GB',{day:'2-digit',month:'2-digit',year:'numeric'});
+  builtData = {
+    type: currentType,
+    date: dateStr,
+    supplier: getField('supplier_name') || 'Your Company Name',
+    supplierVat: getField('supplier_vat') || 'BEXXXXXXXXXX',
+    customer: getField('customer_name') || 'Customer Name',
+    customerVat: getField('customer_vat'),
+    customerCountry: getField('customer_country'),
+    description: getField('description') || 'Services rendered',
+    amount: getField('amount') || '0.00',
+    currency: getField('currency') || 'EUR',
+    vatRate: getField('vat_rate') || '21',
+    originalInv: getField('original_inv'),
+    originalDate: getField('original_date'),
+    reason: getField('reason'),
+  };
+  document.getElementById('outputWrap').classList.add('show');
+  renderOutput();
+}
+
+function renderOutput(){
+  if(!builtData) return;
+  const d = builtData;
+  const legal = LEGAL_TEXTS[d.type][currentLang];
+  const vatAmt = d.vatRate ? (parseFloat(d.amount)*parseFloat(d.vatRate)/100).toFixed(2) : '0.00';
+  const total = d.vatRate ? (parseFloat(d.amount)*(1+parseFloat(d.vatRate)/100)).toFixed(2) : d.amount;
+
+  let rows = `
+    <div class="inv-label">${TYPE_LABELS[d.type]}</div>
+    <div class="inv-row"><span class="label">Date</span><span class="value">${d.date}</span></div>
+    <div class="inv-row"><span class="label">Supplier</span><span class="value">${d.supplier} · ${d.supplierVat}</span></div>
+    <div class="inv-row"><span class="label">Customer</span><span class="value">${d.customer}${d.customerVat?' · '+d.customerVat:''}${d.customerCountry?' · '+d.customerCountry:''}</span></div>
+    <div class="inv-row"><span class="label">Description</span><span class="value">${d.description}</span></div>`;
+
+  if(d.originalInv) rows += `<div class="inv-row"><span class="label">Ref. Invoice</span><span class="value">${d.originalInv} (${d.originalDate})</span></div>`;
+  if(d.reason) rows += `<div class="inv-row"><span class="label">Reason</span><span class="value">${d.reason}</span></div>`;
+
+  rows += `<div class="inv-row"><span class="label">Amount (excl. VAT)</span><span class="value">${d.currency} ${parseFloat(d.amount).toFixed(2)}</span></div>`;
+
+  if(d.type === 'domestic' || d.type === 'oss'){
+    rows += `<div class="inv-row"><span class="label">VAT (${d.vatRate}%)</span><span class="value">${d.currency} ${vatAmt}</span></div>
+    <div class="inv-row"><span class="label"><strong>Total (incl. VAT)</strong></span><span class="value"><strong>${d.currency} ${total}</strong></span></div>`;
+  } else {
+    rows += `<div class="inv-row"><span class="label">VAT</span><span class="value">0.00 (see note below)</span></div>
+    <div class="inv-row"><span class="label"><strong>Total Due</strong></span><span class="value"><strong>${d.currency} ${parseFloat(d.amount).toFixed(2)}</strong></span></div>`;
+  }
+
+  rows += `<div class="legal-text"><div class="legal-label">Legal Note</div>${legal.text}<div class="article-ref">${legal.note}</div></div>`;
+
+  document.getElementById('invoiceBox').innerHTML = rows;
+}
+
+function setLang(lang, btn){
+  currentLang = lang;
+  document.querySelectorAll('.lang-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderOutput();
+}
+
+function copyLegal(){
+  if(!builtData) return;
+  const legal = LEGAL_TEXTS[builtData.type][currentLang];
+  navigator.clipboard.writeText(legal.text).then(()=>{
+    const btn = event.target;
+    btn.textContent='✓ Copied!';
+    setTimeout(()=>btn.textContent='📋 Copy Legal Text',1500);
+  });
+}
+
+function copyAll(){
+  const box = document.getElementById('invoiceBox');
+  const text = box.innerText;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn = event.target;
+    btn.textContent='✓ Copied!';
+    setTimeout(()=>btn.textContent='📄 Copy Full Invoice Block',1500);
+  });
+}
+
+
+// Init
+renderForm();
+</script>
+   <script src="mafioso-widget.js" defer></script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

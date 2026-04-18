@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EU Salary Calculator — Gross to Net Belgium, Germany, France | Storelines Tools</title>
+<meta name="description" content="Free EU salary calculator. Convert gross to net salary for Belgium, Germany, France, Netherlands, Poland. Includes tax rates and social contributions for 2026.">
+<meta name="keywords" content="salary calculator belgium, gross net salary calculator, salary calculator germany, salary calculator france, eu salary calculator, gross to net europe, net salary calculator, brutto netto rechner, salaire net belgique">
+<link rel="canonical" href="https://storelines.net/salary-calculator.html">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<meta property="og:title" content="EU Salary Calculator — Gross to Net for All EU Countries">
+<meta property="og:description" content="Calculate net salary from gross for Belgium, Germany, France, Netherlands, Poland and more. Free, instant.">
+<meta property="og:url" content="https://storelines.net/salary-calculator.html">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F5F5;--white:#FFFFFF;--navy:#0D1B4B;--blue:#1E6FD9;--blue-light:#EBF3FD;--blue-mid:#D0E6FA;--tx:#1A1A2E;--tx2:#4A5568;--tx3:#9AA5B4;--border:#E2E8F0;--shadow:0 4px 24px rgba(13,27,75,0.08);--font:'Inter',sans-serif;--radius:12px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(13,27,75,0.06)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo img{height:40px;width:auto}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links>li{position:relative}
+.nav-links a{font-size:14px;font-weight:500;color:var(--tx2);text-decoration:none;padding:7px 14px;border-radius:8px;transition:all .2s;display:flex;align-items:center;gap:5px}
+.nav-links a:hover{color:var(--navy);background:var(--blue-light)}
+.nav-links a.active{color:var(--blue);font-weight:700;background:var(--blue-light)}
+.has-dropdown>a::after{content:'▾';font-size:11px;opacity:0.6}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:0 8px 32px rgba(13,27,75,0.12);padding:8px;min-width:240px;z-index:200}
+.dropdown-menu a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:500;color:var(--tx2);text-decoration:none;transition:all .15s;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--blue-light);color:var(--navy)}
+.drop-section{font-size:10px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px;margin-top:4px}
+.drop-section:first-child{margin-top:0}
+.has-dropdown:hover .dropdown-menu{display:block}
+.header-cta{height:38px;padding:0 20px;background:var(--blue);color:var(--white);font-size:13px;font-weight:700;border-radius:9px;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all .2s;white-space:nowrap}
+.header-cta:hover{background:var(--navy);box-shadow:0 4px 16px rgba(30,111,217,0.3);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
+.mob-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:98}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:99;padding:16px 24px 24px;box-shadow:0 8px 24px rgba(0,0,0,0.1);max-height:80vh;overflow-y:auto}
+.mob-menu.open{display:block}
+.mob-menu nav{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.mob-menu nav a{padding:10px 14px;border-radius:8px;font-size:15px;font-weight:500;color:var(--tx);text-decoration:none}
+.mob-menu nav a:hover{background:var(--blue-light);color:var(--blue)}
+.mob-section{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px}
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:12px 24px}
+.breadcrumb-inner{max-width:1200px;margin:0 auto;font-size:13px}
+.breadcrumb a{color:var(--blue);text-decoration:none}
+.breadcrumb span{color:var(--tx3);margin:0 6px}
+.breadcrumb .current{color:var(--tx);font-weight:500}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1a2d6b 100%);padding:56px 24px 48px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(30,111,217,0.25) 0%,transparent 70%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(30,111,217,0.2);border:1px solid rgba(30,111,217,0.4);color:#93c5fd;padding:5px 14px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{color:white;font-size:clamp(28px,4vw,46px);font-weight:900;line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
+.hero h1 span{color:#60a5fa}
+.hero p{color:rgba(255,255,255,0.7);font-size:17px;max-width:560px;margin:0 auto}
+.main-wrap{max-width:900px;margin:-30px auto 0;padding:0 20px 60px;position:relative;z-index:10}
+.tool-card{background:var(--white);border-radius:20px;box-shadow:0 8px 48px rgba(13,27,75,0.12);padding:40px;margin-bottom:28px}
+.tool-card h2{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:24px}
+
+/* MODE TOGGLE */
+.mode-toggle{display:grid;grid-template-columns:1fr 1fr;background:var(--bg);border-radius:10px;padding:4px;margin-bottom:24px;border:1px solid var(--border)}
+.mode-btn{padding:10px;text-align:center;font-weight:600;font-size:14px;cursor:pointer;border-radius:8px;transition:all .2s;color:var(--tx3);user-select:none}
+.mode-btn.active{background:var(--blue);color:white;box-shadow:0 2px 8px rgba(30,111,217,0.3)}
+
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-label{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px}
+.amount-wrap{position:relative}
+.currency-sym{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;font-weight:700;color:var(--tx3);pointer-events:none}
+.amount-input{width:100%;padding:14px 14px 14px 36px;border:2px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:20px;font-weight:700;color:var(--tx);outline:none;transition:border-color .2s,box-shadow .2s}
+.amount-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,111,217,0.1)}
+select{width:100%;padding:14px 16px;border:2px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:600;color:var(--tx);background:var(--white);cursor:pointer;outline:none;transition:border-color .2s}
+select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,111,217,0.1)}
+.btn-calc{width:100%;padding:16px;background:var(--blue);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:16px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-calc:hover{background:var(--navy);box-shadow:0 4px 16px rgba(30,111,217,0.3)}
+
+/* RESULT */
+.result-box{display:none;margin-top:24px;animation:slideIn .3s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.result-box.show{display:block}
+.result-main{background:linear-gradient(135deg,var(--navy) 0%,#1a2d6b 100%);border-radius:16px;padding:28px 32px;text-align:center;margin-bottom:16px}
+.result-label{color:rgba(255,255,255,0.6);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.result-amount{color:white;font-size:44px;font-weight:900;letter-spacing:-1px}
+.result-amount small{font-size:22px;opacity:.7;margin-right:4px}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.result-item{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.result-item .r-label{font-size:11px;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.result-item .r-value{font-size:20px;font-weight:800;color:var(--navy)}
+.result-item.highlight{background:var(--blue-light);border-color:var(--blue-mid)}
+.result-item.highlight .r-value{color:var(--blue)}
+
+/* BREAKDOWN BAR */
+.breakdown-bar{margin-top:20px}
+.breakdown-title{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.bar-wrap{height:28px;border-radius:8px;overflow:hidden;display:flex;margin-bottom:8px}
+.bar-net{background:var(--blue);transition:width .5s ease}
+.bar-tax{background:#f87171;transition:width .5s ease}
+.bar-social{background:#fb923c;transition:width .5s ease}
+.bar-legend{display:flex;gap:16px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--tx2)}
+.legend-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+
+/* COUNTRY TABLE */
+.country-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:16px}
+.country-table thead th{background:var(--navy);color:white;padding:12px 16px;text-align:left;font-weight:600;font-size:13px}
+.country-table thead th:first-child{border-radius:10px 0 0 0}
+.country-table thead th:last-child{border-radius:0 10px 0 0}
+.country-table tbody tr{border-bottom:1px solid var(--border);transition:background .15s}
+.country-table tbody tr:hover{background:#f8fafc}
+.country-table tbody td{padding:11px 16px;color:var(--tx)}
+.badge-high{display:inline-block;padding:2px 10px;border-radius:100px;font-size:12px;font-weight:700;background:#fee2e2;color:#b91c1c}
+.badge-mid{display:inline-block;padding:2px 10px;border-radius:100px;font-size:12px;font-weight:700;background:#fef3c7;color:#b45309}
+.badge-low{display:inline-block;padding:2px 10px;border-radius:100px;font-size:12px;font-weight:700;background:#dcfce7;color:#166534}
+
+.wise-banner{background:linear-gradient(135deg,#163300 0%,#1a4d00 100%);border-radius:16px;padding:28px 32px;display:flex;align-items:center;gap:24px;margin-bottom:28px}
+.wise-icon{width:52px;height:52px;background:#00b950;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.wise-text{flex:1}
+.wise-text h3{color:white;font-size:16px;font-weight:700;margin-bottom:4px}
+.wise-text p{color:rgba(255,255,255,0.7);font-size:13px}
+.wise-text p strong{color:#4ade80}
+.wise-btn{display:inline-flex;align-items:center;gap:8px;background:#00b950;color:white;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap;transition:background .2s;flex-shrink:0}
+.wise-btn:hover{background:#00d45c}
+
+.seo-card{background:var(--white);border-radius:20px;padding:40px;margin-bottom:24px}
+.seo-card h2{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:16px;letter-spacing:-.3px}
+.seo-card h3{font-size:17px;font-weight:700;color:var(--navy);margin:24px 0 10px}
+.seo-card p{color:#475569;font-size:15px;line-height:1.75;margin-bottom:14px}
+.seo-card ul{margin:0 0 14px 20px;color:#475569;font-size:15px;line-height:1.8}
+.faq-list{display:grid;gap:12px;margin-top:16px}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;font-size:15px;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--white);transition:background .2s;user-select:none}
+.faq-q:hover{background:#f8fafc}
+.faq-q::after{content:'▾';font-size:14px;color:var(--blue);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(180deg)}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;font-size:14px;color:#475569;line-height:1.7;background:#fafbfd}
+.faq-item.open .faq-a{max-height:300px;padding:14px 20px 18px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:16px}
+.related-item{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;align-items:center;gap:10px;text-decoration:none;transition:border-color .2s}
+.related-item:hover{border-color:var(--blue)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:40px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-brand img{height:36px;margin-bottom:12px}
+.footer-desc{font-size:13px;color:var(--tx2);line-height:1.7}
+.footer-col h4{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.footer-col a{display:block;font-size:13px;color:var(--tx2);text-decoration:none;margin-bottom:8px;transition:color .15s}
+.footer-col a:hover{color:var(--blue)}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--tx3)}
+@media(max-width:768px){
+  .nav-links,.header-cta{display:none}.hamburger{display:flex}
+  .form-grid{grid-template-columns:1fr}
+  .result-grid{grid-template-columns:1fr}
+  .wise-banner{flex-direction:column;text-align:center;padding:24px 20px}
+  .tool-card,.seo-card{padding:24px 18px}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+}
+
+/* DROPDOWN FIX */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu { display: block !important; }
+
+</style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Storelines",
+  "url": "https://storelines.net/",
+  "description": ""
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="tools.html">Tools</a><span>›</span>
+    <span class="current">Salary Calculator</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">💶 Free EU Tool</div>
+  <h1>EU Salary <span>Calculator</span></h1>
+  <p>Calculate gross to net salary for Belgium, Germany, France, Netherlands, Poland and more. Includes taxes and social contributions 2026.</p>
+</div>
+
+<div class="main-wrap">
+
+  <div class="tool-card">
+    <h2>💶 Calculate Net Salary</h2>
+
+    <div class="mode-toggle">
+      <div class="mode-btn active" id="modeGross" onclick="setMode('gross')">Gross → Net</div>
+      <div class="mode-btn" id="modeNet" onclick="setMode('net')">Net → Gross</div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label class="form-label" id="amountLabel">Gross Salary (monthly)</label>
+        <div class="amount-wrap">
+          <span class="currency-sym">€</span>
+          <input type="number" class="amount-input" id="salaryAmount" placeholder="3000" oninput="autoCalc()">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Country</label>
+        <select id="country" onchange="autoCalc()">
+          <option value="BE">🇧🇪 Belgium</option>
+          <option value="DE">🇩🇪 Germany</option>
+          <option value="FR">🇫🇷 France</option>
+          <option value="NL">🇳🇱 Netherlands</option>
+          <option value="PL">🇵🇱 Poland</option>
+          <option value="IT">🇮🇹 Italy</option>
+          <option value="ES">🇪🇸 Spain</option>
+          <option value="AT">🇦🇹 Austria</option>
+          <option value="SE">🇸🇪 Sweden</option>
+          <option value="DK">🇩🇰 Denmark</option>
+          <option value="CZ">🇨🇿 Czech Republic</option>
+          <option value="HU">🇭🇺 Hungary</option>
+          <option value="RO">🇷🇴 Romania</option>
+          <option value="PT">🇵🇹 Portugal</option>
+          <option value="IE">🇮🇪 Ireland</option>
+          <option value="LU">🇱🇺 Luxembourg</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn-calc" onclick="calculate()">💶 Calculate Salary</button>
+
+    <div class="result-box" id="resultBox">
+      <div class="result-main">
+        <div class="result-label" id="resultLabel">Net Monthly Salary</div>
+        <div class="result-amount"><small>€</small><span id="resultMain">0</span></div>
+      </div>
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="r-label">Gross</div>
+          <div class="r-value">€<span id="resGross">0</span></div>
+        </div>
+        <div class="result-item highlight">
+          <div class="r-label">Net</div>
+          <div class="r-value">€<span id="resNet">0</span></div>
+        </div>
+        <div class="result-item">
+          <div class="r-label">Tax + Social</div>
+          <div class="r-value">€<span id="resTax">0</span></div>
+        </div>
+      </div>
+
+      <div class="breakdown-bar" style="margin-top:16px">
+        <div class="breakdown-title">Salary breakdown</div>
+        <div class="bar-wrap" id="barWrap">
+          <div class="bar-net" id="barNet" style="width:50%"></div>
+          <div class="bar-social" id="barSocial" style="width:25%"></div>
+          <div class="bar-tax" id="barTax" style="width:25%"></div>
+        </div>
+        <div class="bar-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>Net salary</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#fb923c"></div>Social contributions</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div>Income tax</div>
+        </div>
+        <p style="font-size:12px;color:var(--tx3);margin-top:10px" id="rateNote"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wise-banner">
+    <div class="wise-icon">💳</div>
+    <div class="wise-text">
+      <h3>Pay International Salaries with Wise Business</h3>
+      <p>Send salaries to remote employees across EU in <strong>70+ currencies at real exchange rates</strong>. No hidden fees.</p>
+    </div>
+    <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored" class="wise-btn">Open Wise →</a>
+  </div>
+
+  <div class="seo-card">
+    <h2>EU Tax Rates by Country — 2026</h2>
+    <p>Every EU member state has different income tax and social contribution rates. Here is an overview of effective tax burden on salaries across the EU:</p>
+    <table class="country-table">
+      <thead><tr><th>Country</th><th>Effective Tax Rate</th><th>Social Contributions</th><th>Total Burden</th></tr></thead>
+      <tbody>
+        <tr><td>🇧🇪 Belgium</td><td>35–45%</td><td>~13.07%</td><td><span class="badge-high">~53%</span></td></tr>
+        <tr><td>🇩🇪 Germany</td><td>25–42%</td><td>~20%</td><td><span class="badge-high">~42%</span></td></tr>
+        <tr><td>🇫🇷 France</td><td>20–45%</td><td>~22%</td><td><span class="badge-high">~45%</span></td></tr>
+        <tr><td>🇳🇱 Netherlands</td><td>19–49.5%</td><td>~27.65%</td><td><span class="badge-high">~49%</span></td></tr>
+        <tr><td>🇵🇱 Poland</td><td>12–32%</td><td>~13.71%</td><td><span class="badge-low">~23%</span></td></tr>
+        <tr><td>🇮🇹 Italy</td><td>23–43%</td><td>~9.49%</td><td><span class="badge-mid">~40%</span></td></tr>
+        <tr><td>🇪🇸 Spain</td><td>19–45%</td><td>~6.35%</td><td><span class="badge-mid">~37%</span></td></tr>
+        <tr><td>🇸🇪 Sweden</td><td>20–52%</td><td>7%</td><td><span class="badge-high">~52%</span></td></tr>
+        <tr><td>🇩🇰 Denmark</td><td>12.10–15%</td><td>8%</td><td><span class="badge-high">~55%</span></td></tr>
+        <tr><td>🇷🇴 Romania</td><td>10%</td><td>35%</td><td><span class="badge-low">~45%</span></td></tr>
+        <tr><td>🇱🇺 Luxembourg</td><td>8–42%</td><td>~12.45%</td><td><span class="badge-mid">~36%</span></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--tx3);margin-top:12px">Rates are approximate averages for a single employee with no dependants. Actual tax depends on income level, deductions, and personal circumstances. Consult a local accountant for precise calculations.</p>
+  </div>
+
+  <div class="seo-card">
+    <h2>Salary Calculations in Europe — Guide</h2>
+
+    <h3>Gross vs Net Salary — What's the Difference?</h3>
+    <p>The <strong>gross salary</strong> is the total amount agreed in an employment contract before any deductions. The <strong>net salary</strong> is what the employee actually receives after income tax and social contributions are deducted. In most EU countries, the difference between gross and net can be substantial — in Belgium for example, an employee earning €3,000 gross takes home approximately €1,900 net.</p>
+
+    <h3>Salary Calculator Belgium — Highest Tax in EU</h3>
+    <p>Belgium has one of the highest tax burdens in the EU. An employee pays 13.07% in personal social security contributions, plus income tax at progressive rates from 25% to 50%. On a €3,000 gross monthly salary, the effective total deduction is approximately 37%. Employer costs add another 27% on top of gross, making Belgium expensive for hiring.</p>
+
+    <h3>Salary Calculator Germany — Steuer & Sozialabgaben</h3>
+    <p>Germany applies income tax (Einkommensteuer) at rates from 14% to 45%, plus a solidarity surcharge (Solidaritätszuschlag) and optional church tax. Social contributions (Sozialabgaben) cover health insurance (~7.3%), pension (~9.3%), unemployment (~1.3%), and long-term care (~1.525%). Total employee deductions typically range from 35–42% of gross salary.</p>
+
+    <h3>Salary Calculator France — Cotisations Sociales</h3>
+    <p>France has complex social contribution system. Employee contributions (cotisations salariales) typically amount to 20–25% of gross, covering health, retirement, unemployment, and supplementary pension. Income tax (impôt sur le revenu) is calculated at the household level annually. Our calculator uses simplified effective rates as an approximation.</p>
+
+    <h3>Remote Work and Cross-Border Payroll</h3>
+    <p>With remote work, many EU businesses hire employees in lower-tax countries like Poland, Romania, or Bulgaria while operating from Belgium or Germany. This requires understanding both the employee's local tax obligations and the employer's payroll registration requirements in each country. Wise Business simplifies cross-border salary payments with transparent FX rates.</p>
+  </div>
+
+  <div class="seo-card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How accurate is this salary calculator?</div>
+        <div class="faq-a">This calculator provides approximate results based on simplified effective tax rates. It is suitable for quick estimations and comparisons between countries. For precise payroll calculations — especially for actual salary processing — consult a certified accountant or payroll specialist familiar with local tax law.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the minimum wage in Belgium in 2026?</div>
+        <div class="faq-a">The national minimum wage in Belgium (salaire minimum / minimumloon) is approximately €2,070 gross per month in 2026, making it one of the highest in the EU. This is the RMMMG (Revenu Minimum Mensuel Moyen Garanti) set through collective bargaining.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does the 13th month salary affect Belgian tax calculations?</div>
+        <div class="faq-a">Yes. In Belgium, the 13th month bonus (and holiday pay — pécule de vacances) is subject to tax and social contributions. Holiday pay is often taxed separately at a special rate. Our calculator shows monthly estimates based on base salary only and does not account for year-end bonuses.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I pay salaries to employees in different EU countries?</div>
+        <div class="faq-a">You need to register as an employer in each country where employees are resident, or use an Employer of Record (EOR) service. For the actual salary payment transfers, Wise Business allows you to send EUR and other currencies to local bank accounts at minimal cost — useful for remote teams across the EU.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seo-card">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="currency-converter.html" class="related-item"><span style="font-size:22px">💱</span><div><strong style="color:var(--navy);font-size:14px">Currency Converter</strong><br><small style="color:var(--tx3)">Convert EU currencies</small></div></a>
+      <a href="vat-calculator.html" class="related-item"><span style="font-size:22px">🧮</span><div><strong style="color:var(--navy);font-size:14px">VAT Calculator</strong><br><small style="color:var(--tx3)">Add or remove VAT</small></div></a>
+      <a href="invoice-builder.html" class="related-item"><span style="font-size:22px">📄</span><div><strong style="color:var(--navy);font-size:14px">Invoice Builder</strong><br><small style="color:var(--tx3)">Legal invoice wording</small></div></a>
+      <a href="tools.html" class="related-item"><span style="font-size:22px">🛠️</span><div><strong style="color:var(--navy);font-size:14px">All 18 Tools</strong><br><small style="color:var(--tx3)">Full EU business toolkit</small></div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="images/storelines-logo.png" alt="Storelines Tools" style="height:36px;margin-bottom:12px">
+      <p class="footer-desc">Professional business tools for EU entrepreneurs. Free, no registration. Official Wise Business partner.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <a href="vat-validator.html">VAT Validator</a>
+      <a href="iban-validator.html">IBAN Validator</a>
+      <a href="vat-calculator.html">VAT Calculator</a>
+      <a href="currency-converter.html">Currency Converter</a>
+      <a href="tools.html">All 18 Tools →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Wise Partner</h4>
+      <a href="wise-business.html">Wise Business</a>
+      <a href="wise-send-money.html">Send Money</a>
+      <a href="wise-iban.html">Get EU IBAN</a>
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored">Open Account →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Storelines Tools. All rights reserved.</span>
+    <span>Brussels, Belgium · EU</span>
+  </div>
+</footer>
+
+<script>
+// Simplified effective rates: [income_tax_rate, social_rate, label]
+const TAX_DATA = {
+  BE:{it:0.35,sc:0.1307,label:'Belgium — Income tax 35%, Social 13.07%'},
+  DE:{it:0.22,sc:0.2035,label:'Germany — Income tax ~22%, Social ~20.35%'},
+  FR:{it:0.23,sc:0.22,label:'France — Income tax ~23%, Social ~22%'},
+  NL:{it:0.22,sc:0.2765,label:'Netherlands — Income tax 22%, Social 27.65%'},
+  PL:{it:0.12,sc:0.1371,label:'Poland — Income tax 12%, Social 13.71%'},
+  IT:{it:0.27,sc:0.0949,label:'Italy — Income tax ~27%, Social ~9.49%'},
+  ES:{it:0.24,sc:0.0635,label:'Spain — Income tax ~24%, Social 6.35%'},
+  AT:{it:0.25,sc:0.1812,label:'Austria — Income tax ~25%, Social ~18.12%'},
+  SE:{it:0.30,sc:0.07,label:'Sweden — Income tax ~30%, Social 7%'},
+  DK:{it:0.37,sc:0.08,label:'Denmark — Income tax ~37%, Social 8%'},
+  CZ:{it:0.15,sc:0.1115,label:'Czech Rep. — Income tax 15%, Social ~11.15%'},
+  HU:{it:0.15,sc:0.185,label:'Hungary — Income tax 15%, Social 18.5%'},
+  RO:{it:0.10,sc:0.35,label:'Romania — Income tax 10%, Social 35%'},
+  PT:{it:0.25,sc:0.11,label:'Portugal — Income tax ~25%, Social 11%'},
+  IE:{it:0.20,sc:0.04,label:'Ireland — Income tax 20%, Social (PRSI) 4%'},
+  LU:{it:0.22,sc:0.1245,label:'Luxembourg — Income tax ~22%, Social ~12.45%'}
+};
+
+let currentMode = 'gross';
+
+function setMode(m){
+  currentMode = m;
+  document.getElementById('modeGross').classList.toggle('active', m==='gross');
+  document.getElementById('modeNet').classList.toggle('active', m==='net');
+  document.getElementById('amountLabel').textContent = m==='gross' ? 'Gross Salary (monthly)' : 'Net Salary (monthly)';
+  autoCalc();
+}
+
+function autoCalc(){
+  const v = parseFloat(document.getElementById('salaryAmount').value);
+  if(v > 0) calculate();
+}
+
+function calculate(){
+  const input = parseFloat(document.getElementById('salaryAmount').value)||0;
+  if(!input){alert('Please enter a salary amount.');return;}
+  const c = document.getElementById('country').value;
+  const {it, sc, label} = TAX_DATA[c];
+  const totalRate = it + sc;
+
+  let gross, net, taxAmt, socialAmt;
+  if(currentMode === 'gross'){
+    gross = input;
+    socialAmt = gross * sc;
+    taxAmt = gross * it;
+    net = gross - socialAmt - taxAmt;
+  } else {
+    net = input;
+    gross = net / (1 - totalRate);
+    socialAmt = gross * sc;
+    taxAmt = gross * it;
+  }
+
+  const fmt = n => Math.round(n).toLocaleString('de-DE');
+
+  document.getElementById('resultLabel').textContent = currentMode==='gross' ? 'Net Monthly Salary' : 'Gross Monthly Salary';
+  document.getElementById('resultMain').textContent = fmt(currentMode==='gross' ? net : gross);
+  document.getElementById('resGross').textContent = fmt(gross);
+  document.getElementById('resNet').textContent = fmt(net);
+  document.getElementById('resTax').textContent = fmt(taxAmt + socialAmt);
+
+  // Bar chart
+  const netPct = (net/gross*100).toFixed(1);
+  const socialPct = (socialAmt/gross*100).toFixed(1);
+  const taxPct = (taxAmt/gross*100).toFixed(1);
+  document.getElementById('barNet').style.width = netPct + '%';
+  document.getElementById('barSocial').style.width = socialPct + '%';
+  document.getElementById('barTax').style.width = taxPct + '%';
+  document.getElementById('rateNote').textContent = `Net: ${netPct}% · Social: ${socialPct}% · Tax: ${taxPct}% — ${label}`;
+
+  document.getElementById('resultBox').classList.add('show');
+}
+
+</script>
+   <script src="mafioso-widget.js" defer></script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EU Company Check — Official Business Registries | Storelines Tools</title>
+<meta name="description" content="Free EU company check tool. Access official business registries for all 27 EU countries. Verify companies in Belgium BCE, Germany Handelsregister, France Infogreffe, Netherlands KVK and more.">
+<meta name="keywords" content="eu company check, company registry eu, belgium company check, bce belgium, handelsregister germany, infogreffe france, kvk netherlands, krs poland, company verification eu, business registry europe">
+<link rel="canonical" href="https://storelines.net/company-check.html">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<meta property="og:title" content="EU Company Check — Official Business Registries for 27 Countries">
+<meta property="og:description" content="Access official company registries for all EU countries. Verify any EU business instantly. Free.">
+<meta property="og:url" content="https://storelines.net/company-check.html">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F5F5;--white:#FFFFFF;--navy:#0D1B4B;--blue:#1E6FD9;--blue-light:#EBF3FD;--blue-mid:#D0E6FA;--tx:#1A1A2E;--tx2:#4A5568;--tx3:#9AA5B4;--border:#E2E8F0;--font:'Inter',sans-serif;--radius:12px;--green:#10b981}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(13,27,75,0.06)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo img{height:40px;width:auto}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links>li{position:relative}
+.nav-links a{font-size:14px;font-weight:500;color:var(--tx2);text-decoration:none;padding:7px 14px;border-radius:8px;transition:all .2s;display:flex;align-items:center;gap:5px}
+.nav-links a:hover{color:var(--navy);background:var(--blue-light)}
+.nav-links a.active{color:var(--blue);font-weight:700;background:var(--blue-light)}
+.has-dropdown>a::after{content:'▾';font-size:11px;opacity:0.6}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:0 8px 32px rgba(13,27,75,0.12);padding:8px;min-width:240px;z-index:200}
+.dropdown-menu a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:500;color:var(--tx2);text-decoration:none;transition:all .15s;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--blue-light);color:var(--navy)}
+.drop-section{font-size:10px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px;margin-top:4px}
+.drop-section:first-child{margin-top:0}
+.has-dropdown:hover .dropdown-menu{display:block}
+.header-cta{height:38px;padding:0 20px;background:var(--blue);color:var(--white);font-size:13px;font-weight:700;border-radius:9px;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all .2s;white-space:nowrap}
+.header-cta:hover{background:var(--navy);box-shadow:0 4px 16px rgba(30,111,217,0.3);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
+.mob-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:98}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:99;padding:16px 24px 24px;box-shadow:0 8px 24px rgba(0,0,0,0.1);max-height:80vh;overflow-y:auto}
+.mob-menu.open{display:block}
+.mob-menu nav{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.mob-menu nav a{padding:10px 14px;border-radius:8px;font-size:15px;font-weight:500;color:var(--tx);text-decoration:none}
+.mob-menu nav a:hover{background:var(--blue-light);color:var(--blue)}
+.mob-section{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px}
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:12px 24px}
+.breadcrumb-inner{max-width:1200px;margin:0 auto;font-size:13px}
+.breadcrumb a{color:var(--blue);text-decoration:none}
+.breadcrumb span{color:var(--tx3);margin:0 6px}
+.breadcrumb .current{color:var(--tx);font-weight:500}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1a2d6b 100%);padding:56px 24px 48px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(30,111,217,0.25) 0%,transparent 70%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(30,111,217,0.2);border:1px solid rgba(30,111,217,0.4);color:#93c5fd;padding:5px 14px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{color:white;font-size:clamp(28px,4vw,46px);font-weight:900;line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
+.hero h1 span{color:#60a5fa}
+.hero p{color:rgba(255,255,255,0.7);font-size:17px;max-width:560px;margin:0 auto}
+.main-wrap{max-width:1000px;margin:-30px auto 0;padding:0 20px 60px;position:relative;z-index:10}
+.tool-card{background:var(--white);border-radius:20px;box-shadow:0 8px 48px rgba(13,27,75,0.12);padding:40px;margin-bottom:28px}
+.tool-card h2{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:24px}
+
+/* SEARCH */
+.search-row{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:20px}
+.search-input{width:100%;padding:14px 18px;border:2px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:15px;color:var(--tx);background:var(--white);outline:none;transition:border-color .2s}
+.search-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,111,217,0.1)}
+.btn-search{height:50px;padding:0 24px;background:var(--blue);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn-search:hover{background:var(--navy)}
+
+/* REGISTRY GRID */
+.registry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.registry-card{background:var(--bg);border:2px solid var(--border);border-radius:16px;padding:20px;transition:all .2s;cursor:pointer;text-decoration:none;display:block}
+.registry-card:hover{border-color:var(--blue-mid);background:var(--white);transform:translateY(-2px);box-shadow:0 4px 20px rgba(13,27,75,0.1)}
+.registry-card.featured{border-color:var(--blue-mid);background:var(--blue-light)}
+.rc-flag{font-size:32px;margin-bottom:10px}
+.rc-country{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:3px}
+.rc-name{font-size:12px;font-weight:600;color:var(--blue);margin-bottom:6px}
+.rc-desc{font-size:12px;color:var(--tx2);line-height:1.4;margin-bottom:10px}
+.rc-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--blue);background:var(--white);border:1px solid var(--blue-mid);border-radius:6px;padding:4px 10px;transition:all .15s}
+.rc-link:hover{background:var(--blue);color:white}
+.rc-free{display:inline-block;font-size:10px;font-weight:700;color:var(--green);background:#dcfce7;border-radius:4px;padding:2px 6px;margin-left:6px}
+.rc-paid{display:inline-block;font-size:10px;font-weight:700;color:#b45309;background:#fef3c7;border-radius:4px;padding:2px 6px;margin-left:6px}
+
+/* RESULT BOX */
+.result-card{display:none;background:var(--blue-light);border:2px solid var(--blue-mid);border-radius:16px;padding:24px 28px;margin-bottom:20px;animation:fadeUp .3s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.result-card.show{display:block}
+.result-card h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:12px}
+.result-info{display:grid;gap:8px;margin-bottom:16px}
+.info-row{display:flex;gap:10px;font-size:14px}
+.info-label{color:var(--tx3);font-weight:500;min-width:110px;flex-shrink:0}
+.info-value{color:var(--navy);font-weight:600}
+.btn-open{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--blue);color:white;border-radius:var(--radius);text-decoration:none;font-weight:700;font-size:14px;transition:all .2s}
+.btn-open:hover{background:var(--navy)}
+
+/* WISE */
+.wise-banner{background:linear-gradient(135deg,#163300 0%,#1a4d00 100%);border-radius:16px;padding:28px 32px;display:flex;align-items:center;gap:24px;margin-bottom:28px}
+.wise-icon{width:52px;height:52px;background:#00b950;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.wise-text{flex:1}.wise-text h3{color:white;font-size:16px;font-weight:700;margin-bottom:4px}
+.wise-text p{color:rgba(255,255,255,0.7);font-size:13px}.wise-text p strong{color:#4ade80}
+.wise-btn{display:inline-flex;align-items:center;gap:8px;background:#00b950;color:white;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap;transition:background .2s;flex-shrink:0}
+.wise-btn:hover{background:#00d45c}
+.seo-card{background:var(--white);border-radius:20px;padding:40px;margin-bottom:24px}
+.seo-card h2{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:16px}
+.seo-card h3{font-size:17px;font-weight:700;color:var(--navy);margin:24px 0 10px}
+.seo-card p{color:#475569;font-size:15px;line-height:1.75;margin-bottom:14px}
+.seo-card ul{margin:0 0 14px 20px;color:#475569;font-size:15px;line-height:1.8}
+.faq-list{display:grid;gap:12px;margin-top:16px}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;font-size:15px;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--white);user-select:none}
+.faq-q:hover{background:#f8fafc}
+.faq-q::after{content:'▾';font-size:14px;color:var(--blue);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(180deg)}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;font-size:14px;color:#475569;line-height:1.7;background:#fafbfd}
+.faq-item.open .faq-a{max-height:300px;padding:14px 20px 18px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:16px}
+.related-item{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;align-items:center;gap:10px;text-decoration:none;transition:border-color .2s}
+.related-item:hover{border-color:var(--blue)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:40px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-col h4{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.footer-col a{display:block;font-size:13px;color:var(--tx2);text-decoration:none;margin-bottom:8px;transition:color .15s}
+.footer-col a:hover{color:var(--blue)}
+.footer-desc{font-size:13px;color:var(--tx2);line-height:1.7}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--tx3)}
+@media(max-width:768px){
+  .nav-links,.header-cta{display:none}.hamburger{display:flex}
+  .registry-grid{grid-template-columns:1fr 1fr}
+  .search-row{grid-template-columns:1fr}
+  .wise-banner{flex-direction:column;text-align:center;padding:24px 20px}
+  .tool-card,.seo-card{padding:24px 18px}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+}
+
+/* DROPDOWN FIX */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu { display: block !important; }
+
+</style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Storelines",
+  "url": "https://storelines.net/",
+  "description": ""
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="index.html">Home</a><span>›</span><a href="tools.html">Tools</a><span>›</span><span class="current">EU Company Check</span>
+</div></div>
+
+<div class="hero">
+  <div class="hero-badge">🏢 Free EU Tool</div>
+  <h1>EU Company <span>Check</span></h1>
+  <p>Access official business registries for all 27 EU countries. Verify any European company instantly via government databases.</p>
+</div>
+
+<div class="main-wrap">
+  <div class="tool-card">
+    <h2>🏢 Find Company Registry</h2>
+
+    <!-- SEARCH -->
+    <div class="search-row">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search by country name (e.g. Belgium, Germany, France...)" oninput="filterRegistries()">
+      <button class="btn-search" onclick="filterRegistries()">🔍 Search</button>
+    </div>
+
+    <!-- RESULT -->
+    <div class="result-card" id="resultCard"></div>
+
+    <!-- REGISTRY GRID -->
+    <div class="registry-grid" id="registryGrid"></div>
+  </div>
+
+  <div class="wise-banner">
+    <div class="wise-icon">🏢</div>
+    <div class="wise-text">
+      <h3>Pay EU Business Partners Securely — Use Wise</h3>
+      <p>Once you've verified a company, pay them safely via Wise Business. <strong>Real exchange rates</strong>, instant SEPA transfers, 70+ currencies.</p>
+    </div>
+    <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored" class="wise-btn">Open Wise →</a>
+  </div>
+
+  <div class="seo-card">
+    <h2>EU Company Registries — Complete Guide</h2>
+    <p>Every EU member state maintains an official <strong>company registry</strong> — a public database of registered businesses, their legal form, registered address, directors, and financial filings. Checking a company in the official registry before entering a business relationship is essential due diligence in European B2B commerce.</p>
+
+    <h3>Why Verify a Company Before Doing Business?</h3>
+    <ul>
+      <li>Confirm the company is legally registered and active</li>
+      <li>Verify the registered address and legal form</li>
+      <li>Check authorized signatories and directors</li>
+      <li>Review financial filings and annual accounts (where available)</li>
+      <li>Detect potential fraud or dormant companies</li>
+      <li>Required for AML (Anti-Money Laundering) compliance</li>
+    </ul>
+
+    <h3>Belgium BCE — Crossroads Bank for Enterprises</h3>
+    <p>The Belgian BCE (Banque-Carrefour des Entreprises / Kruispuntbank van Ondernemingen) is the central company registry. Every Belgian company has a unique enterprise number (numéro d'entreprise / ondernemingsnummer) in the format BE XXXX.XXX.XXX. The public search at kbopub.economie.fgov.be is free and shows basic company information, VAT status, and activity codes.</p>
+
+    <h3>Germany Handelsregister</h3>
+    <p>The German commercial register (Handelsregister) is maintained by local courts (Amtsgerichte) and accessible via handelsregister.de. It contains registration details, articles of association, managing directors, and annual accounts for GmbH and AG companies. Document access costs €1.50 per document but company name/number search is free.</p>
+
+    <h3>EU-Wide Company Search — BRIS</h3>
+    <p>The Business Registers Interconnection System (BRIS) connects company registries across all EU member states and allows cross-border company searches via the European e-Justice portal (e-justice.europa.eu). This is particularly useful when you need to verify companies across multiple EU countries simultaneously.</p>
+  </div>
+
+  <div class="seo-card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is it free to check a company in EU registries?</div><div class="faq-a">Most EU member states provide free basic company information (name, registration number, address, legal status) in their official registries. Detailed documents (articles of association, annual accounts, director details) may require a small fee, typically €1.50–€15 per document. Belgium, Netherlands (KVK), and Poland (KRS) offer extensive free data.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I verify a Belgian company number?</div><div class="faq-a">Belgian company numbers (enterprise numbers) are in the format XXXX.XXX.XXX and can be verified for free at the BCE public search (kbopub.economie.fgov.be). The search returns the company name, legal form, VAT status, registered address, and NACE activity codes. Belgian company numbers starting with 0 or 1 are assigned to legal entities; natural persons have numbers starting with their national number.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is a KvK number in the Netherlands?</div><div class="faq-a">The KvK number (Kamer van Koophandel) is the Dutch Chamber of Commerce registration number. It is an 8-digit number unique to each Dutch business entity. All Dutch businesses (including sole traders) are required to register with the KvK. The basic company profile is publicly accessible at kvk.nl for free; detailed extracts cost around €2.50.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I verify EU companies across multiple countries at once?</div><div class="faq-a">Yes. The European e-Justice portal (e-justice.europa.eu) provides access to company registries across EU member states through the BRIS (Business Registers Interconnection System). You can search by company name or registration number across connected member states. Some countries also appear in commercial data providers like Orbis (Bureau van Dijk) or Dun & Bradstreet.</div></div>
+    </div>
+  </div>
+
+  <div class="seo-card">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="vat-validator.html" class="related-item"><span style="font-size:22px">🔍</span><div><strong style="color:var(--navy);font-size:14px">VAT Validator</strong><br><small style="color:var(--tx3)">Verify EU VAT numbers</small></div></a>
+      <a href="iban-validator.html" class="related-item"><span style="font-size:22px">🏦</span><div><strong style="color:var(--navy);font-size:14px">IBAN Validator</strong><br><small style="color:var(--tx3)">Validate bank accounts</small></div></a>
+      <a href="swift-lookup.html" class="related-item"><span style="font-size:22px">🏛️</span><div><strong style="color:var(--navy);font-size:14px">BIC/SWIFT Lookup</strong><br><small style="color:var(--tx3)">Verify bank codes</small></div></a>
+      <a href="tools.html" class="related-item"><span style="font-size:22px">🛠️</span><div><strong style="color:var(--navy);font-size:14px">All 18 Tools</strong><br><small style="color:var(--tx3)">Full EU business toolkit</small></div></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><img src="images/storelines-logo.png" alt="Storelines Tools" style="height:36px;margin-bottom:12px"><p class="footer-desc">Professional business tools for EU entrepreneurs. Free, no registration. Official Wise Business partner.</p></div>
+    <div class="footer-col"><h4>Tools</h4><a href="company-check.html">EU Company Check</a><a href="vat-validator.html">VAT Validator</a><a href="swift-lookup.html">BIC/SWIFT Lookup</a><a href="eori-checklist.html">EORI Checklist</a><a href="tools.html">All 18 Tools →</a></div>
+    <div class="footer-col"><h4>Wise Partner</h4><a href="wise-business.html">Wise Business</a><a href="wise-send-money.html">Send Money</a><a href="wise-iban.html">Get EU IBAN</a><a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored">Open Account →</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Storelines Tools. All rights reserved.</span><span>Brussels, Belgium · EU</span></div>
+</footer>
+
+<script>
+const REGISTRIES = [
+  {country:'Belgium',flag:'🇧🇪',name:'BCE / KBO',fullName:'Banque-Carrefour des Entreprises',desc:'Central business registry. Search by enterprise number or company name. VAT status and activity codes included.',url:'https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html',free:true,featured:true},
+  {country:'Germany',flag:'🇩🇪',name:'Handelsregister',fullName:'Handelsregister Deutschland',desc:'Federal commercial register. GmbH, AG companies. Documents €1.50 each, name search free.',url:'https://www.handelsregister.de',free:false,featured:true},
+  {country:'France',flag:'🇫🇷',name:'Infogreffe / Pappers',fullName:'Registre du Commerce et des Sociétés',desc:'Commercial registry via Infogreffe or free Pappers.fr. SIREN/SIRET numbers, directors, accounts.',url:'https://www.pappers.fr',free:true,featured:true},
+  {country:'Netherlands',flag:'🇳🇱',name:'KvK',fullName:'Kamer van Koophandel',desc:'Dutch Chamber of Commerce. KvK number search. Basic profile free, full extract €2.50.',url:'https://www.kvk.nl/zoeken/',free:true,featured:true},
+  {country:'Poland',flag:'🇵🇱',name:'KRS',fullName:'Krajowy Rejestr Sądowy',desc:'National Court Register. Extensive free data including financial statements and management boards.',url:'https://ekrs.ms.gov.pl',free:true,featured:false},
+  {country:'Spain',flag:'🇪🇸',name:'BORME',fullName:'Boletín Oficial del Registro Mercantil',desc:'Spanish commercial registry publications. Company announcements, incorporations and liquidations.',url:'https://www.boe.es/borme/',free:true,featured:false},
+  {country:'Italy',flag:'🇮🇹',name:'Registro Imprese',fullName:'Registro delle Imprese',desc:'Italian business registry. Company profiles, balance sheets, legal representatives.',url:'https://www.registroimprese.it',free:false,featured:false},
+  {country:'Sweden',flag:'🇸🇪',name:'Bolagsverket',fullName:'Bolagsverket',desc:'Swedish Companies Registration Office. AB (limited companies) and other legal forms.',url:'https://www.bolagsverket.se/en',free:true,featured:false},
+  {country:'Austria',flag:'🇦🇹',name:'Firmenbuch',fullName:'Firmenbuch Österreich',desc:'Austrian commercial register. GmbH, AG companies. Online access via Firmenbuch portal.',url:'https://www.firmenbuch.at',free:false,featured:false},
+  {country:'Luxembourg',flag:'🇱🇺',name:'RCSL',fullName:'Registre de Commerce et des Sociétés',desc:'Luxembourg trade and companies register. SA, SARL, holding companies.',url:'https://www.rcsl.lu',free:true,featured:false},
+  {country:'Denmark',flag:'🇩🇰',name:'CVR',fullName:'Det Centrale Virksomhedsregister',desc:'Danish Central Business Register. CVR numbers, company details, financial reports.',url:'https://datacvr.virk.dk',free:true,featured:false},
+  {country:'Finland',flag:'🇫🇮',name:'PRH',fullName:'Patentti- ja rekisterihallitus',desc:'Finnish Patent and Registration Office. Business ID (Y-tunnus) search.',url:'https://virre.prh.fi',free:true,featured:false},
+  {country:'Ireland',flag:'🇮🇪',name:'CRO',fullName:'Companies Registration Office',desc:'Irish company registry. CRO number search, director details, annual returns.',url:'https://search.cro.ie',free:true,featured:false},
+  {country:'Portugal',flag:'🇵🇹',name:'IRN',fullName:'Instituto dos Registos e do Notariado',desc:'Portuguese company registry. NIF/NIPC numbers, company status.',url:'https://publicacoes.mj.pt',free:false,featured:false},
+  {country:'Czech Republic',flag:'🇨🇿',name:'OR',fullName:'Obchodní rejstřík',desc:'Czech commercial register. IČO number search, financial statements, deed of incorporation.',url:'https://or.justice.cz',free:true,featured:false},
+  {country:'Hungary',flag:'🇭🇺',name:'Cégbíróság',fullName:'Cégbírósági nyilvántartás',desc:'Hungarian company court registry. Kft, Zrt companies. Cégjegyzékszám search.',url:'https://ceginformacio.hu',free:false,featured:false},
+  {country:'Romania',flag:'🇷🇴',name:'ONRC',fullName:'Oficiul National al Registrului Comertului',desc:'Romanian trade registry. CUI/CIF numbers, SRL, SA companies.',url:'https://www.onrc.ro',free:true,featured:false},
+  {country:'EU Pan-European',flag:'🇪🇺',name:'BRIS / e-Justice',fullName:'Business Registers Interconnection System',desc:'Search company registries across all EU member states from one portal.',url:'https://e-justice.europa.eu/content_find_a_company-489-en.do',free:true,featured:true},
+];
+
+let filtered = [...REGISTRIES];
+
+function renderGrid(list){
+  document.getElementById('registryGrid').innerHTML = list.map(r=>`
+    <a href="${r.url}" target="_blank" rel="noopener" class="registry-card${r.featured?' featured':''}">
+      <div class="rc-flag">${r.flag}</div>
+      <div class="rc-country">${r.country}</div>
+      <div class="rc-name">${r.name} <span class="${r.free?'rc-free':'rc-paid'}">${r.free?'Free':'Paid'}</span></div>
+      <div class="rc-desc">${r.desc}</div>
+      <div class="rc-link">Open Registry →</div>
+    </a>`).join('');
+}
+
+function filterRegistries(){
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  if(!q){filtered=[...REGISTRIES];document.getElementById('resultCard').classList.remove('show');renderGrid(filtered);return;}
+  const match = REGISTRIES.find(r=>r.country.toLowerCase().includes(q)||r.name.toLowerCase().includes(q)||r.fullName.toLowerCase().includes(q));
+  if(match){
+    const card = document.getElementById('resultCard');
+    card.classList.add('show');
+    card.innerHTML=`<h3>${match.flag} ${match.country} — ${match.name}</h3>
+    <div class="result-info">
+      <div class="info-row"><span class="info-label">Registry</span><span class="info-value">${match.fullName}</span></div>
+      <div class="info-row"><span class="info-label">Access</span><span class="info-value">${match.free?'✅ Free':'💳 Paid (some documents)'}</span></div>
+      <div class="info-row"><span class="info-label">Details</span><span class="info-value">${match.desc}</span></div>
+    </div>
+    <a href="${match.url}" target="_blank" rel="noopener" class="btn-open">🔗 Open Official Registry →</a>`;
+  } else {
+    document.getElementById('resultCard').classList.remove('show');
+  }
+  filtered = REGISTRIES.filter(r=>r.country.toLowerCase().includes(q)||r.name.toLowerCase().includes(q));
+  renderGrid(filtered.length ? filtered : REGISTRIES);
+}
+
+
+renderGrid(REGISTRIES);
+</script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

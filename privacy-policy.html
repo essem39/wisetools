@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Storelines</title>
+<meta name="description" content="Privacy Policy for Storelines Tools. How we collect, use, and protect your information. GDPR compliant.">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<link rel="canonical" href="https://storelines.net/privacy-policy.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://storelines.net/privacy-policy.html">
+<meta property="og:title" content="Privacy Policy — Storelines">
+<meta property="og:description" content="Privacy Policy for Storelines Tools. How we collect, use, and protect your information. GDPR compliant.">
+<meta property="og:image" content="https://storelines.net/images/hero-wise.jpg">
+<meta property="og:site_name" content="Storelines">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Policy — Storelines">
+<meta name="twitter:description" content="Privacy Policy for Storelines Tools. How we collect, use, and protect your information. GDPR compliant.">
+<meta name="twitter:image" content="https://storelines.net/images/hero-wise.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* === WISE LIGHT THEME === */
+:root {
+  --bg: #F0F5F2;
+  --surface: #FFFFFF;
+  --teal-dark: #16322E;
+  --teal: #00B972;
+  --teal-light: #2A9D8F;
+  --wise-green: #00B972;
+  --wise-green-hover: #00A060;
+  --tx: #1A2E3A;
+  --tx2: #2E4C5E;
+  --tx3: #5A7A8A;
+  --border: #C0D9D0;
+  --border-light: #A8C9BC;
+  --shadow: 0 8px 24px rgba(22,50,46,0.06);
+  --shadow-h: 0 16px 40px rgba(22,50,46,0.12);
+  --font: 'Inter', sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--tx);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+}
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+.nav-links {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links > li {
+  position: relative;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-links a:hover {
+  color: var(--teal);
+  background: rgba(0,185,114,0.08);
+}
+.nav-links a.active {
+  color: var(--teal);
+  font-weight: 700;
+  background: rgba(0,185,114,0.12);
+}
+
+/* DROPDOWN */
+.has-dropdown > a::after {
+  content: '▾';
+  font-size: 11px;
+  opacity: 0.6;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-h);
+  padding: 8px;
+  min-width: 280px;
+  z-index: 200;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.dropdown-menu .drop-section {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+  margin-top: 4px;
+}
+.dropdown-menu .drop-section:first-child {
+  margin-top: 0;
+}
+.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-cta {
+  height: 38px;
+  padding: 0 20px;
+  background: var(--teal);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 9px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .2s;
+  white-space: nowrap;
+  border: none;
+}
+.header-cta:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 4px 12px rgba(0,185,114,0.25);
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--teal-dark);
+  border-radius: 2px;
+  transition: all .3s;
+}
+.mob-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 98;
+}
+.mob-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  padding: 16px 24px 24px;
+  box-shadow: var(--shadow);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.mob-menu.open {
+  display: block;
+}
+.mob-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.mob-menu nav a {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--tx);
+  text-decoration: none;
+}
+.mob-menu nav a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.mob-section {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+}
+
+/* HERO */
+.hero {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 60px 24px;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0,185,114,0.1);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  color: var(--teal-dark);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.hero-date {
+  font-size: 14px;
+  color: var(--tx3);
+}
+
+/* CONTENT */
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+.highlight-box {
+  background: var(--teal-dark);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+  font-size: 15px;
+  color: white;
+  line-height: 1.7;
+}
+.highlight-box strong {
+  color: var(--teal-light);
+}
+
+.policy-section {
+  margin-bottom: 48px;
+}
+.policy-section h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--teal-dark);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.policy-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--tx);
+  margin: 24px 0 10px;
+}
+.policy-section p {
+  font-size: 15px;
+  color: var(--tx2);
+  margin-bottom: 14px;
+  line-height: 1.75;
+}
+.policy-section ul, .policy-section ol {
+  margin: 0 0 16px 20px;
+}
+.policy-section li {
+  font-size: 15px;
+  color: var(--tx2);
+  margin-bottom: 6px;
+  line-height: 1.65;
+}
+.policy-section a {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 600;
+}
+.policy-section a:hover {
+  text-decoration: underline;
+}
+code {
+  font-size: 13px;
+  background: rgba(0,185,114,0.08);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: var(--teal-dark);
+}
+
+/* FOOTER */
+footer {
+  background: var(--teal-dark);
+  padding: 48px 24px 32px;
+  color: white;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-brand {
+  font-size: 22px;
+  font-weight: 700;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color .15s;
+}
+.footer-links a:hover {
+  color: var(--teal);
+}
+.footer-copy {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  .nav-links, .header-right .header-cta { display: none; }
+  .hamburger { display: flex; }
+  .hero { padding: 48px 20px 40px; }
+  .wrap { padding: 40px 20px 60px; }
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+
+/* DROPDOWN FIX */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu { display: block !important; }
+
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "url": "https://storelines.net/privacy-policy.html",
+  "description": "Privacy Policy for Storelines Tools. How we collect, use, and protect your information. GDPR compliant."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="hero-date">Last updated: March 23, 2026</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <div class="highlight-box">
+    <strong>Short version:</strong> Storelines Tools runs entirely in your browser. We do not collect, store, or sell your personal data. The only local storage we use is to remember your invoice counter — and only on your own device.
+  </div>
+
+  <div class="policy-section">
+    <h2>1. Introduction</h2>
+    <p>Welcome to Storelines Tools ("we," "our," or "us"), operated at storelines.net. We are committed to protecting your privacy and being transparent about our data practices.</p>
+    <p>This Privacy Policy explains what information we collect, how we use it, and your rights under the EU General Data Protection Regulation (GDPR) and other applicable laws.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>2. Information We Collect</h2>
+    <h3>Tool Usage (No Data Collected)</h3>
+    <p>All 18 business tools on Storelines Tools — VAT Validator, IBAN Checker, Currency Converter, and others — run entirely client-side in your browser. No data you enter into these tools is transmitted to our servers or stored anywhere.</p>
+    <h3>Local Storage</h3>
+    <p>The Invoice Number Generator uses your browser's localStorage to maintain a sequential invoice counter. This data never leaves your device and can be cleared by clearing your browser data.</p>
+    <h3>Contact Form</h3>
+    <p>If you submit our contact form, we collect your name, email address, and message content solely to respond to your inquiry. This data is not used for marketing without your explicit consent.</p>
+    <h3>Analytics (Anonymised)</h3>
+    <p>We may use privacy-respecting analytics to understand aggregate usage patterns (e.g., which tools are most used). No personally identifiable information is collected or stored in this process.</p>
+    <h3>Cookies</h3>
+    <p>We use minimal, functional cookies only. We do not use advertising or tracking cookies. Our affiliate partner Wise Business may set cookies on their own domain when you click their link — their privacy policy applies.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li>To respond to contact form inquiries</li>
+      <li>To improve the functionality and content of our tools</li>
+      <li>To monitor site performance and fix technical issues</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+    <p>We do not sell, rent, or trade your personal information to third parties.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>4. Affiliate Links — Wise Business</h2>
+    <p>Storelines Tools has an affiliate partnership with Wise Business. When you click on Wise links on our site, we may earn a commission at no extra cost to you. Wise links are marked with <code>rel="noopener sponsored"</code>.</p>
+    <p>Clicking a Wise link takes you to Wise's website, where their own Privacy Policy applies. We encourage you to review it at <a href="https://wise.com/gb/legal/privacy-policy" target="_blank" rel="noopener">wise.com</a>.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>5. GDPR — Your Rights</h2>
+    <p>If you are located in the European Union, you have the following rights under the GDPR:</p>
+    <ul>
+      <li><strong>Right of access</strong> — request a copy of any personal data we hold about you</li>
+      <li><strong>Right to rectification</strong> — request correction of inaccurate data</li>
+      <li><strong>Right to erasure</strong> — request deletion of your personal data</li>
+      <li><strong>Right to restriction</strong> — request that we limit how we process your data</li>
+      <li><strong>Right to data portability</strong> — receive your data in a machine-readable format</li>
+      <li><strong>Right to object</strong> — object to processing based on legitimate interests</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:hello@storelines.net">hello@storelines.net</a>. We will respond within 30 days.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>6. Data Security</h2>
+    <p>Because Storelines Tools processes data locally in your browser, the risk of data breaches affecting your tool usage is minimal. Our website is served over HTTPS. Contact form submissions are handled securely.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>7. Children's Privacy</h2>
+    <p>Storelines Tools is intended for business use and is not directed at children under 16. We do not knowingly collect personal data from children. If you believe a child has submitted data through our contact form, please notify us immediately.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be reflected by an updated "Last updated" date at the top of this page. We encourage you to review this policy periodically.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>9. Contact</h2>
+    <p>For any privacy-related questions or to exercise your GDPR rights:</p>
+    <p>📧 <a href="mailto:hello@storelines.net">hello@storelines.net</a></p>
+    <p>🌐 <a href="contact.html">storelines.net/contact</a></p>
+    <p>📍 Brussels, Belgium — EU</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">STORELINES</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tools.html">Tools</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 Storelines Tools. All rights reserved. · Brussels, Belgium</div>
+</footer>
+
+<script>
+</script>
+<script src="mafioso-widget.js" defer></script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

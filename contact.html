@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Storelines | EU Business Tools & Wise Partner</title>
+<meta name="description" content="Get in touch with Storelines. Questions about EU business tools, partnerships, or Wise Business integration. We're here to help.">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<link rel="canonical" href="https://storelines.net/contact.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://storelines.net/contact.html">
+<meta property="og:title" content="Contact — Storelines | EU Business Tools & Wise Partner">
+<meta property="og:description" content="Get in touch with Storelines. Questions about EU business tools, partnerships, or Wise Business integration.">
+<meta property="og:image" content="https://storelines.net/images/hero-wise.jpg">
+<meta property="og:site_name" content="Storelines">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Storelines | EU Business Tools & Wise Partner">
+<meta name="twitter:description" content="Get in touch with Storelines. Questions about EU business tools, partnerships, or Wise Business integration.">
+<meta name="twitter:image" content="https://storelines.net/images/hero-wise.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* === WISE LIGHT THEME === */
+:root {
+  --bg: #F0F5F2;
+  --surface: #FFFFFF;
+  --card: #FFFFFF;
+  --teal-dark: #16322E;
+  --teal: #00B972;
+  --teal-light: #2A9D8F;
+  --wise-green: #00B972;
+  --wise-green-hover: #00A060;
+  --tx: #1A2E3A;
+  --tx2: #2E4C5E;
+  --tx3: #5A7A8A;
+  --border: #C0D9D0;
+  --border-light: #A8C9BC;
+  --shadow: 0 8px 24px rgba(22,50,46,0.06);
+  --shadow-h: 0 16px 40px rgba(22,50,46,0.12);
+  --font: 'Inter', sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--tx);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+}
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+.nav-links {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links > li {
+  position: relative;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-links a:hover {
+  color: var(--teal);
+  background: rgba(0,185,114,0.08);
+}
+.nav-links a.active {
+  color: var(--teal);
+  font-weight: 700;
+  background: rgba(0,185,114,0.12);
+}
+
+/* DROPDOWN */
+.has-dropdown > a::after {
+  content: '▾';
+  font-size: 11px;
+  opacity: 0.6;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-h);
+  padding: 8px;
+  min-width: 280px;
+  z-index: 200;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.dropdown-menu .drop-section {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+  margin-top: 4px;
+}
+.dropdown-menu .drop-section:first-child {
+  margin-top: 0;
+}
+.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-cta {
+  height: 38px;
+  padding: 0 20px;
+  background: var(--teal);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 9px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .2s;
+  white-space: nowrap;
+  border: none;
+}
+.header-cta:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 4px 12px rgba(0,185,114,0.25);
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--teal-dark);
+  border-radius: 2px;
+  transition: all .3s;
+}
+.mob-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 98;
+}
+.mob-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  padding: 16px 24px 24px;
+  box-shadow: var(--shadow);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.mob-menu.open {
+  display: block;
+}
+.mob-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.mob-menu nav a {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--tx);
+  text-decoration: none;
+}
+.mob-menu nav a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.mob-section {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+}
+
+/* HERO */
+.hero {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 60px 24px;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0,185,114,0.1);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  color: var(--teal-dark);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+.hero h1 span {
+  background: linear-gradient(135deg, var(--teal), var(--wise-green-hover));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-sub {
+  font-size: 17px;
+  color: var(--tx2);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* MAIN */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 40px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+/* LEFT — INFO */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all .2s;
+  box-shadow: var(--shadow);
+}
+.info-card:hover {
+  border-color: var(--teal);
+  box-shadow: var(--shadow-h);
+}
+.info-card-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.info-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-bottom: 6px;
+}
+.info-card-text {
+  font-size: 13px;
+  color: var(--tx2);
+  line-height: 1.6;
+}
+.info-card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity .15s;
+}
+.info-card-link:hover {
+  opacity: 0.8;
+}
+
+/* RIGHT — FORM */
+.contact-form-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+}
+.form-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--teal-dark);
+  margin-bottom: 6px;
+}
+.form-sub {
+  font-size: 14px;
+  color: var(--tx3);
+  margin-bottom: 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tx2);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+}
+.inp {
+  width: 100%;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: var(--font);
+  color: var(--tx);
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.inp:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(0,185,114,0.1);
+}
+.inp::placeholder {
+  color: var(--tx3);
+}
+select.inp {
+  cursor: pointer;
+}
+textarea.inp {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.form-topic {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.topic-btn {
+  padding: 7px 16px;
+  background: transparent;
+  border: 1.5px solid var(--border);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tx3);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: all .15s;
+}
+.topic-btn:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+.topic-btn.active {
+  border-color: var(--teal);
+  background: rgba(0,185,114,0.1);
+  color: var(--teal);
+}
+
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  background: var(--teal);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all .2s;
+}
+.submit-btn:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 6px 24px rgba(0,185,114,0.3);
+  transform: translateY(-1px);
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--tx3);
+  text-align: center;
+  margin-top: 14px;
+}
+
+/* SUCCESS */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 32px;
+}
+.form-success-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.form-success h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--teal-dark);
+  margin-bottom: 10px;
+}
+.form-success p {
+  font-size: 14px;
+  color: var(--tx2);
+}
+
+/* WISE FULL-WIDTH BLOCK */
+.wise-full {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+.wise-card-full {
+  background: var(--teal-dark);
+  border-radius: 20px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: white;
+  box-shadow: var(--shadow-h);
+}
+.wise-full-content {
+  flex: 1;
+}
+.wise-full-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal-light);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+.wise-full-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.wise-full-text {
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 600px;
+}
+.wise-full-btn {
+  padding: 14px 32px;
+  background: var(--teal);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all .2s;
+  border: none;
+  cursor: pointer;
+}
+.wise-full-btn:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 6px 20px rgba(0,185,114,0.4);
+  transform: translateY(-2px);
+}
+
+/* FAQ */
+.faq-wrap {
+  margin-top: 20px;
+}
+.faq-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 24px;
+  cursor: pointer;
+  transition: all .2s;
+  box-shadow: var(--shadow);
+}
+.faq-item:hover {
+  border-color: var(--teal);
+  box-shadow: var(--shadow-h);
+}
+.faq-q {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.faq-q span {
+  color: var(--teal);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.faq-a {
+  font-size: 13px;
+  color: var(--tx2);
+  line-height: 1.65;
+}
+
+/* FOOTER */
+footer {
+  background: var(--teal-dark);
+  padding: 48px 24px 32px;
+  color: white;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+.footer-brand {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.footer-desc {
+  font-size: 13px;
+  opacity: 0.7;
+  line-height: 1.7;
+}
+.footer-col h4 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+.footer-col a {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color .15s;
+}
+.footer-col a:hover {
+  color: var(--teal);
+}
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+@media(max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .wise-card-full { flex-direction: column; text-align: center; }
+  .wise-full-text { max-width: 100%; }
+}
+@media(max-width: 768px) {
+  .nav-links, .header-right .header-cta { display: none; }
+  .hamburger { display: flex; }
+  .hero { padding: 48px 20px 40px; }
+  .main { padding: 40px 20px 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form-wrap { padding: 28px 20px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .wise-full { padding: 0 20px; }
+  .wise-card-full { padding: 28px 24px; }
+}
+
+/* DROPDOWN FIX */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu { display: block !important; }
+
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Storelines",
+  "url": "https://storelines.net/contact.html",
+  "description": "Get in touch with Storelines for questions about EU business tools, partnerships, or Wise Business integration.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Storelines",
+    "email": "support@storelines.net",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brussels",
+      "addressCountry": "BE"
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Get in Touch</div>
+    <h1>Contact <span>Storelines</span></h1>
+    <p class="hero-sub">Questions about tools, partnerships, or Wise Business? The Family is here to help.</p>
+  </div>
+</section>
+
+<div class="main">
+  <div class="contact-grid">
+
+    <!-- LEFT -->
+    <div class="contact-info">
+
+      <div class="info-card">
+        <div class="info-card-icon">🛠️</div>
+        <div class="info-card-title">Tool Support</div>
+        <div class="info-card-text">Found a bug or need help with VAT, IBAN, or any of the 18 tools? Describe the issue and we'll fix it fast.</div>
+        <a href="mailto:support@storelines.net" class="info-card-link">support@storelines.net →</a>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-icon">🇪🇺</div>
+        <div class="info-card-title">Location</div>
+        <div class="info-card-text">Brussels, Belgium — the heart of the European Union. Built for entrepreneurs across all 27 EU member states.</div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT — FORM -->
+    <div class="contact-form-wrap">
+      <div id="formContent">
+        <div class="form-title">Send a Message</div>
+        <div class="form-sub">Fill out the form and we'll get back to you within 24 hours.</div>
+
+        <div style="margin-bottom:20px">
+          <label>Topic</label>
+          <div class="form-topic">
+            <button type="button" class="topic-btn active" onclick="selectTopic(this)">General</button>
+            <button type="button" class="topic-btn" onclick="selectTopic(this)">Tools Support</button>
+            <button type="button" class="topic-btn" onclick="selectTopic(this)">Partnership</button>
+            <button type="button" class="topic-btn" onclick="selectTopic(this)">Wise Business</button>
+            <button type="button" class="topic-btn" onclick="selectTopic(this)">Other</button>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="fname">First Name</label>
+            <input class="inp" type="text" id="fname" placeholder="John">
+          </div>
+          <div>
+            <label for="lname">Last Name</label>
+            <input class="inp" type="text" id="lname" placeholder="Smith">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input class="inp" type="email" id="email" placeholder="john@company.eu">
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company (optional)</label>
+          <input class="inp" type="text" id="company" placeholder="Your EU business">
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select class="inp" id="country">
+            <option value="">Select country...</option>
+            <option>🇧🇪 Belgium</option>
+            <option>🇩🇪 Germany</option>
+            <option>🇫🇷 France</option>
+            <option>🇳🇱 Netherlands</option>
+            <option>🇵🇱 Poland</option>
+            <option>🇪🇸 Spain</option>
+            <option>🇮🇹 Italy</option>
+            <option>🇸🇪 Sweden</option>
+            <option>🇦🇹 Austria</option>
+            <option>🇨🇿 Czech Republic</option>
+            <option>🇷🇴 Romania</option>
+            <option>🇭🇺 Hungary</option>
+            <option>🇦🇲 Armenia</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="inp" id="message" placeholder="Tell us how we can help..."></textarea>
+        </div>
+
+        <button class="submit-btn" onclick="submitForm()">Send Message →</button>
+        <p class="form-note">🔒 Your data is safe. We never share your information.</p>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">✅</div>
+        <h3>Message Sent</h3>
+        <p>Thank you. We'll get back to you within 24 hours.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- WISE FULL-WIDTH BLOCK -->
+<div class="wise-full">
+  <div class="wise-card-full">
+    <div class="wise-full-content">
+      <div class="wise-full-label">💚 Official Partner</div>
+      <div class="wise-full-title">Wise Business</div>
+      <div class="wise-full-text">Open a multi-currency EU business account in 5 minutes. Transfers to 70+ countries at the real exchange rate.</div>
+    </div>
+    <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="wise-full-btn">Open Wise Account →</a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="main" style="padding-top:0;">
+  <div class="faq-wrap">
+    <div class="faq-label">— Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Are all 18 tools really free? <span>→</span></div>
+        <div class="faq-a">Yes, completely free. No registration, no subscription, no hidden fees. All tools run client-side in your browser.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How accurate is the VAT Validator? <span>→</span></div>
+        <div class="faq-a">The validator checks format against official EU VIES patterns for all 27 member states.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why do you recommend Wise Business? <span>→</span></div>
+        <div class="faq-a">Wise is our official financial partner. It saves EU entrepreneurs up to 10x on international transfers.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I suggest a new tool? <span>→</span></div>
+        <div class="faq-a">Absolutely. Use the contact form with topic "Other" and describe what you need.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you store my data? <span>→</span></div>
+        <div class="faq-a">No. All calculations happen in your browser. Only invoice counter is saved locally on your device.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I report a bug? <span>→</span></div>
+        <div class="faq-a">Use the contact form, select "Tools Support", and describe the issue. We fix critical bugs within 48h.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">STORELINES</div>
+      <p class="footer-desc">Premium business intelligence platform for European entrepreneurs. Trusted tools for validation, compliance, and financial operations.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <a href="tools.html">All 18 Tools</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Storelines Tools. All rights reserved.</span>
+    <span>Brussels, Belgium</span>
+  </div>
+</footer>
+
+<script>
+function selectTopic(btn) {
+  document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function submitForm() {
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const fname = document.getElementById('fname').value.trim();
+  if (!fname || !email || !message) {
+    const first = !fname ? 'fname' : !email ? 'email' : 'message';
+    const el = document.getElementById(first);
+    el.style.borderColor = '#dc2626';
+    el.focus();
+    setTimeout(() => el.style.borderColor = '', 2000);
+    return;
+  }
+  document.getElementById('formContent').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
+function toggleMenu() {
+  const m = document.getElementById('mob-menu');
+  const o = document.getElementById('overlay');
+  const open = m.classList.toggle('open');
+  o.style.display = open ? 'block' : 'none';
+}
+</script>
+<script src="mafioso-widget.js" defer></script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

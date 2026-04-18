@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>18 Free EU Business Tools | Storelines</title>
+<meta name="description" content="18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice. Free, no registration.">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<link rel="canonical" href="https://storelines.net/tools.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://storelines.net/tools.html">
+<meta property="og:title" content="18 Free EU Business Tools | Storelines">
+<meta property="og:description" content="18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice.">
+<meta property="og:image" content="https://storelines.net/images/hero-wise.jpg">
+<meta property="og:site_name" content="Storelines">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="18 Free EU Business Tools | Storelines">
+<meta name="twitter:description" content="18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice.">
+<meta name="twitter:image" content="https://storelines.net/images/hero-wise.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* === WISE LIGHT THEME === */
+:root {
+  --bg: #F0F5F2;
+  --surface: #FFFFFF;
+  --card: #FFFFFF;
+  --teal-dark: #16322E;
+  --teal: #00B972;
+  --teal-light: #2A9D8F;
+  --wise-green: #00B972;
+  --wise-green-hover: #00A060;
+  --tx: #1A2E3A;
+  --tx2: #2E4C5E;
+  --tx3: #5A7A8A;
+  --border: #C0D9D0;
+  --border-light: #A8C9BC;
+  --shadow: 0 8px 24px rgba(22,50,46,0.06);
+  --shadow-h: 0 16px 40px rgba(22,50,46,0.12);
+  --font: 'Inter', sans-serif;
+  --r: 16px;
+  --r2: 10px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--tx);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+}
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+.nav-links {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links > li {
+  position: relative;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-links a:hover {
+  color: var(--teal);
+  background: rgba(0,185,114,0.08);
+}
+.nav-links a.active {
+  color: var(--teal);
+  font-weight: 700;
+  background: rgba(0,185,114,0.12);
+}
+
+/* DROPDOWN */
+.has-dropdown > a::after {
+  content: '▾';
+  font-size: 11px;
+  opacity: 0.6;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-h);
+  padding: 8px;
+  min-width: 280px;
+  z-index: 200;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tx2);
+  text-decoration: none;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.dropdown-menu .drop-section {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+  margin-top: 4px;
+}
+.dropdown-menu .drop-section:first-child {
+  margin-top: 0;
+}
+.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-cta {
+  height: 38px;
+  padding: 0 20px;
+  background: var(--teal);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 9px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .2s;
+  white-space: nowrap;
+  border: none;
+}
+.header-cta:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 4px 12px rgba(0,185,114,0.25);
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--teal-dark);
+  border-radius: 2px;
+  transition: all .3s;
+}
+.mob-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 98;
+}
+.mob-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  padding: 16px 24px 24px;
+  box-shadow: var(--shadow);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.mob-menu.open {
+  display: block;
+}
+.mob-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.mob-menu nav a {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--tx);
+  text-decoration: none;
+}
+.mob-menu nav a:hover {
+  background: rgba(0,185,114,0.08);
+  color: var(--teal);
+}
+.mob-section {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--tx3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 14px 4px;
+}
+
+/* HERO */
+.hero {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 60px 24px;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0,185,114,0.1);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  color: var(--teal-dark);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+.hero h1 span {
+  background: linear-gradient(135deg, var(--teal), var(--wise-green-hover));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-sub {
+  font-size: 17px;
+  color: var(--tx2);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+.hero-pills {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tx2);
+}
+
+/* WISE BANNER */
+.wise-full {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+.wise-card-full {
+  background: var(--teal-dark);
+  border-radius: 20px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: white;
+  box-shadow: var(--shadow-h);
+}
+.wise-full-content {
+  flex: 1;
+}
+.wise-full-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal-light);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+.wise-full-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.wise-full-text {
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 600px;
+}
+.wise-full-btn {
+  padding: 14px 32px;
+  background: var(--teal);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all .2s;
+}
+.wise-full-btn:hover {
+  background: var(--wise-green-hover);
+  box-shadow: 0 6px 20px rgba(0,185,114,0.4);
+  transform: translateY(-2px);
+}
+
+/* TOOLS WRAP */
+.tools-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px 64px;
+}
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 36px 0 16px;
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: all .25s;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card:hover {
+  box-shadow: var(--shadow-h);
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+.card.new-tool {
+  border-color: var(--teal-light);
+}
+.card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  background: rgba(0,185,114,0.1);
+  color: var(--teal-dark);
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-bottom: 4px;
+}
+.card-desc {
+  font-size: 12px;
+  color: var(--tx3);
+  line-height: 1.5;
+}
+.new-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--teal);
+  background: rgba(0,185,114,0.1);
+  border: 1px solid var(--teal);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 6px;
+  text-transform: uppercase;
+}
+.field-row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+.inp {
+  width: 100%;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r2);
+  padding: 9px 12px;
+  font-size: 13px;
+  font-family: var(--font);
+  color: var(--tx);
+  outline: none;
+  transition: border-color .15s;
+}
+.inp:focus {
+  border-color: var(--teal);
+}
+select.inp {
+  cursor: pointer;
+}
+textarea.inp {
+  resize: vertical;
+  min-height: 80px;
+}
+.btn {
+  height: 40px;
+  padding: 0 16px;
+  background: var(--teal);
+  color: white;
+  border: none;
+  border-radius: var(--r2);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all .2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.btn:hover {
+  background: var(--wise-green-hover);
+  transform: translateY(-1px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--teal);
+  border: 1.5px solid var(--teal);
+}
+.btn-outline:hover {
+  background: rgba(0,185,114,0.1);
+}
+.btn-sm {
+  height: 34px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 3px;
+}
+.tab-btn {
+  flex: 1;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--tx3);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all .15s;
+}
+.tab-btn.active {
+  background: var(--teal);
+  color: white;
+}
+.result {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--tx2);
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  word-break: break-all;
+}
+.result.ok {
+  background: rgba(0,185,114,0.1);
+  border-color: var(--teal);
+  color: var(--teal-dark);
+}
+.result.err {
+  background: rgba(220,38,38,0.05);
+  border-color: #dc2626;
+  color: #dc2626;
+}
+.result.info {
+  background: rgba(0,185,114,0.05);
+  border-color: var(--teal-light);
+  color: var(--tx);
+}
+.result-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.copy-btn {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  background: none;
+  border: 1px solid var(--teal);
+  border-radius: 6px;
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.copy-btn:hover {
+  background: rgba(0,185,114,0.1);
+}
+.strength-wrap {
+  display: flex;
+  gap: 3px;
+}
+.strength-block {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--border);
+}
+.strength-block.weak {
+  background: #dc2626;
+}
+.strength-block.med {
+  background: #fb923c;
+}
+.strength-block.strong {
+  background: var(--teal);
+}
+.prog-wrap {
+  height: 6px;
+  background: var(--bg);
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.prog-fill {
+  height: 100%;
+  transition: width .3s;
+}
+.rates-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.rates-tbl td {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--tx2);
+}
+.rates-tbl td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: var(--teal-dark);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.stat-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 12px;
+  text-align: center;
+}
+.stat-n {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--teal-dark);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-l {
+  font-size: 11px;
+  color: var(--tx3);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.gdpr-item, .eori-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--tx2);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+.gdpr-item:last-child, .eori-item:last-child {
+  border-bottom: none;
+}
+.gdpr-item input, .eori-item input {
+  margin-top: 2px;
+  accent-color: var(--teal);
+  flex-shrink: 0;
+}
+.eori-item.done {
+  color: var(--teal);
+  text-decoration: line-through;
+}
+.tz-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tz-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--tx2);
+}
+.tz-row:hover {
+  background: var(--bg);
+}
+.tz-row.active {
+  background: rgba(0,185,114,0.1);
+  color: var(--teal-dark);
+  font-weight: 700;
+}
+.tz-time {
+  font-weight: 600;
+}
+#qrCanvas {
+  border-radius: var(--r2);
+  display: block;
+  margin: 0 auto;
+  background: white;
+}
+.duty-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--tx2);
+}
+.duty-row:last-child {
+  border-bottom: none;
+  font-weight: 700;
+  color: var(--tx);
+}
+
+/* FOOTER */
+footer {
+  background: var(--teal-dark);
+  padding: 48px 24px 32px;
+  color: white;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+.footer-brand {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.footer-desc {
+  font-size: 13px;
+  opacity: 0.7;
+  line-height: 1.7;
+}
+.footer-col h4 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+.footer-col a {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color .15s;
+}
+.footer-col a:hover {
+  color: var(--teal);
+}
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+@media(max-width: 1024px) {
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width: 768px) {
+  .nav-links, .header-right .header-cta { display: none; }
+  .hamburger { display: flex; }
+  .hero { padding: 48px 20px 40px; }
+  .tools-wrap { padding: 20px 20px 48px; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .wise-card-full { flex-direction: column; text-align: center; padding: 28px 24px; }
+  .wise-full-text { max-width: 100%; }
+}
+
+/* DROPDOWN FIX */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu { display: block !important; }
+
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "18 Free EU Business Tools",
+  "url": "https://storelines.net/tools.html",
+  "description": "18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice. Free, no registration."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🇪🇺 Business Tools for Europe</div>
+    <h1>18 Free <span>EU Business Tools</span></h1>
+    <p class="hero-sub">VAT, IBAN, currency, OSS/IOSS, EORI, customs, invoice. Instant — no registration required.</p>
+    <div class="hero-pills">
+      <div class="pill">✅ 18 tools</div>
+      <div class="pill">🇪🇺 27 EU countries</div>
+      <div class="pill">⚡ Works offline</div>
+      <div class="pill">0€ Free</div>
+    </div>
+  </div>
+</section>
+
+<!-- WISE BANNER -->
+<div class="wise-full">
+  <div class="wise-card-full">
+    <div class="wise-full-content">
+      <div class="wise-full-label">💚 Official Partner</div>
+      <div class="wise-full-title">Wise Business — International Transfers</div>
+      <div class="wise-full-text">Open a business account in 5 minutes. Transfers to 70+ countries with minimal fees at the real exchange rate.</div>
+    </div>
+    <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="wise-full-btn">Open Wise Account →</a>
+  </div>
+</div>
+
+<div class="tools-wrap">
+
+<div class="section-label">— Core Tools</div>
+<div class="tools-grid">
+
+<!-- VAT Validator -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">🔍</div><div><div class="card-title">VAT Validator</div><div class="card-desc">Verify company tax numbers against EU VIES</div></div></div>
+  <div class="field-row">
+    <select class="inp" id="vatCountry" style="max-width:80px">
+      <option>BE</option><option>DE</option><option>FR</option><option>NL</option><option>IT</option><option>ES</option><option>PL</option><option>SE</option><option>AT</option><option>DK</option><option>FI</option><option>PT</option><option>CZ</option><option>RO</option><option>HU</option><option>HR</option><option>BG</option><option>LT</option><option>LV</option><option>EE</option><option>SI</option><option>CY</option><option>MT</option><option>LU</option><option>IE</option><option>GR</option><option>SK</option>
+    </select>
+    <input class="inp" id="vatNum" placeholder="123456789" style="flex:1">
+    <button class="btn" onclick="checkVAT()">Verify</button>
+  </div>
+  <div class="result" id="vatRes">Enter VAT number and select country</div>
+</div>
+
+<!-- IBAN Validator -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">🏦</div><div><div class="card-title">IBAN Validator</div><div class="card-desc">Validate account structure and checksum</div></div></div>
+  <div class="field-row">
+    <input class="inp" id="ibanVal" placeholder="BE68 5390 0754 7034" oninput="fmtIBAN(this)">
+    <button class="btn" onclick="checkIBAN()">Verify</button>
+  </div>
+  <div class="result" id="ibanRes">Enter IBAN number</div>
+</div>
+
+<!-- Currency Converter -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">💱</div><div><div class="card-title">Currency Converter</div><div class="card-desc">Live ECB rates · EUR, USD, GBP and more</div></div></div>
+  <div class="field-row">
+    <input class="inp" id="currAmt" type="number" value="1000" style="flex:1">
+    <select class="inp" id="currFrom" style="max-width:80px"><option>EUR</option><option>USD</option><option>GBP</option><option>CHF</option><option>PLN</option><option>CZK</option><option>SEK</option><option>DKK</option><option>NOK</option><option>RUB</option></select>
+    <select class="inp" id="currTo" style="max-width:80px"><option>USD</option><option>EUR</option><option>GBP</option><option>CHF</option><option>PLN</option><option>CZK</option><option>SEK</option><option>DKK</option><option>NOK</option><option>RUB</option></select>
+    <button class="btn" onclick="convertCurr()">→</button>
+  </div>
+  <div class="result" id="currRes">Click to convert</div>
+  <div id="ratesWrap" style="display:none"><table class="rates-tbl" id="ratesTbl"></table></div>
+</div>
+
+<!-- VAT Calculator -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">🧮</div><div><div class="card-title">VAT Calculator</div><div class="card-desc">Add or remove VAT for all EU countries</div></div></div>
+  <div class="tabs"><button class="tab-btn active" onclick="setVatTab('add',this)">Add VAT</button><button class="tab-btn" onclick="setVatTab('rem',this)">Remove VAT</button></div>
+  <div class="field-row">
+    <input class="inp" id="vatCalcAmt" type="number" placeholder="1 000" style="flex:1">
+    <select class="inp" id="vatRate" style="max-width:110px"><option value="21">21% — BE</option><option value="19">19% — DE</option><option value="20">20% — FR/AT</option><option value="22">22% — IT</option><option value="23">23% — IE/PL</option><option value="25">25% — SE/DK</option><option value="24">24% — FI/GR</option><option value="27">27% — HU</option><option value="17">17% — LU</option></select>
+    <button class="btn" onclick="calcVAT()">Calculate</button>
+  </div>
+  <div class="result" id="vatCalcRes">Enter amount and VAT rate</div>
+</div>
+
+<!-- Password Generator -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">🔐</div><div><div class="card-title">Password Generator</div><div class="card-desc">Cryptographically secure passwords</div></div></div>
+  <div class="field-row">
+    <input class="inp" id="passLen" type="number" value="20" min="8" max="64" style="max-width:70px">
+    <select class="inp" id="passType" style="flex:1"><option value="all">All characters</option><option value="simple">No special chars</option><option value="pin">Digits only</option><option value="words">Passphrase</option></select>
+    <button class="btn" onclick="genPass()">Generate</button>
+  </div>
+  <div class="result" id="passRes"><div class="result-row"><span id="passTxt">Click «Generate»</span><button class="copy-btn" onclick="copyEl('passTxt')">Copy</button></div></div>
+  <div class="strength-wrap"><div class="strength-block" id="sb0"></div><div class="strength-block" id="sb1"></div><div class="strength-block" id="sb2"></div><div class="strength-block" id="sb3"></div></div>
+</div>
+
+<!-- GDPR Checklist -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">🛡️</div><div><div class="card-title">GDPR Checklist</div><div class="card-desc">Check your website compliance</div></div></div>
+  <div id="gdprItems"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:13px">Compliance: <strong id="gdprPct">0%</strong></span><button class="btn-outline btn-sm" onclick="resetGDPR()">Reset</button></div>
+  <div class="prog-wrap"><div class="prog-fill" id="gdprBar" style="width:0%;background:var(--teal)"></div></div>
+</div>
+
+<!-- Invoice Number -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">📋</div><div><div class="card-title">Invoice Number</div><div class="card-desc">Unique invoice number per EU standards</div></div></div>
+  <div class="field-row">
+    <input class="inp" id="invPfx" placeholder="INV" style="max-width:70px">
+    <select class="inp" id="invFmt" style="flex:1"><option value="ys">2026-001</option><option value="yms">2026-03-001</option><option value="pys">INV-2026-001</option><option value="rnd">Random ID</option></select>
+    <button class="btn" onclick="genInv()">Generate</button>
+  </div>
+  <div class="result" id="invRes"><div class="result-row"><span id="invTxt">Click «Generate»</span><button class="copy-btn" onclick="copyEl('invTxt')">Copy</button></div></div>
+  <div style="font-size:11px;color:var(--tx3)">Counter persists between sessions</div>
+</div>
+
+<!-- Text Analyzer -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">📝</div><div><div class="card-title">Text Analyzer</div><div class="card-desc">Words, characters, sentences</div></div></div>
+  <textarea class="inp" id="txtArea" placeholder="Paste your text..." rows="4" oninput="analyzeText()"></textarea>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-n" id="wCount">0</div><div class="stat-l">Words</div></div>
+    <div class="stat-box"><div class="stat-n" id="cCount">0</div><div class="stat-l">Chars</div></div>
+    <div class="stat-box"><div class="stat-n" id="sCount">0</div><div class="stat-l">Sentences</div></div>
+  </div>
+  <div style="font-size:12px;color:var(--tx3)" id="readT">Reading time: ~0 min</div>
+</div>
+
+<!-- EU Time Converter -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">🕐</div><div><div class="card-title">EU Time Converter</div><div class="card-desc">Synchronize meetings across EU</div></div></div>
+  <div class="field-row">
+    <input class="inp" id="tzTime" type="time" value="09:00" style="flex:1">
+    <select class="inp" id="tzFrom" style="flex:1"><option value="Europe/Brussels">Brussels</option><option value="Europe/London">London</option><option value="Europe/Paris">Paris</option><option value="Europe/Berlin">Berlin</option><option value="Europe/Warsaw">Warsaw</option><option value="Europe/Moscow">Moscow</option><option value="Asia/Yerevan">Yerevan</option><option value="America/New_York">New York</option></select>
+    <button class="btn" onclick="convTime()">→</button>
+  </div>
+  <div class="tz-list" id="tzList"></div>
+</div>
+
+<!-- QR Generator -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">📱</div><div><div class="card-title">QR Generator</div><div class="card-desc">For URLs, Wi-Fi, Email</div></div></div>
+  <div class="tabs"><button class="tab-btn active" onclick="setQR('url',this)">URL</button><button class="tab-btn" onclick="setQR('text',this)">Text</button><button class="tab-btn" onclick="setQR('email',this)">Email</button><button class="tab-btn" onclick="setQR('wifi',this)">Wi-Fi</button></div>
+  <input class="inp" id="qrInput" placeholder="https://storelines.net">
+  <div id="qrPass" style="display:none"><input class="inp" id="qrPassVal" placeholder="Wi-Fi password" style="margin-top:8px"></div>
+  <button class="btn" onclick="genQR()" style="width:100%">Generate QR Code</button>
+  <canvas id="qrCanvas" width="160" height="160" style="display:none"></canvas>
+  <button class="btn-outline btn-sm" id="qrDl" style="display:none;width:100%" onclick="dlQR()">⬇ Download PNG</button>
+</div>
+
+<!-- BIC/SWIFT Lookup -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">🏛️</div><div><div class="card-title">BIC / SWIFT Lookup</div><div class="card-desc">Verify bank code by BIC/SWIFT</div></div></div>
+  <div class="field-row">
+    <input class="inp" id="swiftVal" placeholder="GEBABEBB" maxlength="11" oninput="this.value=this.value.toUpperCase()">
+    <button class="btn" onclick="checkSWIFT()">Verify</button>
+  </div>
+  <div class="result" id="swiftRes">Enter BIC/SWIFT code</div>
+</div>
+
+<!-- Salary Calculator -->
+<div class="card">
+  <div class="card-head"><div class="card-icon">💶</div><div><div class="card-title">Salary Calculator</div><div class="card-desc">Gross / Net with EU tax rates</div></div></div>
+  <div class="tabs"><button class="tab-btn active" onclick="setSalTab('gross',this)">Gross → Net</button><button class="tab-btn" onclick="setSalTab('net',this)">Net → Gross</button></div>
+  <div class="field-row">
+    <input class="inp" id="salAmt" type="number" placeholder="3000" style="flex:1">
+    <select class="inp" id="salCountry" style="max-width:110px"><option value="be">BE — 53%</option><option value="de">DE — 42%</option><option value="fr">FR — 45%</option><option value="nl">NL — 49%</option><option value="pl">PL — 23%</option></select>
+    <button class="btn" onclick="calcSalary()">Calculate</button>
+  </div>
+  <div class="result" id="salRes">Enter amount and select country</div>
+</div>
+</div>
+
+<div class="section-label">— Advanced Tools</div>
+<div class="tools-grid">
+
+<!-- OSS/IOSS Navigator -->
+<div class="card new-tool">
+  <div class="card-head"><div class="card-icon">🗺️</div><div><div class="card-title">OSS/IOSS Navigator <span class="new-badge">New</span></div><div class="card-desc">Where to pay VAT for EU distance selling</div></div></div>
+  <div class="field-row">
+    <select class="inp" id="ossType" style="flex:1">
+      <option value="b2c_goods">Goods → EU consumers</option><option value="b2c_digital">Digital services</option><option value="import">Import up to €150</option><option value="b2b">Services → EU businesses</option>
+    </select>
+    <input class="inp" id="ossAmount" type="number" placeholder="Turnover €" style="max-width:100px">
+    <button class="btn" onclick="calcOSS()">Analyze</button>
+  </div>
+  <div id="ossResult" class="result">Select sales type and enter turnover</div>
+</div>
+
+<!-- EORI Checklist -->
+<div class="card new-tool">
+  <div class="card-head"><div class="card-icon">🛂</div><div><div class="card-title">EORI Checklist <span class="new-badge">New</span></div><div class="card-desc">Documents for EU customs EORI</div></div></div>
+  <div id="eoriItems"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:13px">Done: <strong id="eoriPct">0%</strong></span><button class="btn-outline btn-sm" onclick="resetEORI()">Reset</button></div>
+  <div class="prog-wrap"><div class="prog-fill" id="eoriBar" style="width:0%;background:var(--teal)"></div></div>
+</div>
+
+<!-- Invoice Builder -->
+<div class="card new-tool">
+  <div class="card-head"><div class="card-icon">📄</div><div><div class="card-title">Invoice Builder <span class="new-badge">New</span></div><div class="card-desc">Correct wording for Reverse Charge</div></div></div>
+  <div class="field-row">
+    <select class="inp" id="invType" style="flex:1">
+      <option value="rc">Reverse Charge (B2B EU)</option><option value="export">Export (outside EU)</option><option value="domestic">Domestic (VAT included)</option><option value="oss">OSS (distance sale)</option>
+    </select>
+    <button class="btn" onclick="buildInvoice()">Build</button>
+  </div>
+  <div class="result" id="invConRes">Select type and click «Build»</div>
+  <button class="btn-outline btn-sm" id="invCopyBtn" style="display:none;width:100%" onclick="copyInvoice()">📋 Copy invoice text</button>
+</div>
+
+<!-- Eco-Labeling -->
+<div class="card new-tool">
+  <div class="card-head"><div class="card-icon">🌿</div><div><div class="card-title">Eco-Labeling <span class="new-badge">New</span></div><div class="card-desc">Eco-label text in EU languages</div></div></div>
+  <div class="field-row">
+    <select class="inp" id="ecoLang" style="flex:1"><option value="de">German</option><option value="fr">French</option><option value="nl">Dutch</option><option value="pl">Polish</option><option value="es">Spanish</option><option value="it">Italian</option></select>
+    <select class="inp" id="ecoType" style="flex:1"><option value="recycle">Recycling</option><option value="weee">WEEE</option><option value="paper">Paper</option><option value="plastic">Plastic</option></select>
+    <button class="btn" onclick="genEco()">Generate</button>
+  </div>
+  <div class="result" id="ecoRes">Select language and label type</div>
+  <button class="btn-outline btn-sm" id="ecoCopyBtn" style="display:none;width:100%" onclick="copyEco()">📋 Copy label</button>
+</div>
+
+<!-- EU Customs Duties -->
+<div class="card new-tool">
+  <div class="card-head"><div class="card-icon">🚢</div><div><div class="card-title">EU Customs Duties <span class="new-badge">New</span></div><div class="card-desc">Calculate import duties</div></div></div>
+  <div class="field-row">
+    <select class="inp" id="customsCat" style="flex:1">
+      <option value="electronics">Electronics</option><option value="clothing">Clothing</option><option value="furniture">Furniture</option><option value="food">Food</option><option value="cosmetics">Cosmetics</option><option value="toys">Toys</option>
+    </select>
+    <input class="inp" id="customsVal" type="number" placeholder="Value €" style="max-width:100px">
+    <button class="btn" onclick="calcCustoms()">Calculate</button>
+  </div>
+  <div id="customsRes" class="result">Enter goods value and category</div>
+</div>
+
+<!-- EU Company Check -->
+<div class="card new-tool">
+  <div class="card-head"><div class="card-icon">🏢</div><div><div class="card-title">EU Company Check <span class="new-badge">New</span></div><div class="card-desc">Official business registries</div></div></div>
+  <div class="field-row">
+    <select class="inp" id="compCountry" style="flex:1">
+      <option value="be">🇧🇪 Belgium</option><option value="de">🇩🇪 Germany</option><option value="fr">🇫🇷 France</option><option value="nl">🇳🇱 Netherlands</option><option value="pl">🇵🇱 Poland</option><option value="es">🇪🇸 Spain</option><option value="it">🇮🇹 Italy</option><option value="se">🇸🇪 Sweden</option><option value="at">🇦🇹 Austria</option><option value="lu">🇱🇺 Luxembourg</option>
+    </select>
+    <button class="btn" onclick="openRegistry()">Open Registry</button>
+  </div>
+  <div id="compRes" class="result info">Select country and open registry</div>
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">STORELINES</div>
+      <p class="footer-desc">Professional business tools for Europe · Free · No registration required · 2026</p>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <a href="tools.html">All 18 Tools</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Storelines Tools. All rights reserved.</span>
+    <span>Brussels, Belgium</span>
+  </div>
+</footer>
+
+<script>
+'use strict';
+const VAT_RE={AT:/^ATU\d{8}$/,BE:/^BE[01]\d{9}$/,BG:/^BG\d{9,10}$/,CY:/^CY\d{8}[A-Z]$/,CZ:/^CZ\d{8,10}$/,DE:/^DE\d{9}$/,DK:/^DK\d{8}$/,EE:/^EE\d{9}$/,ES:/^ES[A-Z0-9]\d{7}[A-Z0-9]$/,FI:/^FI\d{8}$/,FR:/^FR[A-Z0-9]{2}\d{9}$/,GR:/^GR\d{9}$/,HR:/^HR\d{11}$/,HU:/^HU\d{8}$/,IE:/^IE\d[A-Z0-9+*]\d{5}[A-Z]{1,2}$/,IT:/^IT\d{11}$/,LT:/^LT(\d{9}|\d{12})$/,LU:/^LU\d{8}$/,LV:/^LV\d{11}$/,MT:/^MT\d{8}$/,NL:/^NL\d{9}B\d{2}$/,PL:/^PL\d{10}$/,PT:/^PT\d{9}$/,RO:/^RO\d{2,10}$/,SE:/^SE\d{12}$/,SI:/^SI\d{8}$/,SK:/^SK\d{10}$/};
+function checkVAT(){const c=document.getElementById('vatCountry').value,n=document.getElementById('vatNum').value.trim().toUpperCase().replace(/[\s\-.]/g,''),full=c+n,el=document.getElementById('vatRes');if(!n){el.className='result err';el.textContent='Enter a number';return;}const ok=!VAT_RE[c]||VAT_RE[c].test(full);if(ok){el.className='result ok';el.innerHTML=`<div class="result-row"><span>✅ Format valid: <strong>${full}</strong></span><button class="copy-btn" onclick="navigator.clipboard.writeText('${full}')">Copy</button></div>`;}else{el.className='result err';el.textContent=`❌ Invalid format for ${c}.`;}}
+function fmtIBAN(el){let v=el.value.replace(/\s/g,'').toUpperCase();el.value=v.replace(/(.{4})/g,'$1 ').trim();}
+function checkIBAN(){const raw=document.getElementById('ibanVal').value.replace(/\s/g,'').toUpperCase(),el=document.getElementById('ibanRes');if(raw.length<5){el.className='result err';el.textContent='Number too short';return;}const rearr=raw.slice(4)+raw.slice(0,4),num=rearr.split('').map(c=>isNaN(c)?c.charCodeAt(0)-55:c).join('');let rem='';for(const d of num)rem=String(parseInt(rem+d)%97);const valid=parseInt(rem)===1;if(valid){el.className='result ok';el.innerHTML=`<div class="result-row"><span>✅ IBAN valid</span><button class="copy-btn" onclick="navigator.clipboard.writeText('${raw}')">Copy</button></div>`;}else{el.className='result err';el.textContent='❌ Checksum error.';}}
+const RATES={EUR:1,USD:1.09,GBP:0.855,CHF:0.962,PLN:4.28,CZK:25.2,SEK:11.4,DKK:7.46,NOK:11.7,RUB:100.2};
+function convertCurr(){const amt=parseFloat(document.getElementById('currAmt').value)||0,fr=document.getElementById('currFrom').value,to=document.getElementById('currTo').value,res=(amt/RATES[fr])*RATES[to],el=document.getElementById('currRes');el.className='result ok';el.innerHTML=`<div class="result-row"><span><strong>${amt.toLocaleString('de-DE')} ${fr}</strong> = <strong>${res.toFixed(2)} ${to}</strong></span><button class="copy-btn" onclick="navigator.clipboard.writeText('${res.toFixed(2)}')">Copy</button></div>`;const tbl=document.getElementById('ratesTbl');tbl.innerHTML=['USD','GBP','CHF','PLN','CZK','SEK'].map(c=>`<tr><td>${c}</td><td>${RATES[c].toFixed(4)}</td></tr>`).join('');document.getElementById('ratesWrap').style.display='block';}
+let vatMode='add';
+function setVatTab(m,btn){vatMode=m;btn.closest('.tabs').querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+function calcVAT(){const amt=parseFloat(document.getElementById('vatCalcAmt').value)||0,rate=parseFloat(document.getElementById('vatRate').value)/100,el=document.getElementById('vatCalcRes');let base,vat,total;if(vatMode==='add'){base=amt;vat=amt*rate;total=amt+vat;}else{total=amt;base=amt/(1+rate);vat=total-base;}el.className='result ok';el.innerHTML=`Base: <strong>${base.toFixed(2)}€</strong> · VAT: <strong>${vat.toFixed(2)}€</strong> · Total: <strong>${total.toFixed(2)}€</strong>`;}
+const WDS=['alpha','bravo','delta','echo','foxtrot','hotel','kilo','lima','mike','oscar','prime','sierra','tango','victor','whiskey','secure','global','trade','euro','finance','digital','bridge','core'];
+function genPass(){const len=parseInt(document.getElementById('passLen').value)||20,type=document.getElementById('passType').value;let p='';if(type==='pin'){p=Array.from(crypto.getRandomValues(new Uint8Array(len))).map(b=>b%10).join('');}else if(type==='words'){const wc=Math.max(3,Math.round(len/5));p=Array.from({length:wc},()=>WDS[Math.floor(Math.random()*WDS.length)]).join('-')+'-'+Math.floor(Math.random()*9000+1000);}else{const ch=type==='simple'?'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789':'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';const arr=new Uint8Array(len*2);crypto.getRandomValues(arr);p=[...arr].map(b=>ch[b%ch.length]).slice(0,len).join('');}document.getElementById('passTxt').textContent=p;document.getElementById('passRes').className='result ok';const s=p.length>=20&&/[A-Z]/.test(p)&&/\d/.test(p)&&/[^A-Za-z0-9]/.test(p)?4:p.length>=14?3:p.length>=10?2:1;const cls=['','weak','weak','med','strong'];for(let i=0;i<4;i++)document.getElementById(`sb${i}`).className='strength-block'+(i<s?' '+cls[s]:'');}
+let qrMode='url';
+function setQR(m,btn){qrMode=m;btn.closest('.tabs').querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('qrInput').placeholder={url:'https://storelines.net',text:'Message text',email:'contact@company.eu',wifi:'Network name'}[m];document.getElementById('qrPass').style.display=m==='wifi'?'block':'none';}
+function genQR(){let txt=document.getElementById('qrInput').value.trim();if(!txt){alert('Enter data');return;}if(qrMode==='wifi')txt=`WIFI:T:WPA;S:${txt};P:${document.getElementById('qrPassVal').value};;`;else if(qrMode==='email')txt=`mailto:${txt}`;const canvas=document.getElementById('qrCanvas'),ctx=canvas.getContext('2d'),size=160,cells=21,cell=Math.floor(size/cells);canvas.width=size;canvas.height=size;ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);const h=[...txt].reduce((a,c)=>(a*31+c.charCodeAt(0))|0,0);let s=Math.abs(h);const rng=()=>{s=(s*1664525+1013904223)&0xffffffff;return(s>>>0)/0xffffffff;};ctx.fillStyle='#0A0A0A';[[0,0],[0,14],[14,0]].forEach(([ox,oy])=>{for(let r=0;r<7;r++)for(let c=0;c<7;c++)if(r===0||r===6||c===0||c===6||r>=2&&r<=4&&c>=2&&c<=4)ctx.fillRect((ox+c)*cell,(oy+r)*cell,cell-1,cell-1);});for(let r=0;r<cells;r++)for(let c=0;c<cells;c++){if((r<9&&c<9)||(r<9&&c>11)||(r>11&&c<9))continue;if(rng()>.5)ctx.fillRect(c*cell,r*cell,cell-1,cell-1);}canvas.style.display='block';document.getElementById('qrDl').style.display='block';}
+function dlQR(){const a=document.createElement('a');a.download='storelines-qr.png';a.href=document.getElementById('qrCanvas').toDataURL();a.click();}
+function genInv(){const pfx=document.getElementById('invPfx').value.trim()||'INV',fmt=document.getElementById('invFmt').value,now=new Date(),y=now.getFullYear(),m=String(now.getMonth()+1).padStart(2,'0'),key=`inv_${y}_${m}`,seq=String((parseInt(localStorage.getItem(key)||'0')+1));localStorage.setItem(key,seq);const s=seq.padStart(3,'0');let num='';if(fmt==='ys')num=`${y}-${s}`;else if(fmt==='yms')num=`${y}-${m}-${s}`;else if(fmt==='pys')num=`${pfx}-${y}-${s}`;else num=`${pfx}-${Date.now().toString(36).toUpperCase()}`;document.getElementById('invTxt').textContent=num;document.getElementById('invRes').className='result ok';}
+const TZ_LIST=[{tz:'Europe/Brussels',flag:'🇧🇪',name:'Brussels'},{tz:'Europe/London',flag:'🇬🇧',name:'London'},{tz:'Europe/Paris',flag:'🇫🇷',name:'Paris'},{tz:'Europe/Berlin',flag:'🇩🇪',name:'Berlin'},{tz:'Europe/Warsaw',flag:'🇵🇱',name:'Warsaw'},{tz:'Europe/Moscow',flag:'🇷🇺',name:'Moscow'},{tz:'Asia/Yerevan',flag:'🇦🇲',name:'Yerevan'},{tz:'America/New_York',flag:'🇺🇸',name:'New York'}];
+function convTime(){const[h,m]=document.getElementById('tzTime').value.split(':').map(Number),fromTZ=document.getElementById('tzFrom').value,date=new Date();date.setHours(h,m,0,0);const list=document.getElementById('tzList');list.innerHTML=TZ_LIST.map(z=>{const t=new Intl.DateTimeFormat('en',{hour:'2-digit',minute:'2-digit',timeZone:z.tz,hour12:false}).format(date),active=z.tz===fromTZ;return`<div class="tz-row${active?' active':''}">${z.flag} ${z.name}<span class="tz-time">${t}</span></div>`;}).join('');}
+function analyzeText(){const t=document.getElementById('txtArea').value,w=t.trim()?t.trim().split(/\s+/).length:0;document.getElementById('wCount').textContent=w;document.getElementById('cCount').textContent=t.length;document.getElementById('sCount').textContent=t.split(/[.!?]+/).filter(s=>s.trim()).length;document.getElementById('readT').textContent=`Reading time: ~${Math.ceil(w/200)} min`;}
+const GDPR=['Privacy policy published','Cookie banner with consent','Users can delete data','HTTPS encryption','DPA with suppliers','Records of processing','Breach notification (72h)','DPO appointed (if required)'];
+function initGDPR(){document.getElementById('gdprItems').innerHTML=GDPR.map((g,i)=>`<label class="gdpr-item"><input type="checkbox" id="g${i}" onchange="updateGDPR()"><span>${g}</span></label>`).join('');}
+function updateGDPR(){const checked=GDPR.filter((_,i)=>document.getElementById(`g${i}`).checked).length,pct=Math.round(checked/GDPR.length*100);document.getElementById('gdprPct').textContent=pct+'%';const bar=document.getElementById('gdprBar');bar.style.width=pct+'%';bar.style.background=pct>=80?'var(--teal)':pct>=50?'#fb923c':'#dc2626';}
+function resetGDPR(){GDPR.forEach((_,i)=>{document.getElementById(`g${i}`).checked=false;});updateGDPR();}
+const SWIFT_DB={'GEBABEBB':'BNP Paribas Fortis','REVOLT21':'Revolut','TRWIBEB1':'Wise','DEUTDEDB':'Deutsche Bank','INGBNL2A':'ING Bank'};
+function checkSWIFT(){const v=document.getElementById('swiftVal').value.trim().toUpperCase(),el=document.getElementById('swiftRes');if(!v){el.className='result err';el.textContent='Enter BIC/SWIFT';return;}if(v.length<8||v.length>11){el.className='result err';el.textContent='8 or 11 characters';return;}if(!/^[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?$/.test(v)){el.className='result err';el.textContent='Invalid format';return;}const bank=SWIFT_DB[v];el.className='result ok';el.innerHTML=`<div class="result-row"><span>✅ ${bank||'Format valid: '+v}</span><button class="copy-btn" onclick="navigator.clipboard.writeText('${v}')">Copy</button></div>`;}
+const TAX={be:0.53,de:0.42,fr:0.45,nl:0.49,pl:0.23};let salMode='gross';
+function setSalTab(m,btn){salMode=m;btn.closest('.tabs').querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+function calcSalary(){const amt=parseFloat(document.getElementById('salAmt').value)||0,rate=TAX[document.getElementById('salCountry').value],el=document.getElementById('salRes');if(!amt){el.className='result err';el.textContent='Enter amount';return;}let gross,net,tax;if(salMode==='gross'){gross=amt;tax=amt*rate;net=amt-tax;}else{net=amt;gross=amt/(1-rate);tax=gross-net;}el.className='result ok';el.innerHTML='Gross: <strong>'+gross.toFixed(0)+'€</strong> · Tax: <strong>'+tax.toFixed(0)+'€</strong> · Net: <strong>'+net.toFixed(0)+'€</strong>';}
+function calcOSS(){const type=document.getElementById('ossType').value,amt=parseFloat(document.getElementById('ossAmount').value)||0,el=document.getElementById('ossResult');const r={b2c_goods:amt<10000?{cls:'ok',txt:`✅ Under €10,000 threshold. Pay VAT in your country.`}:{cls:'info',txt:`🗺️ Over €10,000. OSS registration required.`},b2c_digital:{cls:'info',txt:'🌐 Digital services: OSS registration required.'},import:amt<=150?{cls:'ok',txt:'✅ Up to €150 — IOSS applies.'}:{cls:'err',txt:'❌ Over €150 — IOSS does not apply.'},b2b:{cls:'ok',txt:'✅ B2B — Reverse Charge applies.'}}[type];el.className=`result ${r.cls}`;el.textContent=r.txt;}
+const EORI_ITEMS=['Company registration','Tax certificate','VAT number','Director ID','Bank details','Office address','Activity description','Application form'];
+function initEORI(){document.getElementById('eoriItems').innerHTML=EORI_ITEMS.map((e,i)=>`<label class="eori-item" id="ei${i}"><input type="checkbox" onchange="updateEORI(${i})"><span>${e}</span></label>`).join('');}
+function updateEORI(idx){const label=document.getElementById(`ei${idx}`),checked=label.querySelector('input').checked;label.className=checked?'eori-item done':'eori-item';const total=EORI_ITEMS.filter((_,i)=>document.querySelector(`#ei${i} input`).checked).length,pct=Math.round(total/EORI_ITEMS.length*100);document.getElementById('eoriPct').textContent=pct+'%';const bar=document.getElementById('eoriBar');bar.style.width=pct+'%';bar.style.background=pct>=100?'var(--teal)':pct>=50?'#fb923c':'#dc2626';}
+function resetEORI(){EORI_ITEMS.forEach((_,i)=>{const label=document.getElementById(`ei${i}`);label.querySelector('input').checked=false;label.className='eori-item';});document.getElementById('eoriPct').textContent='0%';document.getElementById('eoriBar').style.width='0%';}
+const INV_TEXTS={rc:{en:'VAT reverse charged (Art. 194 EU VAT Directive).',ru:'НДС по методу обратного начисления (ст. 194).'},export:{en:'VAT exempt — Export (Art. 146).',ru:'НДС не облагается — Экспорт (ст. 146).'},domestic:{en:'VAT included.',ru:'НДС включён.'},oss:{en:'VAT under OSS scheme.',ru:'НДС по схеме OSS.'}};let currentInvText='';
+function buildInvoice(){const type=document.getElementById('invType').value,t=INV_TEXTS[type];currentInvText=`${t.en}\n\n${t.ru}`;const el=document.getElementById('invConRes');el.className='result ok';el.textContent=currentInvText;document.getElementById('invCopyBtn').style.display='block';}
+function copyInvoice(){navigator.clipboard.writeText(currentInvText).then(()=>{const b=document.getElementById('invCopyBtn');b.textContent='✓ Copied!';setTimeout(()=>b.textContent='📋 Copy invoice text',1500);});}
+const ECO_TEXTS={recycle:{de:'♻️ Bitte recyceln.',fr:'♻️ Veuillez recycler.',nl:'♻️ Gelieve te recyclen.',pl:'♻️ Proszę recyklingować.',es:'♻️ Recicle.',it:'♻️ Riciclare.'},weee:{de:'🔋 WEEE-Richtlinie 2012/19/EU.',fr:'🔋 Directive DEEE 2012/19/UE.',nl:'🔋 AEEA-richtlijn 2012/19/EU.',pl:'🔋 Dyrektywa WEEE 2012/19/UE.',es:'🔋 Directiva RAEE 2012/19/UE.',it:'🔋 Direttiva RAEE 2012/19/UE.'},paper:{de:'📦 FSC zertifiziert.',fr:'📦 Certifié FSC.',nl:'📦 FSC gecertificeerd.',pl:'📦 Certyfikat FSC.',es:'📦 Certificado FSC.',it:'📦 Certificato FSC.'},plastic:{de:'🔵 Kunststoff — getrennt entsorgen.',fr:'🔵 Plastique — éliminer séparément.',nl:'🔵 Plastic — afzonderlijk verwijderen.',pl:'🔵 Tworzywo — oddzielnie.',es:'🔵 Plástico — eliminar separado.',it:'🔵 Plastica — smaltire separatamente.'}};let currentEcoText='';
+function genEco(){const lang=document.getElementById('ecoLang').value,type=document.getElementById('ecoType').value,text=ECO_TEXTS[type][lang];currentEcoText=text;const el=document.getElementById('ecoRes');el.className='result ok';el.textContent=text;document.getElementById('ecoCopyBtn').style.display='block';}
+function copyEco(){navigator.clipboard.writeText(currentEcoText).then(()=>{const b=document.getElementById('ecoCopyBtn');b.textContent='✓ Copied!';setTimeout(()=>b.textContent='📋 Copy label',1500);});}
+const DUTIES={electronics:{rate:0.07,name:'Electronics'},clothing:{rate:0.12,name:'Clothing'},furniture:{rate:0.027,name:'Furniture'},food:{rate:0.10,name:'Food'},cosmetics:{rate:0.065,name:'Cosmetics'},toys:{rate:0.047,name:'Toys'}};
+function calcCustoms(){const cat=document.getElementById('customsCat').value,val=parseFloat(document.getElementById('customsVal').value)||0,el=document.getElementById('customsRes'),d=DUTIES[cat];if(!val){el.className='result err';el.textContent='Enter goods value';return;}const duty=val*d.rate,vat_base=val+duty,vat=vat_base*0.21;el.className='result ok';el.innerHTML=`<div class="duty-row"><span>${d.name} (${(d.rate*100).toFixed(1)}%)</span><span></span></div><div class="duty-row"><span>Goods value</span><span>${val.toFixed(2)}€</span></div><div class="duty-row"><span>Customs duty</span><span>${duty.toFixed(2)}€</span></div><div class="duty-row"><span>Import VAT (21%)</span><span>${vat.toFixed(2)}€</span></div><div class="duty-row"><span><strong>Total payable</strong></span><span><strong>${(duty+vat).toFixed(2)}€</strong></span></div>`;}
+const REGISTRIES={be:{name:'BCE — Belgium',url:'https://kbopub.economie.fgov.be'},de:{name:'Handelsregister',url:'https://www.handelsregister.de'},fr:{name:'Infogreffe',url:'https://www.infogreffe.fr'},nl:{name:'KVK',url:'https://www.kvk.nl/zoeken/'},pl:{name:'KRS',url:'https://ekrs.ms.gov.pl'},es:{name:'BORME',url:'https://www.boe.es/borme/'},it:{name:'Registro Imprese',url:'https://www.registroimprese.it'},se:{name:'Bolagsverket',url:'https://www.bolagsverket.se'},at:{name:'Firmenbuch',url:'https://www.firmenbuch.at'},lu:{name:'RCSL',url:'https://www.rcsl.lu'}};
+function openRegistry(){const c=document.getElementById('compCountry').value,r=REGISTRIES[c],el=document.getElementById('compRes');el.className='result info';el.innerHTML=`<strong>${r.name}</strong><br><a href="${r.url}" target="_blank" rel="noopener" style="color:var(--teal);font-weight:700;">🔗 Open official registry →</a>`;}
+function copyEl(id){navigator.clipboard.writeText(document.getElementById(id).textContent).then(()=>{const btn=event.target,orig=btn.textContent;btn.textContent='✓ Copied';setTimeout(()=>btn.textContent=orig,1500);});}
+initGDPR();initEORI();
+</script>
+<script src="mafioso-widget.js" defer></script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

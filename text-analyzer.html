@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Analyzer — Word Count, Characters, Reading Time | Storelines Tools</title>
+<meta name="description" content="Free online text analyzer. Count words, characters, sentences, paragraphs and reading time. Perfect for contracts, legal documents, emails and business texts.">
+<meta name="keywords" content="text analyzer, word counter, character counter, word count tool, reading time calculator, sentence counter, text statistics, online word counter, contract word count, document analyzer">
+<link rel="canonical" href="https://storelines.net/text-analyzer.html">
+<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<meta property="og:title" content="Free Text Analyzer — Word Count, Characters & Reading Time">
+<meta property="og:description" content="Analyze any text: words, characters, sentences, paragraphs, reading time. Free, instant, no registration.">
+<meta property="og:url" content="https://storelines.net/text-analyzer.html">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F5F5;--white:#FFFFFF;--navy:#0D1B4B;--blue:#1E6FD9;--blue-light:#EBF3FD;--blue-mid:#D0E6FA;--tx:#1A1A2E;--tx2:#4A5568;--tx3:#9AA5B4;--border:#E2E8F0;--font:'Inter',sans-serif;--radius:12px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(13,27,75,0.06)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo img{height:40px;width:auto}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links>li{position:relative}
+.nav-links a{font-size:14px;font-weight:500;color:var(--tx2);text-decoration:none;padding:7px 14px;border-radius:8px;transition:all .2s;display:flex;align-items:center;gap:5px}
+.nav-links a:hover{color:var(--navy);background:var(--blue-light)}
+.nav-links a.active{color:var(--blue);font-weight:700;background:var(--blue-light)}
+.has-dropdown>a::after{content:'▾';font-size:11px;opacity:0.6}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:0 8px 32px rgba(13,27,75,0.12);padding:8px;min-width:240px;z-index:200}
+.dropdown-menu a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:500;color:var(--tx2);text-decoration:none;transition:all .15s;white-space:nowrap}
+.dropdown-menu a:hover{background:var(--blue-light);color:var(--navy)}
+.drop-section{font-size:10px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px;margin-top:4px}
+.drop-section:first-child{margin-top:0}
+.has-dropdown:hover .dropdown-menu{display:block}
+.header-cta{height:38px;padding:0 20px;background:var(--blue);color:var(--white);font-size:13px;font-weight:700;border-radius:9px;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all .2s;white-space:nowrap}
+.header-cta:hover{background:var(--navy);box-shadow:0 4px 16px rgba(30,111,217,0.3);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
+.mob-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:98}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:99;padding:16px 24px 24px;box-shadow:0 8px 24px rgba(0,0,0,0.1);max-height:80vh;overflow-y:auto}
+.mob-menu.open{display:block}
+.mob-menu nav{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.mob-menu nav a{padding:10px 14px;border-radius:8px;font-size:15px;font-weight:500;color:var(--tx);text-decoration:none}
+.mob-menu nav a:hover{background:var(--blue-light);color:var(--blue)}
+.mob-section{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;padding:10px 14px 4px}
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:12px 24px}
+.breadcrumb-inner{max-width:1200px;margin:0 auto;font-size:13px}
+.breadcrumb a{color:var(--blue);text-decoration:none}
+.breadcrumb span{color:var(--tx3);margin:0 6px}
+.breadcrumb .current{color:var(--tx);font-weight:500}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1a2d6b 100%);padding:56px 24px 48px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(30,111,217,0.25) 0%,transparent 70%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(30,111,217,0.2);border:1px solid rgba(30,111,217,0.4);color:#93c5fd;padding:5px 14px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{color:white;font-size:clamp(28px,4vw,46px);font-weight:900;line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
+.hero h1 span{color:#60a5fa}
+.hero p{color:rgba(255,255,255,0.7);font-size:17px;max-width:560px;margin:0 auto}
+.main-wrap{max-width:960px;margin:-30px auto 0;padding:0 20px 60px;position:relative;z-index:10}
+.tool-card{background:var(--white);border-radius:20px;box-shadow:0 8px 48px rgba(13,27,75,0.12);padding:40px;margin-bottom:28px}
+.tool-card h2{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:20px}
+
+/* TEXTAREA */
+.textarea-wrap{position:relative;margin-bottom:16px}
+textarea{width:100%;padding:18px 20px;border:2px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:15px;color:var(--tx);background:var(--white);outline:none;transition:border-color .2s,box-shadow .2s;resize:vertical;min-height:200px;line-height:1.7}
+textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,111,217,0.1)}
+textarea::placeholder{color:var(--tx3)}
+.textarea-actions{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.btn-action{height:36px;padding:0 16px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;font-family:var(--font);font-size:13px;font-weight:600;color:var(--tx2);cursor:pointer;transition:all .2s}
+.btn-action:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light)}
+
+/* STATS GRID */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.stat-box{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;transition:all .2s}
+.stat-box:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(30,111,217,0.08)}
+.stat-n{font-size:32px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:6px}
+.stat-l{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px}
+.stat-box.highlight{background:var(--blue-light);border-color:var(--blue-mid)}
+.stat-box.highlight .stat-n{color:var(--blue)}
+
+/* SECONDARY STATS */
+.secondary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.sec-item{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.sec-label{font-size:13px;font-weight:600;color:var(--tx2)}
+.sec-value{font-size:15px;font-weight:800;color:var(--navy)}
+
+/* READING TIME BAR */
+.reading-bar{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px}
+.reading-icon{font-size:28px;flex-shrink:0}
+.reading-text{flex:1}
+.reading-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.reading-sub{font-size:13px;color:var(--tx2)}
+
+/* TOP WORDS */
+.top-words{margin-top:20px}
+.top-words-title{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.words-list{display:flex;flex-wrap:wrap;gap:8px}
+.word-chip{padding:5px 12px;background:var(--bg);border:1px solid var(--border);border-radius:100px;font-size:13px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:6px}
+.word-chip .wc{font-size:11px;color:var(--tx3);font-weight:500}
+
+/* WISE */
+.wise-banner{background:linear-gradient(135deg,#163300 0%,#1a4d00 100%);border-radius:16px;padding:28px 32px;display:flex;align-items:center;gap:24px;margin-bottom:28px}
+.wise-icon{width:52px;height:52px;background:#00b950;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.wise-text{flex:1}
+.wise-text h3{color:white;font-size:16px;font-weight:700;margin-bottom:4px}
+.wise-text p{color:rgba(255,255,255,0.7);font-size:13px}
+.wise-text p strong{color:#4ade80}
+.wise-btn{display:inline-flex;align-items:center;gap:8px;background:#00b950;color:white;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap;transition:background .2s;flex-shrink:0}
+.wise-btn:hover{background:#00d45c}
+
+.seo-card{background:var(--white);border-radius:20px;padding:40px;margin-bottom:24px}
+.seo-card h2{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:16px;letter-spacing:-.3px}
+.seo-card h3{font-size:17px;font-weight:700;color:var(--navy);margin:24px 0 10px}
+.seo-card p{color:#475569;font-size:15px;line-height:1.75;margin-bottom:14px}
+.seo-card ul{margin:0 0 14px 20px;color:#475569;font-size:15px;line-height:1.8}
+.faq-list{display:grid;gap:12px;margin-top:16px}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;font-size:15px;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--white);transition:background .2s;user-select:none}
+.faq-q:hover{background:#f8fafc}
+.faq-q::after{content:'▾';font-size:14px;color:var(--blue);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(180deg)}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;font-size:14px;color:#475569;line-height:1.7;background:#fafbfd}
+.faq-item.open .faq-a{max-height:300px;padding:14px 20px 18px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:16px}
+.related-item{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;align-items:center;gap:10px;text-decoration:none;transition:border-color .2s}
+.related-item:hover{border-color:var(--blue)}
+footer{background:var(--white);border-top:1px solid var(--border);padding:40px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-col h4{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.footer-col a{display:block;font-size:13px;color:var(--tx2);text-decoration:none;margin-bottom:8px;transition:color .15s}
+.footer-col a:hover{color:var(--blue)}
+.footer-desc{font-size:13px;color:var(--tx2);line-height:1.7}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--tx3)}
+@media(max-width:768px){
+  .nav-links,.header-cta{display:none}.hamburger{display:flex}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .secondary-grid{grid-template-columns:1fr 1fr}
+  .wise-banner{flex-direction:column;text-align:center;padding:24px 20px}
+  .tool-card,.seo-card{padding:24px 18px}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+}
+
+/* DROPDOWN FIX */
+.has-dropdown .dropdown-menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.1s;
+}
+.dropdown-menu { display: block !important; }
+
+</style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Storelines",
+  "url": "https://storelines.net/",
+  "description": ""
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/storelines-logo.png" alt="Storelines">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="wise-business.html">Wise</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Wise Business</div>
+            <a href="wise-business.html">💳 Wise Business Account</a>
+            <a href="wise-send-money.html">💸 Send Money Abroad</a>
+            <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+            <a href="wise-iban.html">🏦 Get EU IBAN with Wise</a>
+            <a href="wise-card.html">💳 Wise Debit Card</a>
+            <div class="drop-section">Comparisons</div>
+            <a href="wise-vs-bank.html">⚖️ Wise vs Traditional Banks</a>
+            <a href="wise-belgium.html">🇧🇪 Wise in Belgium</a>
+            <a href="wise-germany.html">🇩🇪 Wise in Germany</a>
+            <a href="wise-france.html">🇫🇷 Wise in France</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="tools.html">Free Tools</a>
+          <div class="dropdown-menu">
+            <div class="drop-section">Core Tools</div>
+            <a href="vat-validator.html">🔍 VAT Validator</a>
+            <a href="iban-validator.html">🏦 IBAN Validator</a>
+            <a href="vat-calculator.html">🧮 VAT Calculator</a>
+            <a href="currency-converter.html">💱 Currency Converter</a>
+            <a href="salary-calculator.html">💶 Salary Calculator</a>
+            <a href="password-generator.html">🔐 Password Generator</a>
+            <a href="invoice-number.html">📋 Invoice Number</a>
+            <a href="text-analyzer.html">📝 Text Analyzer</a>
+            <a href="time-converter.html">🕐 EU Time Converter</a>
+            <a href="qr-generator.html">📱 QR Generator</a>
+            <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+            <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+            <div class="drop-section">Advanced Tools</div>
+            <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+            <a href="eori-checklist.html">🛂 EORI Checklist</a>
+            <a href="invoice-builder.html">📄 Invoice Builder</a>
+            <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+            <a href="customs-duties.html">🚢 EU Customs Duties</a>
+            <a href="company-check.html">🏢 EU Company Check</a>
+          </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="header-cta">💳 Open Wise Account</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mob-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mob-menu" id="mob-menu">
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="mob-section">Wise</div>
+    <a href="wise-business.html">💳 Wise Business Account</a>
+    <a href="wise-send-money.html">💸 Send Money Abroad</a>
+    <a href="wise-multi-currency.html">🌍 Multi-Currency Account</a>
+    <a href="wise-iban.html">🏦 Get EU IBAN</a>
+    <a href="wise-card.html">💳 Wise Card</a>
+    <a href="wise-vs-bank.html">⚖️ Wise vs Banks</a>
+    <a href="wise-belgium.html">🇧🇪 Wise Belgium</a>
+    <a href="wise-germany.html">🇩🇪 Wise Germany</a>
+    <a href="wise-france.html">🇫🇷 Wise France</a>
+    <div class="mob-section">Free Tools</div>
+    <a href="vat-validator.html">🔍 VAT Validator</a>
+    <a href="iban-validator.html">🏦 IBAN Validator</a>
+    <a href="vat-calculator.html">🧮 VAT Calculator</a>
+    <a href="currency-converter.html">💱 Currency Converter</a>
+    <a href="salary-calculator.html">💶 Salary Calculator</a>
+    <a href="password-generator.html">🔐 Password Generator</a>
+    <a href="invoice-number.html">📋 Invoice Number</a>
+    <a href="text-analyzer.html">📝 Text Analyzer</a>
+    <a href="time-converter.html">🕐 EU Time Converter</a>
+    <a href="qr-generator.html">📱 QR Generator</a>
+    <a href="swift-lookup.html">🏛️ BIC / SWIFT Lookup</a>
+    <a href="gdpr-checklist.html">🛡️ GDPR Checklist</a>
+    <a href="oss-ioss-navigator.html">🗺️ OSS/IOSS Navigator</a>
+    <a href="eori-checklist.html">🛂 EORI Checklist</a>
+    <a href="invoice-builder.html">📄 Invoice Builder</a>
+    <a href="eco-labeling.html">🌿 Eco-Labeling</a>
+    <a href="customs-duties.html">🚢 EU Customs Duties</a>
+    <a href="company-check.html">🏢 EU Company Check</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wise.prf.hn/l/JpDWWbN/" target="_blank" rel="noopener sponsored">🔐 Login to Wise</a>
+  </nav>
+  <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="noopener sponsored" class="btn-primary" style="justify-content:center;margin-top:8px">💳 Open Wise Account</a>
+</div>
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="tools.html">Tools</a><span>›</span>
+    <span class="current">Text Analyzer</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">📝 Free EU Tool</div>
+  <h1>Text <span>Analyzer</span></h1>
+  <p>Count words, characters, sentences and paragraphs. Estimate reading time and speaking time. Perfect for contracts, emails and business documents.</p>
+</div>
+
+<div class="main-wrap">
+
+  <div class="tool-card">
+    <h2>📝 Analyze Your Text</h2>
+
+    <div class="textarea-wrap">
+      <textarea id="textInput" placeholder="Paste your contract, email, letter or any business text here..." oninput="analyze()"></textarea>
+    </div>
+
+    <div class="textarea-actions">
+      <button class="btn-action" onclick="clearText()">🗑️ Clear</button>
+      <button class="btn-action" onclick="copyText()">📋 Copy</button>
+      <button class="btn-action" onclick="loadSample()">📄 Load Sample Contract</button>
+    </div>
+
+    <!-- MAIN STATS -->
+    <div class="stats-grid">
+      <div class="stat-box highlight">
+        <div class="stat-n" id="wordCount">0</div>
+        <div class="stat-l">Words</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-n" id="charCount">0</div>
+        <div class="stat-l">Characters</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-n" id="charNoSpace">0</div>
+        <div class="stat-l">Chars (no spaces)</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-n" id="sentenceCount">0</div>
+        <div class="stat-l">Sentences</div>
+      </div>
+    </div>
+
+    <!-- SECONDARY STATS -->
+    <div class="secondary-grid">
+      <div class="sec-item">
+        <span class="sec-label">📄 Paragraphs</span>
+        <span class="sec-value" id="paraCount">0</span>
+      </div>
+      <div class="sec-item">
+        <span class="sec-label">📏 Avg. word length</span>
+        <span class="sec-value" id="avgWord">0</span>
+      </div>
+      <div class="sec-item">
+        <span class="sec-label">📊 Avg. sentence</span>
+        <span class="sec-value" id="avgSentence">0 words</span>
+      </div>
+      <div class="sec-item">
+        <span class="sec-label">🔤 Unique words</span>
+        <span class="sec-value" id="uniqueWords">0</span>
+      </div>
+      <div class="sec-item">
+        <span class="sec-label">📝 Lines</span>
+        <span class="sec-value" id="lineCount">0</span>
+      </div>
+      <div class="sec-item">
+        <span class="sec-label">🔡 Longest word</span>
+        <span class="sec-value" id="longestWord">—</span>
+      </div>
+    </div>
+
+    <!-- READING TIME -->
+    <div class="reading-bar">
+      <div class="reading-icon">⏱️</div>
+      <div class="reading-text">
+        <div class="reading-title" id="readingTime">Reading time: 0 min</div>
+        <div class="reading-sub" id="speakingTime">Speaking time: 0 min · at 130 words/min</div>
+      </div>
+    </div>
+
+    <!-- TOP WORDS -->
+    <div class="top-words" id="topWordsWrap" style="display:none">
+      <div class="top-words-title">Most frequent words</div>
+      <div class="words-list" id="wordsList"></div>
+    </div>
+  </div>
+
+  <div class="wise-banner">
+    <div class="wise-icon">📝</div>
+    <div class="wise-text">
+      <h3>Send Business Documents with Wise Payments</h3>
+      <p>After writing your contract or invoice, collect payment instantly via <strong>Wise Business IBAN</strong> — available in EUR, GBP, USD and 40+ currencies.</p>
+    </div>
+    <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored" class="wise-btn">Open Wise →</a>
+  </div>
+
+  <div class="seo-card">
+    <h2>Text Analysis for EU Business Documents</h2>
+
+    <p>Our <strong>text analyzer</strong> gives you instant statistics on any text — from a short email to a full legal contract. It calculates word count, character count, sentence structure, reading time, and the most frequently used words. All processing happens in your browser — no text is ever sent to a server.</p>
+
+    <h3>Word Count for Legal Contracts</h3>
+    <p>In legal and business contexts, word count matters. Many translation agencies charge per word, so knowing the exact word count before requesting a translation saves time. EU contracts for public procurement often have length requirements. Employment contracts in Belgium, Germany, and France must cover specific topics — knowing the length helps ensure completeness.</p>
+
+    <h3>Reading Time Estimation</h3>
+    <p>The average adult reads 200–250 words per minute (silent reading). Our tool estimates reading time at 200 words/min. Speaking time is estimated at 130 words/min — useful for presentations, speeches, and video scripts. A standard A4 page contains approximately 500 words.</p>
+
+    <h3>Character Count for EU Compliance Texts</h3>
+    <p>Character limits matter for:</p>
+    <ul>
+      <li>Meta descriptions (SEO): 150–160 characters recommended</li>
+      <li>Social media posts: Twitter/X 280 chars, LinkedIn 3,000 chars</li>
+      <li>SMS notifications: 160 characters per message</li>
+      <li>Product description fields: varies by platform</li>
+      <li>GDPR consent texts: must be clear and concise</li>
+    </ul>
+
+    <h3>Document Length Standards in EU Business</h3>
+    <p>EU business documents follow different length conventions by type. A standard commercial invoice should be concise — typically 1 page. An NDA (Non-Disclosure Agreement) ranges from 1,000 to 3,000 words. A full service agreement typically runs 2,000–8,000 words. A GDPR Privacy Policy for an EU website should cover all required elements, typically 1,500–3,000 words.</p>
+  </div>
+
+  <div class="seo-card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my text stored or sent anywhere?</div>
+        <div class="faq-a">No. All text analysis runs entirely in your browser using JavaScript. Your text never leaves your device and is never sent to our servers. You can safely paste confidential contracts, legal documents, or personal data — everything stays local.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How is reading time calculated?</div>
+        <div class="faq-a">Reading time is based on the average adult reading speed of 200 words per minute for silent reading. Speaking time uses 130 words per minute, which is a comfortable presentation pace. These are averages — actual times vary based on text complexity, individual reading speed, and purpose (skimming vs. careful reading).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How many words is a standard A4 page?</div>
+        <div class="faq-a">A standard A4 page with 12pt font, standard margins, and single spacing contains approximately 500 words. Double-spaced formatting reduces this to about 250 words per page. Legal documents often use 1.5 line spacing, yielding approximately 350 words per page.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What languages does the analyzer support?</div>
+        <div class="faq-a">The analyzer works with any language that uses spaces between words — including all EU languages (English, French, German, Dutch, Polish, Spanish, Italian, etc.). Character counting works for all Unicode characters. Word frequency analysis works best with Latin-script languages.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seo-card">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="invoice-builder.html" class="related-item"><span style="font-size:22px">📄</span><div><strong style="color:var(--navy);font-size:14px">Invoice Builder</strong><br><small style="color:var(--tx3)">Legal invoice wording</small></div></a>
+      <a href="invoice-number.html" class="related-item"><span style="font-size:22px">📋</span><div><strong style="color:var(--navy);font-size:14px">Invoice Number</strong><br><small style="color:var(--tx3)">Generate EU invoice IDs</small></div></a>
+      <a href="gdpr-checklist.html" class="related-item"><span style="font-size:22px">🛡️</span><div><strong style="color:var(--navy);font-size:14px">GDPR Checklist</strong><br><small style="color:var(--tx3)">EU compliance check</small></div></a>
+      <a href="tools.html" class="related-item"><span style="font-size:22px">🛠️</span><div><strong style="color:var(--navy);font-size:14px">All 18 Tools</strong><br><small style="color:var(--tx3)">Full EU business toolkit</small></div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="images/storelines-logo.png" alt="Storelines Tools" style="height:36px;margin-bottom:12px">
+      <p class="footer-desc">Professional business tools for EU entrepreneurs. Free, no registration. Official Wise Business partner.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <a href="vat-validator.html">VAT Validator</a>
+      <a href="iban-validator.html">IBAN Validator</a>
+      <a href="text-analyzer.html">Text Analyzer</a>
+      <a href="invoice-number.html">Invoice Number</a>
+      <a href="tools.html">All 18 Tools →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Wise Partner</h4>
+      <a href="wise-business.html">Wise Business</a>
+      <a href="wise-send-money.html">Send Money</a>
+      <a href="wise-iban.html">Get EU IBAN</a>
+      <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored">Open Account →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Storelines Tools. All rights reserved.</span>
+    <span>Brussels, Belgium · EU</span>
+  </div>
+</footer>
+
+<script>
+const STOP_WORDS = new Set(['the','a','an','and','or','but','in','on','at','to','for','of','with','by','from','is','are','was','were','be','been','being','have','has','had','do','does','did','will','would','could','should','may','might','shall','can','this','that','these','those','i','you','he','she','it','we','they','my','your','his','her','its','our','their','not','no','as','if','so','up','out','about','into','than','then','when','where','who','which','what','how','all','each','every','more','also','just','after','before','over','under','between','de','la','le','les','et','en','un','une','des','du','au','aux','je','tu','il','elle','nous','vous','ils','elles','der','die','das','und','in','im','ein','eine','ist','van','het','de','een','en','er','is']);
+
+function analyze(){
+  const t = document.getElementById('textInput').value;
+
+  const words = t.trim() ? t.trim().split(/\s+/).filter(w=>w.length>0) : [];
+  const chars = t.length;
+  const charsNoSpace = t.replace(/\s/g,'').length;
+  const sentences = t.split(/[.!?]+/).filter(s=>s.trim().length>0).length;
+  const paras = t.split(/\n\s*\n/).filter(p=>p.trim().length>0).length || (t.trim() ? 1 : 0);
+  const lines = t.split('\n').length;
+  const wc = words.length;
+  const avgWord = wc ? (words.reduce((a,w)=>a+w.replace(/[^a-zA-Z]/g,'').length,0)/wc).toFixed(1) : 0;
+  const avgSentence = sentences ? Math.round(wc/sentences) : 0;
+  const unique = new Set(words.map(w=>w.toLowerCase().replace(/[^a-z]/g,''))).size;
+  const longest = wc ? words.reduce((a,b)=>b.replace(/[^a-zA-Z]/g,'').length>a.replace(/[^a-zA-Z]/g,'').length?b:a,'') : '—';
+  const readMin = Math.max(1, Math.ceil(wc/200));
+  const speakMin = Math.max(1, Math.ceil(wc/130));
+
+  document.getElementById('wordCount').textContent = wc.toLocaleString();
+  document.getElementById('charCount').textContent = chars.toLocaleString();
+  document.getElementById('charNoSpace').textContent = charsNoSpace.toLocaleString();
+  document.getElementById('sentenceCount').textContent = sentences.toLocaleString();
+  document.getElementById('paraCount').textContent = paras;
+  document.getElementById('avgWord').textContent = avgWord + ' chars';
+  document.getElementById('avgSentence').textContent = avgSentence + ' words';
+  document.getElementById('uniqueWords').textContent = unique.toLocaleString();
+  document.getElementById('lineCount').textContent = lines;
+  document.getElementById('longestWord').textContent = longest.replace(/[^a-zA-Z]/g,'').slice(0,12) || '—';
+  document.getElementById('readingTime').textContent = wc < 10 ? 'Reading time: < 1 min' : `Reading time: ~${readMin} min (${wc} words)`;
+  document.getElementById('speakingTime').textContent = `Speaking time: ~${speakMin} min · at 130 words/min`;
+
+  // Top words
+  if(wc >= 5){
+    const freq = {};
+    words.forEach(w=>{
+      const clean = w.toLowerCase().replace(/[^a-z]/g,'');
+      if(clean.length > 2 && !STOP_WORDS.has(clean)) freq[clean] = (freq[clean]||0)+1;
+    });
+    const top = Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,12);
+    if(top.length){
+      document.getElementById('wordsList').innerHTML = top.map(([w,c])=>`<div class="word-chip">${w} <span class="wc">×${c}</span></div>`).join('');
+      document.getElementById('topWordsWrap').style.display='block';
+    }
+  } else {
+    document.getElementById('topWordsWrap').style.display='none';
+  }
+}
+
+function clearText(){
+  document.getElementById('textInput').value='';
+  analyze();
+}
+
+function copyText(){
+  const t = document.getElementById('textInput').value;
+  if(!t) return;
+  navigator.clipboard.writeText(t).then(()=>{
+    const btn = event.target;
+    btn.textContent='✓ Copied!';
+    setTimeout(()=>btn.textContent='📋 Copy',1500);
+  });
+}
+
+function loadSample(){
+  document.getElementById('textInput').value = `SERVICE AGREEMENT
+
+This Service Agreement ("Agreement") is entered into as of January 1, 2026, between Storelines Tools BV, a company registered in Belgium ("Service Provider"), and the Client identified below ("Client").
+
+1. SERVICES
+The Service Provider agrees to provide business consulting and digital tools as described in Schedule A attached hereto. All services shall be performed in accordance with the standards of the industry and in compliance with applicable EU regulations.
+
+2. PAYMENT TERMS
+Client shall pay the fees set forth in Schedule A within 30 days of receipt of invoice. All amounts are stated exclusive of VAT. VAT shall be charged at the applicable rate in accordance with EU VAT Directive 2006/112/EC.
+
+3. INTELLECTUAL PROPERTY
+All intellectual property rights in materials created by the Service Provider under this Agreement shall remain the property of the Service Provider unless otherwise agreed in writing.
+
+4. GOVERNING LAW
+This Agreement shall be governed by and construed in accordance with the laws of Belgium. Any disputes shall be subject to the exclusive jurisdiction of the courts of Brussels.`;
+  analyze();
+}
+
+
+analyze();
+</script>
+   <script src="mafioso-widget.js" defer></script>
+
+<script>
+/* DROPDOWN FIX — задержка закрытия */
+(function(){
+  var timers = {};
+  document.querySelectorAll('.has-dropdown').forEach(function(el, i){
+    el.addEventListener('mouseenter', function(){
+      clearTimeout(timers[i]);
+    });
+    el.addEventListener('mouseleave', function(){
+      timers[i] = setTimeout(function(){}, 0);
+    });
+  });
+  /* Мост — убираем зазор через padding */
+  var style = document.createElement('style');
+  style.textContent = '.has-dropdown{position:relative}.has-dropdown>.dropdown-menu{margin-top:0!important}.has-dropdown::after{content:"";position:absolute;bottom:-12px;left:0;right:0;height:12px;z-index:199}.dropdown-menu{top:100%!important;padding-top:12px!important}';
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>
