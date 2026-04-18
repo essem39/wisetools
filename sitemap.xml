@@ -3,7 +3,7 @@
 
   <!-- Главная -->
   <url>
-    <loc>https://storelines.net/</loc>
+    <loc>https://wisetools.org/</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,55 +11,55 @@
 
   <!-- Wise страницы -->
   <url>
-    <loc>https://storelines.net/wise-send-money.html</loc>
+    <loc>https://wisetools.org/wise-send-money.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://storelines.net/wise-business.html</loc>
+    <loc>https://wisetools.org/wise-business.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://storelines.net/wise-multi-currency.html</loc>
+    <loc>https://wisetools.org/wise-multi-currency.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://storelines.net/wise-card.html</loc>
+    <loc>https://wisetools.org/wise-card.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://storelines.net/wise-iban.html</loc>
+    <loc>https://wisetools.org/wise-iban.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://storelines.net/wise-vs-bank.html</loc>
+    <loc>https://wisetools.org/wise-vs-bank.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://storelines.net/wise-germany.html</loc>
+    <loc>https://wisetools.org/wise-germany.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://storelines.net/wise-france.html</loc>
+    <loc>https://wisetools.org/wise-france.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://storelines.net/wise-belgium.html</loc>
+    <loc>https://wisetools.org/wise-belgium.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -67,115 +67,115 @@
 
   <!-- Инструменты -->
   <url>
-    <loc>https://storelines.net/tools.html</loc>
+    <loc>https://wisetools.org/tools.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://storelines.net/vat-calculator.html</loc>
+    <loc>https://wisetools.org/vat-calculator.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://storelines.net/vat-validator.html</loc>
+    <loc>https://wisetools.org/vat-validator.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://storelines.net/currency-converter.html</loc>
+    <loc>https://wisetools.org/currency-converter.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://storelines.net/iban-validator.html</loc>
+    <loc>https://wisetools.org/iban-validator.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://storelines.net/swift-lookup.html</loc>
+    <loc>https://wisetools.org/swift-lookup.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://storelines.net/salary-calculator.html</loc>
+    <loc>https://wisetools.org/salary-calculator.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://storelines.net/invoice-builder.html</loc>
+    <loc>https://wisetools.org/invoice-builder.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://storelines.net/invoice-number.html</loc>
+    <loc>https://wisetools.org/invoice-number.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://storelines.net/gdpr-checklist.html</loc>
+    <loc>https://wisetools.org/gdpr-checklist.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://storelines.net/eori-checklist.html</loc>
+    <loc>https://wisetools.org/eori-checklist.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://storelines.net/oss-ioss-navigator.html</loc>
+    <loc>https://wisetools.org/oss-ioss-navigator.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://storelines.net/customs-duties.html</loc>
+    <loc>https://wisetools.org/customs-duties.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://storelines.net/company-check.html</loc>
+    <loc>https://wisetools.org/company-check.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://storelines.net/eco-labeling.html</loc>
+    <loc>https://wisetools.org/eco-labeling.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://storelines.net/qr-generator.html</loc>
+    <loc>https://wisetools.org/qr-generator.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://storelines.net/password-generator.html</loc>
+    <loc>https://wisetools.org/password-generator.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://storelines.net/text-analyzer.html</loc>
+    <loc>https://wisetools.org/text-analyzer.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://storelines.net/time-converter.html</loc>
+    <loc>https://wisetools.org/time-converter.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -183,7 +183,7 @@
 
   <!-- Блог -->
   <url>
-    <loc>https://storelines.net/blog.html</loc>
+    <loc>https://wisetools.org/blog.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -191,19 +191,19 @@
 
   <!-- Служебные -->
   <url>
-    <loc>https://storelines.net/contact.html</loc>
+    <loc>https://wisetools.org/contact.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://storelines.net/privacy-policy.html</loc>
+    <loc>https://wisetools.org/privacy-policy.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://storelines.net/terms-of-service.html</loc>
+    <loc>https://wisetools.org/terms-of-service.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
