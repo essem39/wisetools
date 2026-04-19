@@ -6,14 +6,14 @@
 <title>18 Free EU Business Tools | Storelines</title>
 <meta name="description" content="18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice. Free, no registration.">
 <link rel="icon" type="image/png" href="images/storelines-logo.png">
-<link rel="canonical" href="https://storelines.net/tools.html">
+<link rel="canonical" href="https://wisetools.org/tools.html">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://storelines.net/tools.html">
+<meta property="og:url" content="https://wisetools.org/tools.html">
 <meta property="og:title" content="18 Free EU Business Tools | Storelines">
 <meta property="og:description" content="18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice.">
-<meta property="og:image" content="https://storelines.net/images/hero-wise.jpg">
+<meta property="og:image" content="https://wisetools.org/images/hero-wise.jpg">
 <meta property="og:site_name" content="Storelines">
 <meta property="og:locale" content="en_US">
 
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="18 Free EU Business Tools | Storelines">
 <meta name="twitter:description" content="18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice.">
-<meta name="twitter:image" content="https://storelines.net/images/hero-wise.jpg">
+<meta name="twitter:image" content="https://wisetools.org/images/hero-wise.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -846,7 +846,7 @@ footer {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "18 Free EU Business Tools",
-  "url": "https://storelines.net/tools.html",
+  "url": "https://wisetools.org/tools.html",
   "description": "18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice. Free, no registration."
 }
 </script>
@@ -1094,7 +1094,7 @@ footer {
 <div class="card">
   <div class="card-head"><div class="card-icon">📱</div><div><div class="card-title">QR Generator</div><div class="card-desc">For URLs, Wi-Fi, Email</div></div></div>
   <div class="tabs"><button class="tab-btn active" onclick="setQR('url',this)">URL</button><button class="tab-btn" onclick="setQR('text',this)">Text</button><button class="tab-btn" onclick="setQR('email',this)">Email</button><button class="tab-btn" onclick="setQR('wifi',this)">Wi-Fi</button></div>
-  <input class="inp" id="qrInput" placeholder="https://storelines.net">
+  <input class="inp" id="qrInput" placeholder="https://wisetools.org">
   <div id="qrPass" style="display:none"><input class="inp" id="qrPassVal" placeholder="Wi-Fi password" style="margin-top:8px"></div>
   <button class="btn" onclick="genQR()" style="width:100%">Generate QR Code</button>
   <canvas id="qrCanvas" width="160" height="160" style="display:none"></canvas>
@@ -1239,7 +1239,7 @@ function calcVAT(){const amt=parseFloat(document.getElementById('vatCalcAmt').va
 const WDS=['alpha','bravo','delta','echo','foxtrot','hotel','kilo','lima','mike','oscar','prime','sierra','tango','victor','whiskey','secure','global','trade','euro','finance','digital','bridge','core'];
 function genPass(){const len=parseInt(document.getElementById('passLen').value)||20,type=document.getElementById('passType').value;let p='';if(type==='pin'){p=Array.from(crypto.getRandomValues(new Uint8Array(len))).map(b=>b%10).join('');}else if(type==='words'){const wc=Math.max(3,Math.round(len/5));p=Array.from({length:wc},()=>WDS[Math.floor(Math.random()*WDS.length)]).join('-')+'-'+Math.floor(Math.random()*9000+1000);}else{const ch=type==='simple'?'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789':'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';const arr=new Uint8Array(len*2);crypto.getRandomValues(arr);p=[...arr].map(b=>ch[b%ch.length]).slice(0,len).join('');}document.getElementById('passTxt').textContent=p;document.getElementById('passRes').className='result ok';const s=p.length>=20&&/[A-Z]/.test(p)&&/\d/.test(p)&&/[^A-Za-z0-9]/.test(p)?4:p.length>=14?3:p.length>=10?2:1;const cls=['','weak','weak','med','strong'];for(let i=0;i<4;i++)document.getElementById(`sb${i}`).className='strength-block'+(i<s?' '+cls[s]:'');}
 let qrMode='url';
-function setQR(m,btn){qrMode=m;btn.closest('.tabs').querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('qrInput').placeholder={url:'https://storelines.net',text:'Message text',email:'contact@company.eu',wifi:'Network name'}[m];document.getElementById('qrPass').style.display=m==='wifi'?'block':'none';}
+function setQR(m,btn){qrMode=m;btn.closest('.tabs').querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('qrInput').placeholder={url:'https://wisetools.org',text:'Message text',email:'contact@company.eu',wifi:'Network name'}[m];document.getElementById('qrPass').style.display=m==='wifi'?'block':'none';}
 function genQR(){let txt=document.getElementById('qrInput').value.trim();if(!txt){alert('Enter data');return;}if(qrMode==='wifi')txt=`WIFI:T:WPA;S:${txt};P:${document.getElementById('qrPassVal').value};;`;else if(qrMode==='email')txt=`mailto:${txt}`;const canvas=document.getElementById('qrCanvas'),ctx=canvas.getContext('2d'),size=160,cells=21,cell=Math.floor(size/cells);canvas.width=size;canvas.height=size;ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);const h=[...txt].reduce((a,c)=>(a*31+c.charCodeAt(0))|0,0);let s=Math.abs(h);const rng=()=>{s=(s*1664525+1013904223)&0xffffffff;return(s>>>0)/0xffffffff;};ctx.fillStyle='#0A0A0A';[[0,0],[0,14],[14,0]].forEach(([ox,oy])=>{for(let r=0;r<7;r++)for(let c=0;c<7;c++)if(r===0||r===6||c===0||c===6||r>=2&&r<=4&&c>=2&&c<=4)ctx.fillRect((ox+c)*cell,(oy+r)*cell,cell-1,cell-1);});for(let r=0;r<cells;r++)for(let c=0;c<cells;c++){if((r<9&&c<9)||(r<9&&c>11)||(r>11&&c<9))continue;if(rng()>.5)ctx.fillRect(c*cell,r*cell,cell-1,cell-1);}canvas.style.display='block';document.getElementById('qrDl').style.display='block';}
 function dlQR(){const a=document.createElement('a');a.download='storelines-qr.png';a.href=document.getElementById('qrCanvas').toDataURL();a.click();}
 function genInv(){const pfx=document.getElementById('invPfx').value.trim()||'INV',fmt=document.getElementById('invFmt').value,now=new Date(),y=now.getFullYear(),m=String(now.getMonth()+1).padStart(2,'0'),key=`inv_${y}_${m}`,seq=String((parseInt(localStorage.getItem(key)||'0')+1));localStorage.setItem(key,seq);const s=seq.padStart(3,'0');let num='';if(fmt==='ys')num=`${y}-${s}`;else if(fmt==='yms')num=`${y}-${m}-${s}`;else if(fmt==='pys')num=`${pfx}-${y}-${s}`;else num=`${pfx}-${Date.now().toString(36).toUpperCase()}`;document.getElementById('invTxt').textContent=num;document.getElementById('invRes').className='result ok';}
