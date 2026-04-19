@@ -6,11 +6,11 @@
 <title>Currency Converter EU — EUR, USD, GBP Live Rates | Storelines Tools</title>
 <meta name="description" content="Free online currency converter with live ECB rates. Convert EUR, USD, GBP, CHF, PLN and 30+ currencies instantly. No registration required.">
 <meta name="keywords" content="currency converter, euro converter, eur to usd, eur to gbp, currency exchange rate europe, ecb exchange rates, online currency converter, free currency converter eu">
-<link rel="canonical" href="https://wisetools.org/currency-converter.html">
+<link rel="canonical" href="https://storelines.net/currency-converter.html">
 <link rel="icon" type="image/png" href="images/storelines-logo.png">
 <meta property="og:title" content="Free EU Currency Converter — Live ECB Rates">
 <meta property="og:description" content="Convert EUR, USD, GBP and 30+ currencies with live ECB rates. Free, instant, no registration.">
-<meta property="og:url" content="https://wisetools.org/currency-converter.html">
+<meta property="og:url" content="https://storelines.net/currency-converter.html">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -181,7 +181,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:40px 2
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Storelines",
-  "url": "https://wisetools.org/",
+  "url": "https://storelines.net/",
   "description": ""
 }
 </script>
@@ -397,9 +397,12 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:40px 2
     </div>
 
     <div class="rates-section" id="ratesSection" style="display:none">
-      <div class="rates-title">Popular EUR rates (ECB reference)</div>
+      <div class="rates-title" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <span>Popular EUR rates</span>
+        <span id="rateStatus" style="font-size:11px;font-weight:600;color:var(--blue)">⏳ Loading live rates...</span>
+      </div>
       <div class="rates-grid" id="ratesGrid"></div>
-      <p style="font-size:11px;color:var(--tx3);margin-top:10px">Rates are indicative. For exact rates use <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored" style="color:var(--blue)">Wise</a> for real mid-market rates.</p>
+      <p style="font-size:11px;color:var(--tx3);margin-top:10px">For actual transfers use <a href="https://wise.prf.hn/l/AJpx5yV/" target="_blank" rel="sponsored" style="color:var(--blue)">Wise</a> — real mid-market rate, no markup.</p>
     </div>
   </div>
 
@@ -505,30 +508,56 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:40px 2
 </footer>
 
 <script>
-// Live rates from Frankfurter (ECB data, free, no key needed)
 const FLAGS={EUR:'€',USD:'$',GBP:'£',CHF:'Fr',PLN:'zł',CZK:'Kč',SEK:'kr',DKK:'kr',NOK:'kr',HUF:'Ft',RON:'lei',BGN:'лв',HRK:'kn',RUB:'₽',JPY:'¥',CNY:'¥',CAD:'$',AUD:'$',TRY:'₺',UAH:'₴',AMD:'֏'};
 
-// Fallback rates (ECB, updated manually as backup)
-let RATES={EUR:1,USD:1.083,GBP:0.853,CHF:0.959,PLN:4.26,CZK:25.1,SEK:11.35,DKK:7.46,NOK:11.65,HUF:398,RON:4.97,BGN:1.956,HRK:7.53,RUB:99.8,JPY:161,CNY:7.82,CAD:1.50,AUD:1.68,TRY:36.1,UAH:44.8,AMD:422};
+// Fallback rates — April 2026 (used only if ALL live APIs fail)
+let RATES={EUR:1,USD:1.1782,GBP:0.8707,CHF:0.9206,PLN:4.2276,CZK:24.296,SEK:10.787,DKK:7.4615,NOK:11.030,HUF:362.09,RON:5.099,BGN:1.9558,HRK:7.5345,RUB:89.91,JPY:186.90,CNY:8.0544,CAD:1.6118,AUD:1.6429,TRY:52.81,UAH:51.73,AMD:440.87};
 let ratesLoaded=false;
 let ratesDate='';
+let ratesSource='';
 
+// Попытка получить курсы по цепочке источников
 async function loadRates(){
+  const statusEl=document.getElementById('rateStatus');
+  if(statusEl) statusEl.textContent='⏳ Loading live rates...';
+
+  // Источник 1: open.er-api.com — бесплатный, без ключа, обновляется каждые ~24ч
   try{
-    // Frankfurter uses real ECB rates, free, no API key
+    const r=await fetch('https://open.er-api.com/v6/latest/EUR');
+    const d=await r.json();
+    if(d.result==='success' && d.rates){
+      RATES={EUR:1,...d.rates};
+      ratesDate=d.time_last_update_utc ? new Date(d.time_last_update_utc).toISOString().slice(0,10) : '';
+      ratesSource='ExchangeRate-API';
+      ratesLoaded=true;
+      convert();
+      if(statusEl) statusEl.textContent=`✅ Live rates · ${ratesDate}`;
+      console.log('✅ Live rates from open.er-api:',ratesDate);
+      return;
+    }
+  }catch(e){ console.log('open.er-api failed, trying frankfurter...'); }
+
+  // Источник 2: frankfurter.app — ECB данные, бесплатный
+  try{
     const r=await fetch('https://api.frankfurter.app/latest?base=EUR');
     const d=await r.json();
     if(d.rates){
       RATES={EUR:1,...d.rates};
-      ratesDate=d.date;
+      ratesDate=d.date||'';
+      ratesSource='ECB via Frankfurter';
       ratesLoaded=true;
       convert();
-      console.log('✅ Live ECB rates loaded:',d.date);
+      if(statusEl) statusEl.textContent=`✅ ECB rates · ${ratesDate}`;
+      console.log('✅ Live rates from frankfurter:',d.date);
+      return;
     }
-  }catch(e){
-    console.log('Using fallback rates');
-    ratesLoaded=false;
-  }
+  }catch(e){ console.log('frankfurter failed, using fallback rates'); }
+
+  // Fallback
+  ratesLoaded=false;
+  ratesSource='fallback';
+  if(statusEl) statusEl.textContent='⚠️ Using cached rates (live API unavailable)';
+  convert();
 }
 
 function convert(){
@@ -542,7 +571,7 @@ function convert(){
   document.getElementById('result').value=res.toFixed(2);
   document.getElementById('resultLabel').textContent=`${amt.toLocaleString('de-DE')} ${from} =`;
   document.getElementById('resultAmount').textContent=`${res.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})} ${to}`;
-  const src=ratesLoaded?`ECB rate · ${ratesDate}`:'ECB reference rate';
+  const src=ratesLoaded?`Live rate · ${ratesDate}`:'Cached rate';
   document.getElementById('resultRate').textContent=`1 ${from} = ${rate.toFixed(4)} ${to} · ${src}`;
   document.getElementById('resultBox').classList.add('show');
 
@@ -550,7 +579,7 @@ function convert(){
   document.getElementById('ratesGrid').innerHTML=popular.map(c=>`
     <div class="rate-item">
       <span class="rate-pair">EUR/${c}</span>
-      <span class="rate-value">${(RATES[c]||'—').toFixed?RATES[c].toFixed(3):'—'}</span>
+      <span class="rate-value">${RATES[c]?RATES[c].toFixed(3):'—'}</span>
     </div>`).join('');
   document.getElementById('ratesSection').style.display='block';
 }
@@ -581,11 +610,9 @@ function copyResult(){
   });
 }
 
-
-// Init: load live rates then convert
+// Init
 onCurrencyChange();
-convert(); // show immediately with fallback
-loadRates(); // then update with live ECB rates
+loadRates(); // сразу грузим живые курсы
 </script>
   <script src="mafioso-widget.js" defer></script>
 
