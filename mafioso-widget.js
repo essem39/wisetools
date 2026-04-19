@@ -1,5 +1,5 @@
 /* ============================================================
-   WISE PILOT AI WIDGET — storelines.net
+   WISE PILOT AI WIDGET — wisetools.org
    Embed: <script src="mafioso-widget.js" defer></script>
    ============================================================ */
 
@@ -280,7 +280,7 @@
 
       <div id="maf-messages">
         <div class="maf-msg bot">
-          <div class="maf-bubble-msg">Hi! I'm WISE Pilot — your EU business assistant. Ask me about VAT, IBAN, Wise Business, customs duties, GDPR, or any tool on storelines.net. 💚</div>
+          <div class="maf-bubble-msg">Hi! I'm WISE Pilot — your EU business assistant. Ask me about VAT, IBAN, Wise Business, customs duties, GDPR, or any tool on wisetools.org. 💚</div>
           <div class="maf-msg-time">${getTime()}</div>
         </div>
         <div id="maf-typing"><div class="maf-dot"></div><div class="maf-dot"></div><div class="maf-dot"></div></div>
@@ -300,7 +300,7 @@
           </svg>
         </button>
       </div>
-      <div id="maf-powered">Powered by WISE Pilot AI · storelines.net</div>
+      <div id="maf-powered">Powered by WISE Pilot AI · wisetools.org</div>
     </div>
   `;
   document.body.appendChild(container);
