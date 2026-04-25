@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>18 Free EU Business Tools | Storelines</title>
+<title>18 Free EU Business Tools | Wisetools</title>
 <meta name="description" content="18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice. Free, no registration.">
-<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<link rel="icon" type="image/png" href="images/wisetools-logo.png">
 <link rel="canonical" href="https://wisetools.org/tools.html">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wisetools.org/tools.html">
-<meta property="og:title" content="18 Free EU Business Tools | Storelines">
+<meta property="og:title" content="18 Free EU Business Tools | Wisetools">
 <meta property="og:description" content="18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice.">
 <meta property="og:image" content="https://wisetools.org/images/hero-wise.jpg">
-<meta property="og:site_name" content="Storelines">
+<meta property="og:site_name" content="Wisetools">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="18 Free EU Business Tools | Storelines">
+<meta name="twitter:title" content="18 Free EU Business Tools | Wisetools">
 <meta name="twitter:description" content="18 professional business tools for EU entrepreneurs: VAT, IBAN, currency, OSS/IOSS, EORI, invoice.">
 <meta name="twitter:image" content="https://wisetools.org/images/hero-wise.jpg">
 
@@ -858,7 +858,7 @@ footer {
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <img src="images/storelines-logo.png" alt="Storelines">
+      <img src="images/wisetools-logo.png" alt="Wisetools">
     </a>
     <nav>
       <ul class="nav-links">
@@ -1206,7 +1206,7 @@ footer {
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">STORELINES</div>
+      <div class="footer-brand">WISETOOLS</div>
       <p class="footer-desc">Professional business tools for Europe · Free · No registration required · 2026</p>
     </div>
     <div class="footer-col">
@@ -1222,7 +1222,7 @@ footer {
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Storelines Tools. All rights reserved.</span>
+    <span>© 2026 Wisetools Tools. All rights reserved.</span>
     <span>Brussels, Belgium</span>
   </div>
 </footer>
@@ -1243,7 +1243,7 @@ function genPass(){const len=parseInt(document.getElementById('passLen').value)|
 let qrMode='url';
 function setQR(m,btn){qrMode=m;btn.closest('.tabs').querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('qrInput').placeholder={url:'https://wisetools.org',text:'Message text',email:'contact@company.eu',wifi:'Network name'}[m];document.getElementById('qrPass').style.display=m==='wifi'?'block':'none';}
 function genQR(){let txt=document.getElementById('qrInput').value.trim();if(!txt){alert('Enter data');return;}if(qrMode==='wifi')txt=`WIFI:T:WPA;S:${txt};P:${document.getElementById('qrPassVal').value};;`;else if(qrMode==='email')txt=`mailto:${txt}`;const canvas=document.getElementById('qrCanvas'),ctx=canvas.getContext('2d'),size=160,cells=21,cell=Math.floor(size/cells);canvas.width=size;canvas.height=size;ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);const h=[...txt].reduce((a,c)=>(a*31+c.charCodeAt(0))|0,0);let s=Math.abs(h);const rng=()=>{s=(s*1664525+1013904223)&0xffffffff;return(s>>>0)/0xffffffff;};ctx.fillStyle='#0A0A0A';[[0,0],[0,14],[14,0]].forEach(([ox,oy])=>{for(let r=0;r<7;r++)for(let c=0;c<7;c++)if(r===0||r===6||c===0||c===6||r>=2&&r<=4&&c>=2&&c<=4)ctx.fillRect((ox+c)*cell,(oy+r)*cell,cell-1,cell-1);});for(let r=0;r<cells;r++)for(let c=0;c<cells;c++){if((r<9&&c<9)||(r<9&&c>11)||(r>11&&c<9))continue;if(rng()>.5)ctx.fillRect(c*cell,r*cell,cell-1,cell-1);}canvas.style.display='block';document.getElementById('qrDl').style.display='block';}
-function dlQR(){const a=document.createElement('a');a.download='storelines-qr.png';a.href=document.getElementById('qrCanvas').toDataURL();a.click();}
+function dlQR(){const a=document.createElement('a');a.download='wisetools-qr.png';a.href=document.getElementById('qrCanvas').toDataURL();a.click();}
 function genInv(){const pfx=document.getElementById('invPfx').value.trim()||'INV',fmt=document.getElementById('invFmt').value,now=new Date(),y=now.getFullYear(),m=String(now.getMonth()+1).padStart(2,'0'),key=`inv_${y}_${m}`,seq=String((parseInt(localStorage.getItem(key)||'0')+1));localStorage.setItem(key,seq);const s=seq.padStart(3,'0');let num='';if(fmt==='ys')num=`${y}-${s}`;else if(fmt==='yms')num=`${y}-${m}-${s}`;else if(fmt==='pys')num=`${pfx}-${y}-${s}`;else num=`${pfx}-${Date.now().toString(36).toUpperCase()}`;document.getElementById('invTxt').textContent=num;document.getElementById('invRes').className='result ok';}
 const TZ_LIST=[{tz:'Europe/Brussels',flag:'🇧🇪',name:'Brussels'},{tz:'Europe/London',flag:'🇬🇧',name:'London'},{tz:'Europe/Paris',flag:'🇫🇷',name:'Paris'},{tz:'Europe/Berlin',flag:'🇩🇪',name:'Berlin'},{tz:'Europe/Warsaw',flag:'🇵🇱',name:'Warsaw'},{tz:'Europe/Moscow',flag:'🇷🇺',name:'Moscow'},{tz:'Asia/Yerevan',flag:'🇦🇲',name:'Yerevan'},{tz:'America/New_York',flag:'🇺🇸',name:'New York'}];
 function convTime(){const[h,m]=document.getElementById('tzTime').value.split(':').map(Number),fromTZ=document.getElementById('tzFrom').value,date=new Date();date.setHours(h,m,0,0);const list=document.getElementById('tzList');list.innerHTML=TZ_LIST.map(z=>{const t=new Intl.DateTimeFormat('en',{hour:'2-digit',minute:'2-digit',timeZone:z.tz,hour12:false}).format(date),active=z.tz===fromTZ;return`<div class="tz-row${active?' active':''}">${z.flag} ${z.name}<span class="tz-time">${t}</span></div>`;}).join('');}
