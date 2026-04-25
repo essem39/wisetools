@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QR Code Generator — Free Online Tool | Storelines Tools</title>
+<title>QR Code Generator — Free Online Tool | Wisetools Tools</title>
 <meta name="description" content="Free QR code generator. Create QR codes for URLs, Wi-Fi, email, phone, business cards and bank details. Download as PNG. No registration required.">
 <meta name="keywords" content="qr code generator, free qr generator, qr code creator, wifi qr code, url qr code, business card qr, qr code download, online qr generator, eu qr code tool">
 <link rel="canonical" href="https://wisetools.org/qr-generator.html">
-<link rel="icon" type="image/png" href="images/storelines-logo.png">
+<link rel="icon" type="image/png" href="images/wisetools-logo.png">
 <meta property="og:title" content="Free QR Code Generator — URL, Wi-Fi, Email, Business Card">
 <meta property="og:description" content="Generate QR codes for any content. Download as PNG. Free, no registration, no watermark.">
 <meta property="og:url" content="https://wisetools.org/qr-generator.html">
@@ -186,7 +186,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:40px 2
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <img src="images/storelines-logo.png" alt="Storelines">
+      <img src="images/wisetools-logo.png" alt="Wisetools">
     </a>
     <nav>
       <ul class="nav-links">
@@ -433,7 +433,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:40px 2
 <footer>
   <div class="footer-inner">
     <div>
-      <img src="images/storelines-logo.png" alt="Storelines Tools" style="height:36px;margin-bottom:12px">
+      <img src="images/wisetools-logo.png" alt="Wisetools Tools" style="height:36px;margin-bottom:12px">
       <p class="footer-desc">Professional business tools for EU entrepreneurs. Free, no registration. Official Wise Business partner.</p>
     </div>
     <div class="footer-col">
@@ -460,7 +460,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:40px 2
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Storelines Tools. All rights reserved.</span>
+    <span>© 2026 Wisetools Tools. All rights reserved.</span>
     <span>Brussels, Belgium · EU</span>
   </div>
 </footer>
@@ -482,13 +482,13 @@ const FIELDS = {
   phone: `<div class="form-group"><label class="form-label">Phone Number</label><input type="tel" id="f1" placeholder="+32 2 123 4567" oninput="generate()"></div>`,
   vcard: `
     <div class="form-group"><label class="form-label">Full Name</label><input type="text" id="f1" placeholder="Jean Dupont" oninput="generate()"></div>
-    <div class="form-group"><label class="form-label">Company</label><input type="text" id="f2" placeholder="Storelines BV" oninput="generate()"></div>
+    <div class="form-group"><label class="form-label">Company</label><input type="text" id="f2" placeholder="Wisetools BV" oninput="generate()"></div>
     <div class="form-group"><label class="form-label">Phone</label><input type="tel" id="f3" placeholder="+32 2 123 4567" oninput="generate()"></div>
     <div class="form-group"><label class="form-label">Email</label><input type="email" id="f4" placeholder="jean@company.eu" oninput="generate()"></div>
     <div class="form-group"><label class="form-label">Website</label><input type="url" id="f5" placeholder="https://company.eu" oninput="generate()"></div>`,
   text: `<div class="form-group"><label class="form-label">Text Content</label><textarea id="f1" placeholder="Enter any text..." rows="4" oninput="generate()"></textarea></div>`,
   iban: `
-    <div class="form-group"><label class="form-label">Beneficiary Name</label><input type="text" id="f1" placeholder="Storelines Tools BV" oninput="generate()"></div>
+    <div class="form-group"><label class="form-label">Beneficiary Name</label><input type="text" id="f1" placeholder="Wisetools Tools BV" oninput="generate()"></div>
     <div class="form-group"><label class="form-label">IBAN</label><input type="text" id="f2" placeholder="BE68 5390 0754 7034" oninput="generate()"></div>
     <div class="form-group"><label class="form-label">Amount (EUR, optional)</label><input type="text" id="f3" placeholder="1234.56" oninput="generate()"></div>
     <div class="form-group"><label class="form-label">Reference (optional)</label><input type="text" id="f4" placeholder="INV-2026-001" oninput="generate()"></div>`
@@ -522,7 +522,7 @@ function buildContent(){
     }
     case 'phone': return `tel:${v('f1')}`;
     case 'vcard': return `BEGIN:VCARD\nVERSION:3.0\nFN:${v('f1')}\nORG:${v('f2')}\nTEL:${v('f3')}\nEMAIL:${v('f4')}\nURL:${v('f5')}\nEND:VCARD`;
-    case 'text':  return v('f1') || 'Hello from Storelines Tools';
+    case 'text':  return v('f1') || 'Hello from Wisetools Tools';
     case 'iban': {
       const iban = v('f2').replace(/\s/g,'');
       let s = `BCD\n002\n1\nSCT\n\n${v('f1')}\n${iban}`;
@@ -608,7 +608,7 @@ function resetPreview(){
 function downloadQR(){
   const canvas = document.getElementById('qrCanvas');
   const a = document.createElement('a');
-  a.download = `storelines-qr-${currentType}.png`;
+  a.download = `wisetools-qr-${currentType}.png`;
   a.href = canvas.toDataURL('image/png');
   a.click();
 }
