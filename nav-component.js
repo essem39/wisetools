@@ -214,7 +214,7 @@ document.body.insertAdjacentHTML('afterbegin', `
 <header id="sl-header">
   <div class="sl-header-inner">
     <a href="/index.html" class="sl-logo">
-      <img src="/images/storelines-logo.png" alt="Storelines">
+      <img src="/images/wisetools-logo.png" alt="Wisetools">
     </a>
     <nav>
       <ul class="sl-nav-links">
