@@ -365,7 +365,16 @@
     div.className = `maf-msg ${role}`;
     // For bot messages render HTML (links), for user escape it
     const content = role === 'bot'
-      ? text.replace(/\n/g, '<br>')
+      ? text
+          .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+          .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+          .replace(/\*(.+?)\*/g, '<em>$1</em>')
+          .replace(/(?:^|\n)(\d+)\.\s+(.+)/g, '\n<li style="margin:4px 0;padding-left:4px;">$2</li>')
+          .replace(/(?:^|\n)[-•]\s+(.+)/g, '\n<li style="margin:4px 0;padding-left:4px;">$1</li>')
+          .replace(/(<li.*<\/li>)+/gs, '<ul style="margin:8px 0;padding-left:16px;list-style:disc;">$&</ul>')
+          .replace(/\n/g, '<br>')
+          .replace(/<br>(<ul)/g, '$1')
+          .replace(/(<\/ul>)<br>/g, '$1')
       : text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
     div.innerHTML = `
       <div class="maf-bubble-msg">${content}</div>
