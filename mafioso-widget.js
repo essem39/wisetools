@@ -360,21 +360,49 @@
     return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   }
 
-  function addMessage(text, role) {
+
+  function parseMarkdownWise(text) {
+    if (!text) return '';
+    let t = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+    // Section headers **HEADER:**
+    t = t.replace(/\*\*([^*]+):\*\*/g, (m,h) => {
+      const colors = ['#00b950','#2563eb','#d97706','#7c3aed','#dc2626','#0891b2'];
+      const c = colors[Math.abs(h.charCodeAt(0)) % colors.length];
+      return '<div style="margin:10px 0 4px;padding:6px 12px;background:'+c+'15;border-left:3px solid '+c+';border-radius:0 8px 8px 0;font-weight:700;font-size:12px;color:'+c+'">'+h+'</div>';
+    });
+
+    // Bold **text**
+    t = t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    // Italic *text*
+    t = t.replace(/\*(.+?)\*/g, '<em style="color:#6b7280">$1</em>');
+
+    // Numbered list
+    let num = 0;
+    t = t.replace(/(?:^|\n)(\d+)\.\s+(.+)/g, (m,n,item) => {
+      num++;
+      const colors = ['#00b950','#2563eb','#d97706','#7c3aed','#dc2626','#0891b2'];
+      const c = colors[(num-1) % colors.length];
+      return '<div style="display:flex;gap:10px;align-items:baseline;margin:4px 0;padding:6px 10px;background:'+c+'08;border-radius:8px;border:1px solid '+c+'20"><span style="background:'+c+';color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">'+num+'</span><span>'+item+'</span></div>';
+    });
+
+    // Bullet list - or •
+    t = t.replace(/(?:^|\n)[-•]\s+(.+)/g, (m,item) => {
+      return '<div style="display:flex;gap:8px;align-items:baseline;margin:3px 0;padding:4px 8px;background:#f0fdf4;border-radius:6px"><span style="color:#00b950;font-weight:700;flex-shrink:0">›</span><span>'+item+'</span></div>';
+    });
+
+    // Code
+    t = t.replace(/`(.+?)`/g, '<code style="background:#f1f5f9;padding:1px 6px;border-radius:4px;font-size:11px;font-family:monospace">$1</code>');
+
+    t = t.replace(/\n/g, '<br>');
+    return t;
+  }
+
+    function addMessage(text, role) {
     const div = document.createElement('div');
     div.className = `maf-msg ${role}`;
     // For bot messages render HTML (links), for user escape it
-    const content = role === 'bot'
-      ? text
-          .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-          .replace(/\*\*(.+?)\*\*/g, '$1')
-          .replace(/\*(.+?)\*/g, '$1')
-          .replace(/(?:^|\n)(\d+)\.\s+(.+)/g, '\n<li style="margin:4px 0;padding-left:4px;">$2</li>')
-          .replace(/(?:^|\n)[-•]\s+(.+)/g, '\n<li style="margin:4px 0;padding-left:4px;">$1</li>')
-          .replace(/(<li.*<\/li>)+/gs, '<ul style="margin:8px 0;padding-left:16px;list-style:disc;">$&</ul>')
-          .replace(/\n/g, '<br>')
-          .replace(/<br>(<ul)/g, '$1')
-          .replace(/(<\/ul>)<br>/g, '$1')
+    const content = role === 'bot' ? parseMarkdownWise(text)
       : text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
     div.innerHTML = `
       <div class="maf-bubble-msg">${content}</div>
