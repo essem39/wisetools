@@ -58,7 +58,7 @@ style.textContent = `
 .sl-nav-links a.sl-active { color: #00B972; font-weight: 700; background: rgba(0,185,114,0.12); }
 
 /* DROPDOWN — фикс закрытия */
-.sl-has-dropdown > a::after { content: '▾'; font-size: 11px; opacity: 0.6; }
+.sl-has-dropdown > a::after { content: ''; }
 .sl-dropdown-menu {
   display: none;
   position: absolute;
