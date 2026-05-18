@@ -60,7 +60,7 @@
 
     #maf-window {
       position: fixed; bottom: 108px; right: 28px; z-index: 99998;
-      width: 420px; height: 700px;
+      width: 420px; height: 780px;
       background: var(--maf-bg2);
       border: 1.5px solid var(--maf-border2);
       border-radius: 20px;
