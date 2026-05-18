@@ -374,8 +374,6 @@
 
     // Bold **text**
     t = t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    // Italic *text*
-    t = t.replace(/\*(.+?)\*/g, '<em style="color:#6b7280">$1</em>');
 
     // Numbered list
     let num = 0;
@@ -386,8 +384,8 @@
       return '<div style="display:flex;gap:10px;align-items:baseline;margin:4px 0;padding:6px 10px;background:'+c+'08;border-radius:8px;border:1px solid '+c+'20"><span style="background:'+c+';color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">'+num+'</span><span>'+item+'</span></div>';
     });
 
-    // Bullet list - or •
-    t = t.replace(/(?:^|\n)[-•]\s+(.+)/g, (m,item) => {
+    // Bullet list: *, -, • 
+    t = t.replace(/(?:^|\n)[*\-•]\s+(.+)/g, (m,item) => {
       return '<div style="display:flex;gap:8px;align-items:baseline;margin:3px 0;padding:4px 8px;background:#f0fdf4;border-radius:6px"><span style="color:#00b950;font-weight:700;flex-shrink:0">›</span><span>'+item+'</span></div>';
     });
 
@@ -398,91 +396,4 @@
     return t;
   }
 
-    function addMessage(text, role) {
-    const div = document.createElement('div');
-    div.className = `maf-msg ${role}`;
-    // For bot messages render HTML (links), for user escape it
-    const content = role === 'bot' ? parseMarkdownWise(text)
-      : text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
-    div.innerHTML = `
-      <div class="maf-bubble-msg">${content}</div>
-      <div class="maf-msg-time">${getTime()}</div>
-    `;
-    // Make links open in same tab (no target="_blank" override needed for internal)
-    div.querySelectorAll('a').forEach(a => {
-      if (!a.href.includes('wise.prf.hn')) {
-        a.removeAttribute('target');
-      }
-    });
-    messages.insertBefore(div, typing);
-    messages.scrollTop = messages.scrollHeight;
-  }
 
-  function setTyping(show) {
-    typing.classList.toggle('show', show);
-    sendBtn.disabled = show;
-    messages.scrollTop = messages.scrollHeight;
-  }
-
-  function autoResize() {
-    input.style.height = 'auto';
-    input.style.height = Math.min(input.scrollHeight, 100) + 'px';
-  }
-
-  /* ── TOGGLE ──────────────────────────────────────────────── */
-  function toggleChat() {
-    isOpen = !isOpen;
-    win.classList.toggle('open', isOpen);
-    badge.classList.remove('show');
-    if (isOpen) setTimeout(() => input.focus(), 300);
-  }
-
-  bubble.addEventListener('click', toggleChat);
-  closeBtn.addEventListener('click', toggleChat);
-
-  /* ── SEND ────────────────────────────────────────────────── */
-  async function sendMessage() {
-    const text = input.value.trim();
-    if (!text || sendBtn.disabled) return;
-    addMessage(text, 'user');
-    history.push({ role: 'user', content: text });
-    input.value = '';
-    input.style.height = 'auto';
-    setTyping(true);
-    try {
-      const res = await fetch(WORKER_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: history })
-      });
-      const data = await res.json();
-      const reply = data.content?.[0]?.text || data.reply || 'Something went wrong. Try again.';
-      history.push({ role: 'assistant', content: reply });
-      setTyping(false);
-      addMessage(reply, 'bot');
-    } catch (e) {
-      setTyping(false);
-      addMessage('Connection error. Please try again.', 'bot');
-    }
-  }
-
-  sendBtn.addEventListener('click', sendMessage);
-  input.addEventListener('keydown', e => {
-    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
-  });
-  input.addEventListener('input', autoResize);
-
-  function getTime() {
-    return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  }
-
-})();
-
-// ===== MOBILE MENU FIX =====
-window.toggleMenu = function() {
-  const m = document.getElementById('mob-menu');
-  const o = document.getElementById('overlay');
-  if (!m) return;
-  const open = m.classList.toggle('open');
-  if (o) o.style.display = open ? 'block' : 'none';
-};
